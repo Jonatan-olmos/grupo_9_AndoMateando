@@ -10,3 +10,15 @@ El sitio de ventas de mate ofrece una amplia gama de productos relacionados con 
 El público al que apunta el sitio de ventas de mate está conformado por amantes de esta tradicional bebida sudamericana, tanto en la región como a nivel internacional. Se dirige a personas que valoran la calidad de los productos relacionados con el mate y que buscan experiencias auténticas y genuinas. Además, el sitio puede atraer a aquellos que desean descubrir y adoptar las costumbres y rituales asociados al consumo de mate. La variedad de productos ofrecidos permite atender a consumidores con diferentes niveles de experiencia, desde principiantes hasta aficionados experimentados.
 
 Nuestro equipo esta conformado por: Jonatan Olmos, Rodrigo Ceraolo,  Gastón Diaz, Facundo Ramirez, Amparo Pascual.
+
+
+REFERENTES DEL MERCADO
+https://www.un-mate.com.ar/ 
+https://www.matesgold.com.ar/
+https://sevamate.com/
+https://www.quematearg.com/
+https://laskamates.com/tienda/
+https://madeinmate.com.ar/
+https://www.matesur.net/
+
+Con nuestro equipo elegimos estos sitios para inspirarnos y tomar ideas por los productos que ofrecen, la estética que presentan y las funcionalidades implementadas.
