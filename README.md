@@ -73,7 +73,7 @@ comic neue,dongle,inter,fenix.
 
 
 ### **HOME:**
-Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el  HOME editado por JONATAN OLMOS.  
+Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el  **HOME** editado por **JONATAN OLMOS**.  
 https://www.figma.com/file/1JVbbobbjtL74pkYYZLxUw/Untitled?type=design&node-id=0-1&mode=design&t=YjUarEAWkO7JO7v3-0
 
 #### **VISTA DE CELULAR:**
@@ -86,7 +86,7 @@ https://www.figma.com/file/1JVbbobbjtL74pkYYZLxUw/Untitled?type=design&node-id=0
 
 
 ### **FORMULARIO DE REGISTRO:** 
-Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el  FORMULARIO DE REGISTRO editado por AMPARO PASCUAL.
+Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el  **FORMULARIO DE REGISTRO** editado por **AMPARO PASCUAL**.
 https://www.figma.com/file/zbRicmow5UDVRBVpYLpqwa/Formulario-de-registro?type=design&node-id=0-1&mode=design&t=WCfgErXVtnhSmRf3-0
 
 #### VISTA DE CELULAR
@@ -98,7 +98,7 @@ https://www.figma.com/file/zbRicmow5UDVRBVpYLpqwa/Formulario-de-registro?type=de
 
 
 ### **CAROO DE COMPRAS:**
-Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el CARRITOS DE COMPRAS   editado por GASTON DIAZ.
+Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el **CARRITOS DE COMPRAS**   editado por **GASTON DIAZ**.
 https://www.figma.com/file/0Xd4E2r24zRFrIdxsWn2e7/Untitled-(Copy)?type=design&node-id=0-1&mode=design&t=I0GvnsNMiJu3VlFZ-0
 
 #### VISTA DE CELULAR
@@ -111,7 +111,7 @@ https://www.figma.com/file/0Xd4E2r24zRFrIdxsWn2e7/Untitled-(Copy)?type=design&no
 
 
 ### **FORMULARIO DE LOGIN:**
-Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el FORMULARIO DE LOGIN   editado por FACUNDO RAMIREZ.
+Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el **FORMULARIO DE LOGIN**   editado por **FACUNDO RAMIREZ**.
 https://www.figma.com/file/Qf4HtTmAlc5L9ZxrZ1VkfC/andoMateando?type=design&node-id=0-1&mode=design&t=MVi03nT01r2sUoEA-0
 
 #### VISTA DE CELULAR
@@ -122,7 +122,7 @@ https://www.figma.com/file/Qf4HtTmAlc5L9ZxrZ1VkfC/andoMateando?type=design&node-
 ![image](https://github.com/Jonatan-olmos/grupo_9_AndoMateando/assets/27811128/f3261293-f951-4ddf-81f9-6ebded32dad4)
 
 ### **VISTA DEL PRODUCTOS:**
-Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el VISTA DEL PRODUCTO   editado por FACUNDO RAMIREZ.
+Dejamos el enlace a figma y las imagenes de la idea que tuvimos para el **VISTA DEL PRODUCTO**   editado por **FACUNDO RAMIREZ**.
 [https://www.figma.com/file/Qf4HtTmAlc5L9ZxrZ1VkfC/andoMateando?type=design&node-id=0-1&mode=design&t=MVi03nT01r2sUoEA-0
 ](https://www.figma.com/file/IKnDoMwCFNUeXuitCMyo04/Untitled?type=design&node-id=0-1&mode=design&t=FHhtCsRs0lgW7Si7-0)
 #### VISTA DEL PRODUCTO
