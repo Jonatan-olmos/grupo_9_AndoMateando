@@ -1,4 +1,3 @@
 ### **LOGO DE LA PÀGINA:**
 
-
-https://github.com/Jonatan-olmos/grupo_9_AndoMateando/issues/3#issue-1959222067
+![Ando Mateando-logos](https://github.com/Jonatan-olmos/grupo_9_AndoMateando/assets/27811128/9040e7ba-9ab8-40d6-b1dc-420675859096)
