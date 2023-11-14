@@ -106,8 +106,12 @@ footer {
     
     }
     
-@media (min-width: 500px) {
+@media (min-width: 420px) {
 /*escritorio*/
+.footer{
+
+    max-width:100%;
+}
 
 .footer_section_navegacion{
 width: 25%;
@@ -135,8 +139,8 @@ display: flex;
 .footer_section_redes_div-correo i{
     width: 30%;
 
-    padding-left: 30px;
-    padding-top: px;
+    padding-left: 20px;
+    padding-top: 30px;
     color:black;
     font-size:30px;
 }
@@ -157,6 +161,9 @@ text-transform: uppercase;
 @media (min-width: 900px) {
 /*escritorio*/
 /*contacto*/
+.footer{
+    width: 100%;
+}
 .footer_section_contacto a{
     font-size: 20px;
 }
@@ -179,6 +186,6 @@ top:100%;
 }
 /*envio*/
 .footer_section_redes_div-correo-textarea{ 
-margin-top: 11px;
+margin-top: 15px;
 }
 }
