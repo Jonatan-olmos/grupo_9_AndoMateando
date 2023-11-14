@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap");
+
+/* -----------------------> HEADER <-----------------------------*/
+
+/* ---------------- Estilos para el encabezado --------------------- */
+
+.header {
+  background-color: #d9e2d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%; /* relleno superior e inferior al 5%, y los laterales al 10% */
+}
+
+.header div {
+  flex-grow: 1;
+}
+
+.header .logo {
+  cursor: pointer;
+  border-radius: 5%;
+}
+
+.header .logo img {
+  height: 50px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1);
+}
+
+.buscador__nav {
+  display: flex;
+  margin: auto 0;
+  height: 35px;
+  line-height: 35px;
+}
+
+.buscador__nav input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #f2f2f2;
+  border-radius: 30px;
+  color: gray;
+  font-size: 30px;
+  text-align: center;
+}
+
+.buscador__nav button {
+  width: 35px;
+  height: 35px;
+  border-radius: 30px;
+  padding: 5px;
+  color: #f2f2f2;
+  transform: scale(0.9);
+  border: none;
+  position: absolute;
+  top: 31px;
+  background: #3e6765;
+  cursor: pointer;
+}
+
+.buscador__nav button:hover {
+  background-color: #d9e2d5;
+  color: #3e6765;
+}
+
+.icons__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: auto;
+}
+
+.icons__container i {
+  font-size: 25px;
+  margin-right: 70px; /* Espacio entre los iconos*/
+  color: #3e6765;
+  cursor: pointer;
+}
+
+/* -----------------------> NAV <-----------------------------*/
+
+.nav {
+  display: flex;
+  background-color: #3e6765;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 95px;
+  right: 0px;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav__links li:hover {
+  transform: scale(1.1);
+}
+.nav a {
+  color: #f2f2f2;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding: 5px 5px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: #d9e2d5;
+  color: #3e6765;
+}
+
+#click,
+label {
+  display: none;
+}
+label i {
+  color: #f2f2f2;
+}
+
+/* -----------------------> MEDIA QUERY <-----------------------------*/
+/* ----------------------->   MOBILE   <-----------------------------*/
+@media (max-width: 667px) {
+  .header {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+  }
+
+  .buscador__nav {
+    display: flex;
+    margin: auto 0;
+    line-height: 35px;
+    position: relative;
+  }
+
+  .buscador__nav input {
+    font-size: 16px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
+  }
+
+  .buscador__nav button {
+    position: absolute;
+    top: 1px;
+    right: -25%;
+  }
+
+  .icons__container {
+    display: flex; /* Muestra los iconos en dispositivos móviles */
+    margin-top: 5px; /* Ajusta el margen superior para dispositivos móviles */
+    margin-bottom: 5px;
+  }
+
+  .nav {
+    width: 100%;
+    height: 40px;
+    posición: relative;
+    margin-top: 40px;
+  }
+  .nav__links li {
+    display: none; /* Oculta las li cuando la pantalla es más pequeña */
+  }
+  .abrir-menu {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+  }
+  .abrir-menu i {
+    font-size: 20px;
+    background-color: #3e6765;
+    border-radius: 5px;
+    color: #f2f2f2;
+    padding: 5px;
+    border: 1px solid #f2f2f2;
+  }
+  .abrir-menu i:hover {
+    background-color: #d9e2d5;
+    color: #3e6765;
+    border-color: #3e6765;
+  }
+}
+
+/* -----------------------> MEDIA QUERY <-----------------------------*/
+/* ----------------------->   TABLET'S   <-----------------------------*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header .logo {
+    height: 50px;
+    width: auto;
+    margin-left: -20px;
+    margin-right: 10px;
+  }
+  .buscador__nav {
+    width: 20%;
+    margin-right: 50px;
+    right: 20px;
+    top: 10px;
+  }
+  .buscador__nav input {
+    text-align: right;
+    font-size: 21px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
+  }
+  .buscador__nav button {
+    top: 30px;
+  }
+  .icons__container i {
+    font-size: 21px;
+    margin-right: 5px; /* Espacio entre los iconos*/
+    margin-left: 50px;
+    color: #3e6765;
+    cursor: pointer;
+  }
+  .nav__links li {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .nav a {
+    color: #f2f2f2;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 5px 5px;
+    text-decoration: none;
+  }
+}
