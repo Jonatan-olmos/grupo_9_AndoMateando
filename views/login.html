@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/form.css">
+    <script src="https://kit.fontawesome.com/6fa071841f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+<img src="https://github.com/Jonatan-olmos/grupo_9_AndoMateando/assets/27811128/9040e7ba-9ab8-40d6-b1dc-420675859096" style="width: 350px; height: 350px;" class="logo">
+
+
+</head>
+<body>
+    <main>
+        <form action="/login" method="POST" class="create-login">
+            <div class="control-login">
+                <label>Username</label>
+                <input type="text" name="Nombre" class="control">
+            </div>
+            <div class="control-login">
+                <label>Password</label>
+                <input type="text" name="password" class="control">
+            </div>
+            <div >
+                <label>Remember me</label>
+                <input type="checkbox" name="rememberMe">
+            </div>
+           <nav class="password">
+            <ul>
+                <li><a href="#">Forgot password</a></li>
+            </ul>
+           </nav>
+
+            <button type="submit" class="boton-login">Log in</button>
+
+           <nav>
+            <ul>
+                <li><a href="#">Or sign in with <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+           </nav>
+        
+        </form>
+        
+    </main>
+</body>
+</html>
