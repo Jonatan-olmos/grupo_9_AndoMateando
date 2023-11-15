@@ -3,14 +3,24 @@
 /* -----------------------> HEADER <-----------------------------*/
 
 /* ---------------- Estilos para el encabezado --------------------- */
-
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
 .header {
   background-color: #d9e2d5;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   height: 85px;
-  padding: 5px 10%; /* relleno superior e inferior al 5%, y los laterales al 10% */
+  padding: 15px 20px;
+}
+.header,
+.nav a {
+  font-weight: 500; /* O el peso de fuente que prefieras */
+  font-size: 20px;
 }
 
 .header div {
@@ -18,6 +28,9 @@
 }
 
 .header .logo {
+  height: 60px;
+  width: auto;
+  margin-left: 10px;
   cursor: pointer;
   border-radius: 5%;
 }
@@ -28,11 +41,8 @@
   transition: all 0.3s;
 }
 
-.header .logo img:hover {
-  transform: scale(1.1);
-}
-
 .buscador__nav {
+  position: relative;
   display: flex;
   margin: auto 0;
   height: 35px;
@@ -40,12 +50,12 @@
 }
 
 .buscador__nav input {
-  width: 100%;
+  width: calc(100% - 40px); /* Resta el ancho del botón de búsqueda al 100% */
   height: 100%;
   border: none;
   outline: none;
-  background: #f2f2f2;
-  border-radius: 30px;
+  background: #e8e8e8;
+  border-radius: 25px;
   color: gray;
   font-size: 30px;
   text-align: center;
@@ -57,32 +67,30 @@
   border-radius: 30px;
   padding: 5px;
   color: #f2f2f2;
-  transform: scale(0.9);
   border: none;
   position: absolute;
-  top: 31px;
+  margin-right: 50px; /* Ajusta la posición del botón */
   background: #3e6765;
   cursor: pointer;
 }
-
-.buscador__nav button:hover {
-  background-color: #d9e2d5;
-  color: #3e6765;
-}
-
 .icons__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100px;
+  width: 80px; /* Reduce el ancho del contenedor */
   height: auto;
+  margin-right: 80px; /* Ajusta el margen derecho del contenedor */
 }
-
 .icons__container i {
-  font-size: 25px;
-  margin-right: 70px; /* Espacio entre los iconos*/
+  font-size: 35px;
+  margin-right: 30px;
   color: #3e6765;
   cursor: pointer;
+}
+
+/* Ajusta el margen derecho entre los íconos */
+.icons__container .fa-cart-shopping {
+  margin-left: 10px;
 }
 
 /* -----------------------> NAV <-----------------------------*/
@@ -93,13 +101,23 @@
   position: absolute;
   width: 100%;
   height: auto;
-  top: 95px;
-  right: 0px;
+  top: 100px;
+  left: 0;
+}
+.nav__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .nav__links li {
   display: inline-block;
+  width: 100%; /* Ocupa todo el ancho disponible */
   padding: 0 20px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .nav__links li:hover {
@@ -126,6 +144,28 @@ label i {
   color: #f2f2f2;
 }
 
+.header,
+.nav {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.buscador__nav input,
+.buscador__nav button {
+  border: 1px solid #ccc; /* Bordes sutiles */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* -----------------------> ANIMACION <-----------------------------*/
+
+.header .logo img:hover,
+.nav__links li:hover,
+.abrir-menu i:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out; /* Animación más suave */
+}
+
+/* -----------------------> ANIMACION <-----------------------------*/
+
 /* -----------------------> MEDIA QUERY <-----------------------------*/
 /* ----------------------->   MOBILE   <-----------------------------*/
 @media (max-width: 667px) {
@@ -133,7 +173,9 @@ label i {
     flex-direction: column; /* Apila los elementos verticalmente */
     height: auto; /* Ajusta la altura automáticamente según el contenido */
   }
-
+  .header .logo {
+    margin-left: -20px;
+  }
   .buscador__nav {
     display: flex;
     margin: auto 0;
@@ -150,13 +192,6 @@ label i {
     top: 1px;
     right: -25%;
   }
-
-  .icons__container {
-    display: flex; /* Muestra los iconos en dispositivos móviles */
-    margin-top: 5px; /* Ajusta el margen superior para dispositivos móviles */
-    margin-bottom: 5px;
-  }
-
   .nav {
     width: 100%;
     height: 40px;
@@ -183,11 +218,25 @@ label i {
     color: #f2f2f2;
     padding: 5px;
     border: 1px solid #f2f2f2;
+    margin-right: 10px;
   }
   .abrir-menu i:hover {
     background-color: #d9e2d5;
     color: #3e6765;
     border-color: #3e6765;
+  }
+  .icons__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .icons__container i {
+    font-size: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 5px;
+    color: #3e6765;
+    cursor: pointer;
   }
 }
 
@@ -198,7 +247,7 @@ label i {
   .header .logo {
     height: 50px;
     width: auto;
-    margin-left: -20px;
+    margin-left: -5px;
     margin-right: 10px;
   }
   .buscador__nav {
@@ -212,7 +261,6 @@ label i {
     font-size: 21px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
   }
   .buscador__nav button {
-    top: 30px;
   }
   .icons__container i {
     font-size: 21px;
