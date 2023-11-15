@@ -1,0 +1,143 @@
+/* Estilos para la sección principal */
+.main {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Estilos para el contenedor del producto */
+.producto__container {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.producto__container:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto__imagen {
+  width: 100%;
+  text-align: center;
+}
+
+.producto__imagen img {
+  width: 100%;
+  height: auto;
+}
+
+.info__producto {
+  padding: 20px;
+  text-align: center;
+}
+.info__producto button:hover {
+  background-color: var(--color-verdeOscuro);
+}
+
+.info__producto h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.info__producto p {
+  margin-bottom: 10px;
+}
+.info__producto label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.info__producto input[type="number"] {
+  width: 20%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease; /* Agregamos una transición suave para el borde */
+}
+
+.info__producto input[type="number"]:hover {
+  border-color: var(
+    --color-verdeOscuro
+  ); /* Cambia el color del borde al enfocar el input */
+}
+
+/* Estilos para la sección de envío */
+.envio__info {
+  text-align: center;
+}
+
+.envio__info p {
+  font-weight: bold;
+  color: var(--color-verdeOscuro);
+  margin-bottom: 10px;
+}
+
+.envio__info label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.envio__info input {
+  width: 50%;
+  padding: 12px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+.envio__info input:focus {
+  border: 1px solid var(--color-verdeOscuro);
+}
+
+.envio__info button {
+  background-color: var(--color-verdeOscuro);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+  font-size: 1em;
+}
+.agregar__carrito {
+  background-color: var(--color-verdeOscuro);
+  color: #fff;
+  padding: 11px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  height: auto;
+  font-size: 18px;
+  transition: background-color 0.3s ease; /* Agregamos una transición suave */
+}
+
+.agregar__carrito:hover {
+  background-color: var(--color-verdeOscuro);
+}
+@media (min-width: 768px) {
+  .producto__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .producto__imagen {
+    width: 40%;
+  }
+
+  .info__producto {
+    width: 60%;
+    padding: 20px;
+  }
+
+  .info__producto h2 {
+    font-size: 24px;
+  }
+
+  .envio__info {
+    margin-top: 20px;
+  }
+}
