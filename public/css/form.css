@@ -1,9 +1,8 @@
 * {
     box-sizing: border-box;
 }
-head {
-    display: flex;
-}
+
+
 body {
     font-family: 'Inter', sans-serif;
     background-color: #D9E2D5;
@@ -31,6 +30,13 @@ body {
     padding: 8px;
 }
 
+.acepto {
+    font-size: small;
+}
+
+.tienes-cuenta {
+    color: #3E6765;
+}
 
 
 /*Boton log in*/
@@ -59,6 +65,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    color: #3E6765;
 }
 
 ul {
@@ -70,6 +77,10 @@ ul {
     line-height: 50px;
     text-transform: none;
    
+}
+
+.signin {
+    color: #3E6765;
 }
 
 /*Tablet*/

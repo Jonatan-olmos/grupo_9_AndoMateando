@@ -18,7 +18,11 @@ app.get('/productCart',(req,res) => res.sendFile(path.join(__dirname,'views','pr
 /*Detalle del producto */
 app.get('/productDetail',(req,res) => res.sendFile(path.join(__dirname,'views','detail.html')))
 
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 8b13aaa4e65385148ad3b7fd631cb06378f9d89e
 
 /* Launcher */
 app.listen(PORT, () => console.log(`Server running in http://localhost:${PORT}`))
