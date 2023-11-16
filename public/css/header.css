@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap");
 
 /* -----------------------> HEADER <-----------------------------*/
@@ -56,7 +55,7 @@ body {
 }
 
 .buscador__nav input {
-  width: calc(100% - 40px); /* Resta el ancho del botÃ³n de bÃºsqueda al 100% */
+  width: calc(100% - 40px); /* Resta el ancho del botón de búsqueda al 100% */
   height: 100%;
   border: none;
   outline: none;
@@ -75,7 +74,7 @@ body {
   color: #f2f2f2;
   border: none;
   position: absolute;
-  margin-right: 50px; /* Ajusta la posiciÃ³n del botÃ³n */
+  margin-right: 50px; /* Ajusta la posición del botón */
   background: #3e6765;
   cursor: pointer;
 }
@@ -94,7 +93,7 @@ body {
   cursor: pointer;
 }
 
-/* Ajusta el margen derecho entre los Ã­conos */
+/* Ajusta el margen derecho entre los íconos */
 .icons__container .fa-cart-shopping {
   margin-left: 10px;
 }
@@ -175,7 +174,7 @@ label i {
 .nav__links li:hover,
 .abrir-menu i:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out; /* AnimaciÃ³n mÃ¡s suave */
+  transition: transform 0.3s ease-in-out; /* Animación más suave */
 }
 
 /* -----------------------> ANIMACION <-----------------------------*/
@@ -185,7 +184,7 @@ label i {
 @media (max-width: 667px) {
   .header {
     flex-direction: column; /* Apila los elementos verticalmente */
-    height: auto; /* Ajusta la altura automÃ¡ticamente segÃºn el contenido */
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
   }
   .header .logo {
     margin-left: -20px;
@@ -198,7 +197,7 @@ label i {
   }
 
   .buscador__nav input {
-    font-size: 16px; /* Ajusta el tamaÃ±o del texto en la barra de bÃºsqueda para dispositivos mÃ³viles */
+    font-size: 16px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
   }
 
   .buscador__nav button {
@@ -213,7 +212,7 @@ label i {
     margin-top: 40px;
   }
   .nav__links li {
-    display: none; /* Oculta las li cuando la pantalla es mÃ¡s pequeÃ±a */
+    display: none; /* Oculta las li cuando la pantalla es más pequeña */
   }
   .abrir-menu {
     display: block;
@@ -272,7 +271,7 @@ label i {
   }
   .buscador__nav input {
     text-align: right;
-    font-size: 21px; /* Ajusta el tamaÃ±o del texto en la barra de bÃºsqueda para dispositivos mÃ³viles */
+    font-size: 21px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
   }
   .buscador__nav button {
   }
