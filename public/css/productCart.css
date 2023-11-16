@@ -1,0 +1,59 @@
+.productcart__main{
+    width: 100%;
+    background-color: rgb(255, 251, 251);
+}
+body{
+    background-color: #858C88;
+    font-family: "Comic+Neue"
+}
+.section__main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.productcart__article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.article__individual{
+    width: 100%;
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.article__img{
+    width: 100%;
+
+}
+.article__description{
+    font-size: 16px;
+    width: 40%;
+}
+
+.article__aviable{
+    font-size:13px;
+    width: 40%;
+    color: green;
+}
+.article__price{
+    font-size:9px;
+    width: 40%;
+}
+.article__color{
+    font-size: 9px;
+    width: 40%;
+}
+.article__img__box{
+    width: 70%;
+}
+.article__relative{
+    display: flex;
+    position: relative;
+    right: 30%;
+    flex-direction: column;
+    font-weight: bold;
+}
