@@ -29,6 +29,15 @@ app.get('/preguntas_frecuentes',(req,res) => res.sendFile(path.join(__dirname,'v
 app.get('/productos',(req,res) => res.sendFile(path.join(__dirname,'views','productos.html')));
 /*super_combos*/
 app.get('/super_combos',(req,res) => res.sendFile(path.join(__dirname,'views','super_combos.html')));
+/*termos*/
+app.get('/termos',(req,res) => res.sendFile(path.join(__dirname,'views','termos.html')));
+
+/*mate*/
+app.get('/mate',(req,res) => res.sendFile(path.join(__dirname,'views','mate.html')));
+/*set_yerbero*/
+app.get('/set_yerbero',(req,res) => res.sendFile(path.join(__dirname,'views','set_yerbero.html')));
+
+
 
 
 /* Launcher */
