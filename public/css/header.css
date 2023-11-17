@@ -290,7 +290,8 @@ label i {
   }
   .nav__links li {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0px 20px
+    ;
   }
 
   .nav a {
@@ -306,6 +307,13 @@ label i {
 }
 @media (min-width:1023px) {
   .nav{
-    top: 95px!important;
+    display: flex;
+    width: 100%;
+    top: 102px!important;
+    flex-direction: column;
+    align-items: stretch;
+}
+.nav__links{
+  padding: 11px;
 }
 }
