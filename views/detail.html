@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/20529117ce.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+          <a href="/">  <img class="logo"  alt="logo de la marca" src="./img/logo-web.png"></ah>
+        </div>    
+        <div class="buscador__nav">
+                <nav class="nav_">
+                    <div class="buscar__header">
+                        <input type="text" placeholder="search...">
+                        <button type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </nav>
+        </div>
+        <div class="icons__container">
+                <i class="fa-regular fa-user"></i>
+                <a href="./productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li ><a class="li_nav" href="/">Inicio</a></li>
+                <li><a class="li_nav" href="/#mateartips">#Mateartips</a></li>
+                <li><a class="li_nav" href="/detail">Productos</a></li>
+                <li><a class="li_nav" href="/mates_personalizados">Mates personalizados</a></li>
+                <li><a class="li_nav" href="/contacto">Contacto</a></li>
+                <li><a class="li_nav" href="/preguntas_frecuentes">Preguntas frecuentes</a></li>
+            </ul> 
+            <label for="click" class="abrir-menu"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="click">
+        </nav>
+        
+        
+    </header>
+    
+    <main class="main">
+        <article class="producto__container">
+            <div class="producto__imagen">
+                <img src="/product-img/1.png" alt="Mate Imperial">
+            </div>
+            <div class="info__producto">
+                <h2>Mate Imperial</h2>
+                <p>
+                    El Mate Imperial es una obra maestra artesanal. Con un diseño elegante y una construcción robusta,
+                    este mate te brinda una experiencia única para disfrutar de tu mate favorito.
+                </p>
+                <ul>
+                    <li>Material: Aluminio resistente</li>
+                    <li>Acabado: Pulido a mano</li>
+                    <li>Capacidad: 300 ml</li>
+                    <li>Origen: Argentina</li>
+                </ul>
+                <p>Precio: $16.999</p>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" value="1" min="1">
+                <button class="agregar__carrito"> <i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </article>
+    
+        <div class="envio__info">
+            <p>¡Envío gratis para compras mayores a $35.00!</p>
+            <label for="codigoPostal">Ingresa tu código postal:</label>
+            <input type="text" id="codigoPostal" placeholder="Ej. 12345">
+            <button class="calcular__envio">Calcular</button>
+        </div>
+    </main>
+    
+    
+
+</body>
+</html>
