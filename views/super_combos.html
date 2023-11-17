@@ -12,81 +12,47 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img class="logo" alt="logo de la marca" src="/images/logo-web.png">
-        </div>
-        <div class="buscador__nav">
-            <nav class="nav_">
-                <div class="buscar__header">
-                    <input type="text" placeholder="search...">
-                    <button type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </nav>
-        </div>
-        <div class="icons__container">
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-        </div>
-        <nav class="nav">
-            <ul class="nav__links">
-                <li> <p class="nav__p" > <a class="li_nav" href="/">Inicio</a></p></li>
-                <li> <p class="nav__p" > <a class="li_nav" href="/#mateartips">#Mateartips</a></p></li>
-                <li> <p class="nav__p" > <a class="li_nav" href="/productos">Productos</a></p></li>
-                <li>  <a class="li_nav" href="/mates_personalizados">Mates personalizados</a> </li>
-                <li> <p class="nav__p" > <a class="li_nav" href="/contacto">Contacto</a></p></li>
-                <li>  <a class="li_nav" href="/preguntas_frecuentes">Preguntas frecuentes</a></li>
-            </ul>
-            <label for="click" class="abrir-menu"><i class="fas fa-bars"></i></label>
-            <input type="checkbox" id="click">
-        </nav>
-
-
-    </header>
     <main class="home_main">
-        <!-- Swiper -->
-        <div class="home_main_banner">
+            <!-- Swiper -->
+            <div class="home_main_banner">
             <div class="swiper mySwiper" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./img/vista_armatumate.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_armatuset.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_bombilla.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_mate.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_supercombos.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_yerbera.png" alt="">
-                    </div>
-
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/vista_armatumate.png" alt="">
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                    <img src="./img/vista_armatuset.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/vista_bombilla.png" alt=""></div>
+                <div class="swiper-slide">
+                    <img src="./img/vista_mate.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/vista_supercombos.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/vista_yerbera.png" alt="">
+                </div>
+               
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-
+          
             <!-- Swiper JS -->
             <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+          
             <!-- Initialize Swiper -->
             <script>
-                var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    freeMode: true,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                });
+              var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                freeMode: true,
+                pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true,
+                },
+              });
             </script>
         </div>
         <!---section--->
@@ -97,7 +63,8 @@
                     <li class="home_menu_destacados_ul_li"><a href="/mates_personalizados">diseña tu equipo de mate </a>
                     </li>
                     <li class="home_menu_destacados_ul_li"><a href="/">arma tu set de mate </a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/">super combos</a></li>
+            <article class="home_main-section-">
+                    <li class="home_menu_destacados_ul_li"><a href="/super_combos">super combos</a></li>
                     <li class="home_menu_destacados_ul_li"><a href="/">termos</a></li>
                     <li class="home_menu_destacados_ul_li"><a href="/">mates</a></li>
                     <li class="home_menu_destacados_ul_li"><a href="/contacto">bombillas</a></li>
@@ -105,7 +72,7 @@
                 </ul>
             </section>
             <section class="home_menu_destacados-imagenes">
-                <article class="home_main-section-img">
+                <article class="home_main-section-">
                     <a href="/"><img src="./img/vista_armatumate.png" alt=""></a>
                     <a class="home_main-section-img-letra">diseña tu equipo</a>
                 </article>
@@ -113,29 +80,25 @@
                     <a href="/"><img src="./img/vista_armatuset.png" alt=""></a>
                     <a class="home_main-section-img-letra">arma tu set de mate</a>
                 </article>
-                <article class="home_main-section-img">
-                    <a href="/mates_personalizados"><img src="./img/vista_supercombos.png" alt=""></a>
-                    <a class="home_main-section-img-letra"> combos</a>
+                <article class="">
+                  
                 </article>
-                <div class="home_main-section-img-div">
+        <div class="">
 
 
-                    <article class="home_main-section-img">
-                        <a href=""><img src="./img/vista_bombilla.png" alt=""></a>
-                        <a class="home_main-section-img-letra">bombillas</a>
-                    </article>
+                    < article class="">
+                       
+                    </>
 
-
-                    <article class="home_main-section-img">
-                        <a href=""> <img src="./img/vista_mate.png" alt=""></a>
-                        <a class="home_main-section-img-letra">mates</a>
-                    </article>
-                    <article class="home_main-section-img">
-                        <a href=""><img src="./img/vista_yerbera.png" alt=""></a>
-                        <a class="home_main-section-img-letra"> set yerbera</a>
-                    </article>
-                </div>
-            </section>
+            
+            <article class="">
+               
+            </article>
+            <article class="">
+               
+            </article>
+        </div>
+        </section>
     </main>
     <footer class="footer">
         <section class="footer_section_navegacion">
@@ -212,7 +175,7 @@
 
 
     </footer>
-
+    
 
 
 </body>

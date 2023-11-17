@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ando Mateando</title>
+    <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="https://kit.fontawesome.com/246b141a4f.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/1b447fcee0.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <header class="header">
         <div class="logo">
@@ -45,97 +41,77 @@
 
 
     </header>
-    <main class="home_main">
-        <!-- Swiper -->
-        <div class="home_main_banner">
-            <div class="swiper mySwiper" class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./img/vista_armatumate.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_armatuset.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_bombilla.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_mate.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_supercombos.png" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./img/vista_yerbera.png" alt="">
-                    </div>
-
+    <main class="productcart__main">
+        <section class="section__main">
+            <article class="productcart__article">
+                <div class="article__img__box">
+                    <img class="article__img" src="img/producto1.jpg" width="200" alt="imgagen del producto">
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <!-- Swiper JS -->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-            <!-- Initialize Swiper -->
-            <script>
-                var swiper = new Swiper(".mySwiper", {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                    freeMode: true,
-                    pagination: {
-                        el: ".swiper-pagination",
-                        clickable: true,
-                    },
-                });
-            </script>
-        </div>
-        <!---section--->
-        <section class="home_main-section">
-            <section class="home_menu_destacados">
-                <h3 class="home_menu_destacados-h3">categorias principales</h3>
-                <ul class="home_menu_destacados_ul">
-                    <li class="home_menu_destacados_ul_li"><a href="/mates_personalizados">diseña tu equipo de mate </a>
-                    </li>
-                    <li class="home_menu_destacados_ul_li"><a href="/">arma tu set de mate </a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/">super combos</a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/">termos</a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/">mates</a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/contacto">bombillas</a></li>
-                    <li class="home_menu_destacados_ul_li"><a href="/preguntas_frecuentes">set yerbero</a></li>
-                </ul>
-            </section>
-            <section class="home_menu_destacados-imagenes">
-                <article class="home_main-section-img">
-                    <a href="/"><img src="./img/vista_armatumate.png" alt=""></a>
-                    <a class="home_main-section-img-letra">diseña tu equipo</a>
-                </article>
-                <article class="home_main-section-img">
-                    <a href="/"><img src="./img/vista_armatuset.png" alt=""></a>
-                    <a class="home_main-section-img-letra">arma tu set de mate</a>
-                </article>
-                <article class="home_main-section-img">
-                    <a href="/mates_personalizados"><img src="./img/vista_supercombos.png" alt=""></a>
-                    <a class="home_main-section-img-letra"> combos</a>
-                </article>
-                <div class="home_main-section-img-div">
-
-
-                    <article class="home_main-section-img">
-                        <a href=""><img src="./img/vista_bombilla.png" alt=""></a>
-                        <a class="home_main-section-img-letra">bombillas</a>
-                    </article>
-
-
-                    <article class="home_main-section-img">
-                        <a href=""> <img src="./img/vista_mate.png" alt=""></a>
-                        <a class="home_main-section-img-letra">mates</a>
-                    </article>
-                    <article class="home_main-section-img">
-                        <a href=""><img src="./img/vista_yerbera.png" alt=""></a>
-                        <a class="home_main-section-img-letra"> set yerbera</a>
-                    </article>
+                <div class="article__individual">
+                    
+                    <p class="article__description" >descripción del producto</p>
+                    <p class="article__aviable" >Disponible</p>
+                    <p class="article__price" >$49.99</p>
+                    <p class="article__color" >Color</p>
                 </div>
-            </section>
+                <div class="article__relative">
+                    <p class="article__borrar">Borrar</p>
+                    <p class="article__duplicar">Duplicar</p>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </article>
+            <article class="productcart__article">
+                <div class="article__img__box">
+                    <img class="article__img" src="img/producto1.jpg" width="200" alt="imgagen del producto">
+                </div>
+                <div class="article__individual">
+                    
+                    <p class="article__description" >description</p>
+                    <p class="article__aviable" >Disponible</p>
+                    <p class="article__price" >Precio</p>
+                    <p class="article__color" >Color</p>
+                </div>
+                <div class="article__relative">
+                    <p class="article__borrar">Borrar</p>
+                    <p class="article__duplicar">Duplicar</p>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </article>
+            <article class="productcart__article">
+                <div class="article__img__box">
+                    <img class="article__img" src="img/producto1.jpg" width="200" alt="imgagen del producto">
+                </div>
+                <div class="article__individual">
+                    
+                    <p class="article__description" >description</p>
+                    <p class="article__aviable" >Disponible</p>
+                    <p class="article__price" >Precio</p>
+                    <p class="article__color" >Color</p>
+                </div>
+                <div class="article__relative">
+                    <p class="article__borrar">Borrar</p>
+                    <p class="article__duplicar">Duplicar</p>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </article>
+            <article class="productcart__article">
+                <div class="article__img__box">
+                    <img class="article__img" src="img/producto1.jpg" width="15" alt="imgagen del producto">
+                </div>
+                <div class="article__individual">
+                    
+                    <p class="article__description" >description</p>
+                    <p class="article__aviable" >Disponible</p>
+                    <p class="article__price" >Precio</p>
+                    <p class="article__color" >Color</p>
+                </div>
+                <div class="article__relative">
+                    <p class="article__borrar">Borrar</p>
+                    <p class="article__duplicar">Duplicar</p>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </article>
+        </section>
     </main>
     <footer class="footer">
         <section class="footer_section_navegacion">
@@ -212,9 +188,5 @@
 
 
     </footer>
-
-
-
 </body>
-
 </html>
