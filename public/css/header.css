@@ -19,10 +19,8 @@ body {
   width: 100%;
 }
 .header,
-.nav{
 
 
-}
 .nav a {
   font-weight: 500; /* O el peso de fuente que prefieras */
   font-size: 20px;
@@ -55,7 +53,7 @@ body {
 }
 
 .buscador__nav input {
-  width: calc(100% - 40px); /* Resta el ancho del botón de búsqueda al 100% */
+  width: calc(100% - 40px); /* Resta el ancho del bot�n de b�squeda al 100% */
   height: 100%;
   border: none;
   outline: none;
@@ -74,7 +72,7 @@ body {
   color: #f2f2f2;
   border: none;
   position: absolute;
-  margin-right: 50px; /* Ajusta la posición del botón */
+  margin-right: 50px; /* Ajusta la posici�n del bot�n */
   background: #3e6765;
   cursor: pointer;
 }
@@ -93,7 +91,7 @@ body {
   cursor: pointer;
 }
 
-/* Ajusta el margen derecho entre los íconos */
+/* Ajusta el margen derecho entre los �conos */
 .icons__container .fa-cart-shopping {
   margin-left: 10px;
 }
@@ -106,7 +104,7 @@ body {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 100px;
+  top: 50px;
   left: 0;
 }
 .nav__links {
@@ -174,7 +172,7 @@ label i {
 .nav__links li:hover,
 .abrir-menu i:hover {
   transform: scale(1.1);
-  transition: transform 0.3s ease-in-out; /* Animación más suave */
+  transition: transform 0.3s ease-in-out; /* Animaci�n m�s suave */
 }
 
 /* -----------------------> ANIMACION <-----------------------------*/
@@ -184,7 +182,7 @@ label i {
 @media (max-width: 667px) {
   .header {
     flex-direction: column; /* Apila los elementos verticalmente */
-    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    height: auto; /* Ajusta la altura autom�ticamente seg�n el contenido */
   }
   .header .logo {
     margin-left: -20px;
@@ -197,7 +195,7 @@ label i {
   }
 
   .buscador__nav input {
-    font-size: 16px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
+    font-size: 16px; /* Ajusta el tama�o del texto en la barra de b�squeda para dispositivos m�viles */
   }
 
   .buscador__nav button {
@@ -210,9 +208,10 @@ label i {
     height: 40px;
     position: relative;
     margin-top: 40px;
+
   }
   .nav__links li {
-    display: none; /* Oculta las li cuando la pantalla es más pequeña */
+    display: none; /* Oculta las li cuando la pantalla es m�s peque�a */
   }
   .abrir-menu {
     display: block;
@@ -257,6 +256,9 @@ label i {
 /* ----------------------->   TABLET'S   <-----------------------------*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .buscar__header{
+  margin: 0px 250px
+}
   .header .logo {
     height: 50px;
     width: auto;
@@ -271,7 +273,7 @@ label i {
   }
   .buscador__nav input {
     text-align: right;
-    font-size: 21px; /* Ajusta el tamaño del texto en la barra de búsqueda para dispositivos móviles */
+    font-size: 21px; /* Ajusta el tama�o del texto en la barra de b�squeda para dispositivos m�viles */
   }
   .buscador__nav button {
   }

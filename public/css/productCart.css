@@ -6,6 +6,9 @@ body{
     background-color: #858C88;
     font-family: "Comic+Neue"
 }
+.productcart__main{
+    margin-top: 60px;
+}
 .section__main{
     width: 100%;
     display: flex;
