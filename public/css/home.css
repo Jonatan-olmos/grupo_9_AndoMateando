@@ -19,7 +19,8 @@
 .home_main-section-img {
     position: relative;
     border-radius: 20px;
-    
+    top: 40px;
+  text-align: center;
 }
 
 .home_main-section-img img {
@@ -39,7 +40,7 @@
     text-transform: uppercase;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: -20px;
+    margin-left: -10px;
 }
 
 .home_menu_destacados_ul {

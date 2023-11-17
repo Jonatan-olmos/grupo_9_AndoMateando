@@ -19,10 +19,8 @@ body {
   width: 100%;
 }
 .header,
-.nav{
 
 
-}
 .nav a {
   font-weight: 500; /* O el peso de fuente que prefieras */
   font-size: 20px;
@@ -106,7 +104,7 @@ body {
   position: absolute;
   width: 100%;
   height: auto;
-  top: 100px;
+  top: 50px;
   left: 0;
 }
 .nav__links {
@@ -210,6 +208,7 @@ label i {
     height: 40px;
     position: relative;
     margin-top: 40px;
+
   }
   .nav__links li {
     display: none; /* Oculta las li cuando la pantalla es m�s peque�a */
@@ -257,6 +256,9 @@ label i {
 /* ----------------------->   TABLET'S   <-----------------------------*/
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .buscar__header{
+  margin: 0px 250px
+}
   .header .logo {
     height: 50px;
     width: auto;
