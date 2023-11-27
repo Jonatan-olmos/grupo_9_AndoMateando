@@ -1,0 +1,114 @@
+.main__login-registro{
+    box-sizing: border-box;
+}
+
+
+.main__login-registro{
+    font-family: 'Inter', sans-serif;
+    background-color: #D9E2D5;
+    font-weight: bold;
+   
+}
+
+.create-form {
+    padding: 20px 15px;
+
+}
+
+.control-login {
+    margin-top: 15px;
+}
+
+.control-login label {
+    margin-bottom: 15px;
+    font-style: normal;
+    display: block;
+}
+
+.control {
+    width: 100%;
+    padding: 8px;
+}
+
+.acepto {
+    font-size: small;
+}
+
+.tienes-cuenta {
+    color: #3E6765;
+}
+
+
+/*Boton log in*/
+.boton-login {
+  display: block;
+  border-radius: 8px;
+  background-color: #3E6765;
+  border: none;
+  color: #FFFFFF;
+  font-size: 16px;
+  padding: 12px 28px;
+  margin: auto;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+.boton-login:hover {
+    background-color: #FFFFFF;
+    color: #3E6765;
+}
+
+
+
+/* Forgot password*/
+.password {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #3E6765;
+}
+
+.Register_login--ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #0e1111;
+    text-decoration: none;
+    line-height: 50px;
+    text-transform: none;
+   
+}
+
+.signin {
+    color: #3E6765;
+}
+
+/*Tablet*/
+
+
+@media (min-width: 768px) {
+    .control-login {
+       align-items: center;
+    }
+    .logo {
+        width: fit-content;
+    }
+}
+
+
+
+/*Laptop*/
+
+@media(min-width: 1200px) {
+    .main__login-registro{
+        padding: 150px;
+        margin: auto;
+        width: 600px;
+    }
+    .control-login {
+        width: 350px 480px;
+        display: center;
+        align-items: center;
+    }
+    
+}

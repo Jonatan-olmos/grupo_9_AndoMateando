@@ -16,9 +16,9 @@ app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views','login.ht
 /* Carro de compras */
 app.get('/productCart',(req,res) => res.sendFile(path.join(__dirname,'views','productCart.html')));
 /*Detalle del producto */
-app.get('/productDetail',(req,res) => res.sendFile(path.join(__dirname,'views','detail.html')));
+app.get('/detail',(req,res) => res.sendFile(path.join(__dirname,'views','detail.html')));
 /*#mateartips*/
-app.get('/#mateartips',(req,res) => res.sendFile(path.join(__dirname,'views','#mateartips.html')));
+app.get('/mateartips',(req,res) => res.sendFile(path.join(__dirname,'views','#mateartips.html')));
 /*contacto */
 app.get('/contacto',(req,res) => res.sendFile(path.join(__dirname,'views','contacto.html')));
 /*mates_personalizados */
@@ -39,8 +39,6 @@ app.get('/mate',(req,res) => res.sendFile(path.join(__dirname,'views','mate.html
 /*set_yerbero*/
 app.get('/set_yerbero',(req,res) => res.sendFile(path.join(__dirname,'views','set_yerbero.html')));
 
-/*datail*/
-app.get('/detail',(req,res) => res.sendFile(path.join(__dirname,'views','detail.html')));
 
 
 /* Launcher */
