@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{
+        title : "login"
+    }) %>
+<body>
+    <%- include('../partials/header') %>
+   
+    <main class="main__login-registro">
+        <img src="../images/logo (1).jpg" style="width: 350px; height: 350px;" class="logo">
+
+        <form action="/login" method="POST" class="create-login">
+            <div class="control-login">
+                <label>Username</label>
+                <input type="text" name="Nombre" class="control">
+            </div>
+            <div class="control-login">
+                <label>Password</label>
+                <input type="text" name="password" class="control">
+            </div>
+            <div >
+                <input type="checkbox" name="rememberMe">
+                <label>Remember me</label>
+               
+            </div>
+           <nav>
+            <ul class="Register_login--ul">
+                <li><a href="#" class="password">Forgot password</a></li>
+            </ul>
+           </nav>
+
+            <button type="submit" class="boton-login">Log in</button>
+
+           <nav>
+            <ul class="Register_login--ul">
+                <li><a href="./registro" class="password">register</a></li>
+                <li><a href="/views/" class="signin">Or sign in with <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></a></li>
+            </ul>
+           </nav>
+        
+        </form>
+        
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

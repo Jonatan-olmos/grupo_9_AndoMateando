@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head',{
+        title : "ando_mateando"
+    }) %>
+<body>
+    <%- include('./partials/header') %>
+    <main class="home_main">
+            <!-- Swiper -->
+            <%- include('./partials/banner_1') %>
+        <!---section--->
+        <section class="home_main-section">
+            <%- include('./partials/menu') %>
+            <section class="home_menu_destacados-imagenes">
+                <article class="home_main-section-img">
+                    <a href="/productos/super_combos"><img src="./images/vista_supercombos.png" alt=""></a>
+                    <a class="home_main-section-img-letra" href="/super_combos" > combos</a>
+                </article>
+              
+                <article class="home_main-section-img">
+                    <a href="/productos/"><img src="./images/vista_armatuset.png" alt=""></a>
+                    <a class="home_main-section-img-letra">arma tu set de mate</a>
+                </article>
+                <article class="home_main-section-img">
+                    <a href="/productos/"><img src="./images/vista_armatumate.png" alt=""></a>
+                    <a class="home_main-section-img-letra">diseña tu equipo</a>
+                </article>
+              
+        <div class="home_main-section-img-div">
+
+            <article class="home_main-section-img">
+                <a href="/productos/set_yerbero"><img src="./images/vista_yerbera.png" alt=""></a>
+                <a class="home_main-section-img-letra" href="set_yerbero"> set yerbera</a>
+            </article>          
+           
+            <article class="home_main-section-img">
+                <a href="/productos/mate"> <img src="./images/vista_mate.png" alt=""></a>
+                <a class="home_main-section-img-letra" href="/mate">mates</a>
+            </article>
+         
+            <article class="home_main-section-img">
+                <a href="/productos/termos"><img src="./images/termo.jpg" alt=""></a>
+                <a class="home_main-section-img-letra" href="/termos">termos</a>
+            </article>
+        </div>
+        </section>
+    </main>
+    <%- include('./partials/footer') %>
+
+
+
+</body>
+
+</html>
