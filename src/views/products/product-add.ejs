@@ -12,7 +12,13 @@
             <div class="col-12 col-md-10 mx-auto">
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
-                        <h4 class="cart-title">Agregar producto</h4>
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">New product</li>
+                            </ol>
+                          </nav>
+                        <h4 class="cart-title">Agregar nuevos productos</h4>
                         <hr>
                     </div>
                     <div class="card-body">
@@ -24,12 +30,33 @@
                                   </div>
                             </div>
                             <div class="col-12 col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="descripcion" placeholder="descripcion">
-                                    <label for="descripcion">Descripción</label>
-                                  </div>  
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="category" aria-label="Floating label select example">
+                                      <option selected>Seleccionar...</option>
+                                      <option value="1">Elegantes</option>
+                                      <option value="2">Personalizados</option>
+                                      <option value="3">Clasicos</option>
+                                    </select>
+                                    <label for="floatingSelect">Selecciona la categoria</label>
+                                  </div> 
                             </div>
-                              
+                            <div class="col-12">
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" style="height: 200px; resize: none;" id="description"></textarea>
+                                    <label for="descripcion">Descripcion</label>
+                                  </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                    <input type="file" class="form-control" id="mainImage" hidden>
+                                    <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
+                            </div> 
+                            <div class="col-12 col-md-6 mb-3">
+                                <input type="file" class="form-control" id="images" hidden>
+                                <label class="btn btn-lg btn-outline-dark w-100" for="images">Imagenes</label>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3  ">
+                                <button class="btn btn-lg btn-dark" for="mainImage">Guardar</button>
+                            </div>
                         </form>
                        
                     </div>
