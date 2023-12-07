@@ -17,4 +17,7 @@ module.exports = {
     termos : (req,res) => {
         return res.render('products/termos')
     },
+    add : (req,res) => {
+        return res.render('products/product-add')
+    }
 }

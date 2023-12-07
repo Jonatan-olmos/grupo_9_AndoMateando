@@ -1,5 +1,5 @@
 const express = require('express');
-const { index, cart, mateartips, preguntas_frecuentres, contacto } = require('../controllers/indexcontroller');
+const { index, cart, mateartips, preguntas_frecuentres, contacto, admin } = require('../controllers/indexcontroller');
 
 const router = express.Router();
 
@@ -10,4 +10,6 @@ router
 .get('/mateartips',mateartips)
 .get('/contacto',contacto)
 .get('/preguntas_frecuentes',preguntas_frecuentres)
+.get('/admin', admin)
+
 module.exports = router;
