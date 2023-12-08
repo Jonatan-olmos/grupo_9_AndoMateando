@@ -7,6 +7,7 @@ const {
   super_combos,
   termos,
   add,
+  edit,
 } = require("../controllers/productscontroller");
 
 const router = express.Router();
