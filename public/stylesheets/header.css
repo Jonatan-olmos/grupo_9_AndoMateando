@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+
 .header {
   background-color: #d9e2d5;
   display: flex;
@@ -17,6 +18,7 @@ body {
   height: 85px;
   padding-bottom: 15px;
   width: 100%;
+padding-bottom: auto;
 }
 .header,
 
@@ -53,6 +55,7 @@ body {
 }
 .nav{
   top: 50px;
+
 }
 
 .buscador__nav input {
