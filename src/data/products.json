@@ -1,0 +1,33 @@
+[
+    {
+        "id" : 1,
+        "name" : "nombre",
+        "description" : "descripcion del producto",
+        "mainImage" : "1.png"
+    },
+    {
+        "id" : 2,
+        "name" : "nombre",
+        "description" : "descripcion del producto",
+        "mainImage" : "2.png"
+    },
+    {
+        "id" : 3,
+        "name" : "nombre",
+        "description" : "descripcion del producto",
+        "mainImage" : "3.png"
+    },
+    {
+        "id" : 4,
+        "name" : "nombre",
+        "description" : "descripcion del producto",
+        "mainImage" : "4.png"
+    },
+    {
+        "id" : 5,
+        "name" : "nombre",
+        "description" : "descripcion del producto",
+        "mainImage" : "5.png"
+    }
+
+]
