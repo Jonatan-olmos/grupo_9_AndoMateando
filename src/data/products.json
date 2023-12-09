@@ -1,33 +1,44 @@
 [
-    {
-        "id" : 1,
-        "name" : "nombre",
-        "description" : "descripcion del producto",
-        "mainImage" : "1.png"
-    },
-    {
-        "id" : 2,
-        "name" : "nombre",
-        "description" : "descripcion del producto",
-        "mainImage" : "2.png"
-    },
-    {
-        "id" : 3,
-        "name" : "nombre",
-        "description" : "descripcion del producto",
-        "mainImage" : "3.png"
-    },
-    {
-        "id" : 4,
-        "name" : "nombre",
-        "description" : "descripcion del producto",
-        "mainImage" : "4.png"
-    },
-    {
-        "id" : 5,
-        "name" : "nombre",
-        "description" : "descripcion del producto",
-        "mainImage" : "5.png"
-    }
-
+  {
+    "id": 1,
+    "name": "Mate Clásico",
+    "description": "Disfruta de tu mate diario con este mate clásico de alta calidad.",
+    "mainImage": "1.png",
+    "category": "clasicos"
+  },
+  {
+    "id": 2,
+    "name": "Mate Personalizado",
+    "description": "Personaliza tu experiencia de mate con este mate único diseñado según tus preferencias.",
+    "mainImage": "2.png",
+    "category": "personalizados"
+  },
+  {
+    "id": 3,
+    "name": "Set de Mates Elegantes",
+    "description": "Eleva tu ritual de mate con este set que incluye mates elegantes y accesorios a juego.",
+    "mainImage": "3.png",
+    "category": "elegantes"
+  },
+  {
+    "id": 4,
+    "name": "Mate de Viaje",
+    "description": "Lleva tu mate contigo a todas partes con este práctico mate de viaje.",
+    "mainImage": "4.png",
+    "category": "clasicos"
+  },
+  {
+    "id": 5,
+    "name": "Mate Premium",
+    "description": "Experimenta la máxima calidad con este mate premium hecho a mano con materiales de primera.",
+    "mainImage": "5.png",
+    "category": "personalizados"
+  },
+  {
+    "id": 6,
+    "name": "Mate Especial",
+    "description": "Descubre la magia de este mate especial con características únicas.",
+    "mainImage": "6.png",
+    "category": "elegantes"
+  }
 ]
