@@ -8,13 +8,8 @@
   --blanco: #fff;
   --verdeOscuro: #3e6765;
 }
-:root{
-    /* colores*/
-    --grisClaro: #D9E2D5;
-    --blanco: #fff;
-    --verdeOscuro: #3E6765;
-    
-    }
-    main{
-        margin-top: 50px;
+
+
+main{
+      margin-top: 50px;
       } 
