@@ -1,15 +1,21 @@
 .main__login-registro{
     box-sizing: border-box;
+
 }
-
-
 .main__login-registro{
     font-family: 'Inter', sans-serif;
     background-color: #D9E2D5;
     font-weight: bold;
    
-}
+   border-bottom: 1px solid #3e6765 ;
 
+   
+}
+.main__login-registro{
+    
+    display: grid;
+    place-items: center;
+}
 .create-form {
     padding: 20px 15px;
 
@@ -17,12 +23,20 @@
 
 .control-login {
     margin-top: 15px;
-}
+    width: 70%;
+    
 
+}
+.main__login-registro img{
+    width: 100%;
+    
+ 
+}
 .control-login label {
     margin-bottom: 15px;
     font-style: normal;
     display: block;
+    width: 80%;
 }
 
 .control {
@@ -93,6 +107,13 @@
     .logo {
         width: fit-content;
     }
+    .main__login-registro{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main__login-registro-sec{
+                width: 50%;
+    }
 }
 
 
@@ -103,7 +124,7 @@
     .main__login-registro{
         padding: 150px;
         margin: auto;
-        width: 600px;
+      
     }
     .control-login {
         width: 350px 480px;

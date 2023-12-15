@@ -7,8 +7,10 @@
     <%- include('../partials/header') %>
    
     <main class="main__login-registro">
-        <img src="../images/logo (1).jpg" style="width: 350px; height: 350px;" class="logo">
-
+     <section class="main__login-registro-sec"> 
+        <img class="img-logo-regis" src="../images/logo (1).jpg" >
+    </section> 
+        <section class="main__login-registro-sec">
         <form action="/login" method="POST" class="create-login">
             <div class="control-login">
                 <label>Username</label>
@@ -39,7 +41,7 @@
            </nav>
         
         </form>
-        
+    </section>
     </main>
     <%- include('../partials/footer') %>
 </body>
