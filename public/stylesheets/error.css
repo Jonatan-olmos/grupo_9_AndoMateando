@@ -1,4 +1,6 @@
+
 .page_404 {
+
   padding: 0px 0;
   background: #fff;
   font-family: 'Arvo', serif;
@@ -7,20 +9,27 @@
 }
 
 .page_404 img {
-  width:40%;
+  width:50%;
   height: 300px;
+}
+.page_404 p{
+  margin: 15px;
 }
 
 .four_zero_four_bg {
 
   background-image: url();
-  height: 50px;
+
   background-position: center;
   background-repeat: no-repeat;
 
 }
 
+.fa-down-long{
+  color: blue;
+  margin: 20px;
 
+}
 .four_zero_four_bg h1 {
   font-size: 80px;
 }
@@ -44,4 +53,10 @@
 }
 .text-center{
   margin-top: 0px;
+}
+
+@media (min-width: 900px) {
+.main-error-404{
+  margin: 0px;
+}
 }

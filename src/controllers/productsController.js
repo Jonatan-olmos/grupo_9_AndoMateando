@@ -1,9 +1,24 @@
-module.exports = {
+const fs = require('fs');
+const path = require('path');
+
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
+
+const controller = {
   detail: (req, res) => {
-    return res.render("products/detail");
+    return res.render("products/detail",
+    );
   },
   mate: (req, res) => {
-    return res.render("products/mate");
+    return res.render("products/mate",
+    {
+      products,
+			toThousand,
+    });
   },
   mates_personalizados: (req, res) => {
     return res.render("products/mates_personalizados");
@@ -24,3 +39,4 @@ module.exports = {
     return res.render("products/product-edit");
   },
 };
+module.exports = controller;

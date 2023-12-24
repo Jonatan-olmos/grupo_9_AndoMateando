@@ -24,63 +24,13 @@
     
     <div class="combos_menu_destacados-imagenes">
 
-       
+   
+        <%products.filter(product => product.producto === "mate").forEach(product => { %>
+            <%- include('../partials/cardProduct',{
+                product
+            }) %>
+        <% }) %>
 
-            <article class="combos_main-section-article">
-
-                <a href="/productos/detalle"><img class="combos_main-section-img" src="../images/fotos/mates/pastico1.jpeg" alt=""  > </a>
-                
-                <br><h2 class="combos_main-section-img-letra">mate</h2>
-                <div class="combos_main-section-div-letra">
-                    <h3 class="combos_main-section-img-letra-h3">precio </h3>                    
-                    <h4 class="combos_main-section-img-letra-h4">$300</h4>
-
-                </div>
-                    <p class="combos_main-section-img-letra-p">mate de plastico formato de trompo, con bombilla extraible</p>
-            </article>
-
-            <article class="combos_main-section-article">
-
-                <a href="/productos/detalle"><img class="combos_main-section-img" src="../images/fotos/mates/plastico2.jpeg" alt=""  > </a>
-                <br><h2 class="combos_main-section-img-letra">mate</h2>
-                <div class="combos_main-section-div-letra">
-                    <h3 class="combos_main-section-img-letra-h3">precio </h3>
-                    <h4 class="combos_main-section-img-letra-h4">$300</h4>
-                </div>
-                    <p class="combos_main-section-img-letra-p">mate de plastico formato de trompo, con bombilla extraible</p>
-            </article>
-            
-        <article class="combos_main-section-article">
-            <a href="/productos/detalle"><img class="combos_main-section-img" src="../images/fotos/mates/pastico3.jpeg" alt=""  > </a>
-            <br><h2 class="combos_main-section-img-letra"> mate</h2>
-            <div class="combos_main-section-div-letra">
-                <h3 class="combos_main-section-img-letra-h3">precio </h3>
-                <h4 class="combos_main-section-img-letra-h4">$300</h4>
-            </div>
-                <p class="combos_main-section-img-letra-p">mate de plastico formato de trompo, con bombilla extraible</p>
-        </article>
-       
-        <article class="combos_main-section-article">
-            <a href="/productos/detaatle"><img class="combos_main-section-img" src="../images/fotos/mates/madera4.jpeg" alt=""  > </a>
-            <br><h2 class="combos_main-section-img-letra">mate</h2>
-            <div class="combos_main-section-div-letra">
-                <h3 class="combos_main-section-img-letra-h3">precio </h3>
-                <h4 class="combos_main-section-img-letra-h4">$300</h4>
-            </div>
-                <p class="combos_main-section-img-letra-p">mate de madera formato de rombo, con anillo metalico</p>
-        </article>
-        <article class="combos_main-section-article">
-            <a href="/productos/detalle"><img class="combos_main-section-img" src="../images/fotos/mates/madera5.jpeg" alt=""  > </a>
-            <br><h2 class="combos_main-section-img-letra">mate</h2>
-            <div class="combos_main-section-div-letra">
-            <h3 class="combos_main-section-img-letra-h3">precio </h3>
-            <h4 class="combos_main-section-img-letra-h4">$300</h4>
-        </div>
-            <p class="combos_main-section-img-letra-p">mate de madera formato de tubo, con anillo metalico</p>
-        </article>
-       
-        
-  
 
 
 </div>

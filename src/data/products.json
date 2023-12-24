@@ -160,8 +160,25 @@
     "description": "Mate Giroscopo / Giroscopio, por fuera impresion3D Material: PLA (Ecoamigable), por dentro mate plastico inyectado Material PP (Polipropileno) , removible para su mejor limpieza.",
     "mainImage": "pastico1.jpeg",
     "category": "elegantes"
-  }
+  },
+  {
+    "id": 9,
+    "producto": "termo",
+    "name": "Mate Giroscopio 360",
+    "tamaño":"9" ,
+    "marca": "Coordenadas 3D",
+    "material": "Plastico",
+    "color":"negro",
+    "capacidad":"140 ML",
+    "precio": 4500,
+    "descuento": 10,
+    "cantidad":5,
+    "tipo": "mate",
 
+    "description": "Mate Giroscopo / Giroscopio, por fuera impresion3D Material: PLA (Ecoamigable), por dentro mate plastico inyectado Material PP (Polipropileno) , removible para su mejor limpieza.",
+    "mainImage": "pastico1.jpeg",
+    "category": "elegantes"
+  }
 
 
 
