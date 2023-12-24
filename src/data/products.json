@@ -1,44 +1,168 @@
 [
   {
     "id": 1,
+    "producto": "mate",
     "name": "Mate Clásico",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+    "category": "clasicos",
     "description": "Disfruta de tu mate diario con este mate clásico de alta calidad.",
-    "mainImage": "1.png",
-    "category": "clasicos"
+    
+    "mainImage": "1.png"
+  
   },
   {
     "id": 2,
+    "producto": "mate",
     "name": "Mate Personalizado",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+    "tipo": "mate",
+  
     "description": "Personaliza tu experiencia de mate con este mate único diseñado según tus preferencias.",
     "mainImage": "2.png",
     "category": "personalizados"
   },
   {
     "id": 3,
+    "tipo": "mate",
     "name": "Set de Mates Elegantes",
+    "producto": "mate",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+   
     "description": "Eleva tu ritual de mate con este set que incluye mates elegantes y accesorios a juego.",
     "mainImage": "3.png",
     "category": "elegantes"
   },
   {
     "id": 4,
+    "tipo": "mate",
     "name": "Mate de Viaje",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+    "producto": "mate",
+   
     "description": "Lleva tu mate contigo a todas partes con este práctico mate de viaje.",
     "mainImage": "4.png",
     "category": "clasicos"
   },
   {
     "id": 5,
+    "producto": "mate",
     "name": "Mate Premium",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+   
+    "tipo": "mate",
     "description": "Experimenta la máxima calidad con este mate premium hecho a mano con materiales de primera.",
     "mainImage": "5.png",
     "category": "personalizados"
   },
   {
     "id": 6,
+    "producto": "mate",
     "name": "Mate Especial",
+    "tamaño":"" ,
+    "marca": "",
+    "material": "",
+    "color":"",
+    "capacidad":"",
+    "precio": 0,
+    "descuento": 0,
+    "cantidad":0,
+    "tipo": "mate",
+   
     "description": "Descubre la magia de este mate especial con características únicas.",
     "mainImage": "6.png",
     "category": "elegantes"
+  },
+  {
+    "id": 7,
+    "producto": "mate",
+    "name": "Mate Plastico Urbano",
+    "tamaño":"10" ,
+    "marca": "urbano",
+    "material": "plastico",
+    "color":"negro",
+    "capacidad":"150 gramos",
+    "precio": 800,
+    "descuento": 10,
+    "cantidad":3,
+    "tipo": "mate",
+
+    "description": "MATE URBANO es un producto innovador dentro del mercado de los mates inteligentes. Se compone de un mate plástico de alta calidad y una bombilla saca-yerba única por su diseño y su doble función: filtrar y sacar toda la yerba en un instante al momento de limpiar el mate.",
+    "mainImage": "plastico2.jpeg",
+    "category": "elegantes"
+  },
+  {
+    "id": 8,
+    "producto": "mate",
+    "name": "Mate Giroscopio 360",
+    "tamaño":"9" ,
+    "marca": "Coordenadas 3D",
+    "material": "Plastico",
+    "color":"negro",
+    "capacidad":"140 ML",
+    "precio": 4500,
+    "descuento": 10,
+    "cantidad":5,
+    "tipo": "mate",
+
+    "description": "Mate Giroscopo / Giroscopio, por fuera impresion3D Material: PLA (Ecoamigable), por dentro mate plastico inyectado Material PP (Polipropileno) , removible para su mejor limpieza.",
+    "mainImage": "pastico3.jpeg",
+    "category": "elegantes"
+  },
+  {
+    "id": 8,
+    "producto": "mate",
+    "name": "Mate Giroscopio 360",
+    "tamaño":"9" ,
+    "marca": "Coordenadas 3D",
+    "material": "Plastico",
+    "color":"negro",
+    "capacidad":"140 ML",
+    "precio": 4500,
+    "descuento": 10,
+    "cantidad":5,
+    "tipo": "mate",
+
+    "description": "Mate Giroscopo / Giroscopio, por fuera impresion3D Material: PLA (Ecoamigable), por dentro mate plastico inyectado Material PP (Polipropileno) , removible para su mejor limpieza.",
+    "mainImage": "pastico1.jpeg",
+    "category": "elegantes"
   }
+
+
+
+
 ]

@@ -18,6 +18,7 @@ module.exports = {
   preguntas_frecuentres: (req, res) => {
     return res.render("extras/preguntas_frecuentes");
   },
+
   contacto: (req, res) => {
     return res.render("extras/contacto");
   },
