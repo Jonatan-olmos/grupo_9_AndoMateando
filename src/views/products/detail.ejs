@@ -2,7 +2,7 @@
 <html lang="en">
 
     <%- include('../partials/head',{
-        title : "detail"
+        title: name
     }) %>
 
 <body>
@@ -10,21 +10,39 @@
     <main class="main">
         <article class="producto__container">
             <div class="producto__imagen">
-                <img src="/product-img/1.png" alt="Mate Imperial">
+                <img src="/images/fotos/mates/<%= mainImage %>" alt="Mate Imperial">
             </div>
             <div class="info__producto">
-                <h2>Mate Imperial</h2>
+                <h2><%= name %></h2>
                 <p>
-                    El Mate Imperial es una obra maestra artesanal. Con un diseño elegante y una construcción robusta,
-                    este mate te brinda una experiencia única para disfrutar de tu mate favorito.
+                   <%= description %>
+               
                 </p>
                 <ul>
-                    <li>Material: Aluminio resistente</li>
-                    <li>Acabado: Pulido a mano</li>
-                    <li>Capacidad: 300 ml</li>
-                    <li>Origen: Argentina</li>
+                    <li>Material: <%= material %></li>
+                    <li>Tamaño: <%= tamaño %>CM</li>
+                    <li>Capacidad: <%= capacidad %>ML</li>
+                    <li>Marca: <%= marca%></li>
+                    <li>Color: <%= color %></li>
+                    <li>Disponible: <%= cantidad %></li>
                 </ul>
-                <p>Precio: $16.999</p>
+                
+                <% if (descuento){ %>
+                    <p >
+                        <span>$<%= toThousand(precio) %></span>
+                        /
+                        <b><%= descuento%>% OFF</b>
+                    </p>
+                
+                        <p >
+                            $ <%= toThousand((precio - (precio * descuento) / 100).toFixed(0)) %>
+                        </p>
+                    <% } else{ %>
+                    
+                    <p >
+                        $ <%= precio %>
+                    </p>
+                    <% } %>
                 <label for="cantidad">Cantidad:</label>
                 <input type="number" id="cantidad" name="cantidad" value="1" min="1">
                 <button class="agregar__carrito"> <i class="fas fa-shopping-cart"></i></button>
@@ -37,6 +55,8 @@
             <input type="text" id="codigoPostal" placeholder="Ej. 12345">
             <button class="calcular__envio">Calcular</button>
         </div>
+
+        
     </main>
     
     <%- include('../partials/footer') %>

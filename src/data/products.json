@@ -133,7 +133,7 @@
     "marca": "Coordenadas 3D",
     "material": "Plastico",
     "color":"negro",
-    "capacidad":"140 ML",
+    "capacidad":"140 ",
     "precio": 4500,
     "descuento": 10,
     "cantidad":5,
@@ -163,7 +163,7 @@
   },
   {
     "id": 9,
-    "producto": "termo",
+    "producto": "termos",
     "name": "Mate Giroscopio 360",
     "tamaño":"9" ,
     "marca": "Coordenadas 3D",

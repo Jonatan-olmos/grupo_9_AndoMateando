@@ -1,5 +1,11 @@
 const { leerJSON } = require("../data");
+const fs = require('fs');
+const path = require('path');
 
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   index: (req, res) => {
     const products = leerJSON("products");
@@ -10,7 +16,11 @@ module.exports = {
   },
 
   cart: (req, res) => {
-    return res.render("productCart");
+    return res.render("productCart",
+    {
+      products,
+			toThousand,
+    })
   },
   mateartips: (req, res) => {
     return res.render("extras/mateartips");

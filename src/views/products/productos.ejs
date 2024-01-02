@@ -12,7 +12,7 @@
             <%- include('../partials/banner_1') %>
         <!---section--->
         <section class="combos_productos-titulo">
-            <h1 class="combos_productos-titulo-h1">termos</h1>
+            <h1 class="combos_productos-titulo-h1">todos los productos</h1>
         </section>
         <i class="fa-sharp fa-solid fa-filter" > filtrar</i>
        
@@ -21,17 +21,16 @@
         </section>
 <section class="combos_productos">
    
-            <div class="combos_menu_destacados-imagenes">
-                
-                <%products.filter(product => product.producto === "termos").forEach(product => { %>
-                    <%- include('../partials/cardProduct',{
-                        product
-                    }) %>
-                <% }) %>
-             
-            </div>
+    <div class="combos_menu_destacados-imagenes">
+               
 
-
+        <% products.forEach(product => { %>
+            <%- include('../partials/cardProduct',{
+                product
+            }) %>
+        <% }) %>
+    
+    </div>
             
 
       

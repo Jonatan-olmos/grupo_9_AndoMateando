@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%- include('../partials/head',{
-  
+    title : "set_yerbero"
 }) %>
 
 <body>
@@ -12,25 +12,29 @@
             <%- include('../partials/banner_1') %>
         <!---section--->
         <section class="combos_productos-titulo">
-            <h1 class="combos_productos-titulo-h1">termos</h1>
+            <h1 class="combos_productos-titulo-h1">bombillas</h1>
         </section>
         <i class="fa-sharp fa-solid fa-filter" > filtrar</i>
-       
+        <section class="arma_tu_equipo_atras_sig">
+            <h1 class="arma_tu_equipo_atras_sig-h1"><a href="/productos/arma_tu_equipo3">atras</a></h1>
+           <h1 class="arma_tu_equipo_atras_sig-h1-2"> <a href="/productos/arma_tu_equipo5">siguiente</a></h1>
+        </section>
         <section class="home_main-section">
             <%- include('../partials/menu') %>
         </section>
 <section class="combos_productos">
    
+           
             <div class="combos_menu_destacados-imagenes">
                 
-                <%products.filter(product => product.producto === "termos").forEach(product => { %>
-                    <%- include('../partials/cardProduct',{
+                <%products.filter(product => product.producto === "bombillas").forEach(product => { %>
+                    <a href="/productos/arma_tu_equipo5"></a><%- include('../partials/cardProduct2',{
                         product
                     }) %>
                 <% }) %>
-             
+                </a>
             </div>
-
+            
 
             
 
