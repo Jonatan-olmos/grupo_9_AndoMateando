@@ -59,12 +59,7 @@ const controller = {
 			toThousand,
     });
   },
-  add: (req, res) => {
-    return res.render("products/product-add");
-  },
-  edit: (req, res) => {
-    return res.render("products/product-edit");
-  },
+ 
 
   arma_tu_equipo: (req, res) => {
     return res.render("products/arma_tu_equipo",
