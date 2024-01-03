@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<%- include('../partials/head', {
-    title : 'Nuevo'
+<html lang="ES">
+
+<%- include('../partials/head',{
+	title : 'Nuevo'
 }) %>
+
+
 <body>
-   
-    <%- include('../partials/header-admin') %> 
-    
+    <%- include('../partials/header-admin') %>
     <main class="container">
         <section class="row my-5">
             <div class="col-12 col-md-10 mx-auto">
@@ -14,129 +15,72 @@
                     <div class="card-header d-flex justify-content-between">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">New product</li>
+                              <li class="breadcrumb-item"><a href="/admin" class="text-primary">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Nuevo restaurant</li>
                             </ol>
                           </nav>
-                        <h4 class="cart-title">Agregar nuevos productos</h4>
-                        <hr>
                     </div>
                     <div class="card-body">
-                        <form action="" class="row">
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="name" type="text" class="form-control" id="name" placeholder="Nombre del producto">
-                                    <label for="name">Producto</label>
-                                  </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Nombre" type="text" class="form-control" id="Nombre" placeholder="Nombre">
+                        <form action="/productos/crear" method="POST" class="row" enctype="multipart/form-data">
+                            <h3>Nuevo Restaurante</h3>
+                            <hr>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating ">
+                                    <input name="name" type="text" class="form-control" id="name" >
                                     <label for="name">Nombre</label>
                                   </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Tamaño" type="text" class="form-control" id="Tamaño" placeholder="Tamaño">
-                                    <label for="name">Tamaño</label>
-                                  </div>
+                            <div class="col-12 col-md-6 mb-3">
+                              <div class="form-floating">
+                                <input name="address" type="text" class="form-control" id="address">
+                                <label for="address">Dirección</label>
+                              </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
+                            <div class="col-12 mb-3 d-flex justify-content-between align-items-center gap-3">
+                                <div class="form-floating w-100">
+                                  <input name="url_map" type="text" class="form-control" id="address" >
+                                  <label for="address">URL Google Maps</label>
+                                </div>
+                                <a href="https://www.google.com/maps" target="_blank" class="btn btn-lg btn-outline-dark"><i class="fa-solid fa-map-location-dot"></i></a>
+                              </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
                                     <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                                      <option selected>Seleccionar...</option>
-                                      <option value="Clasicos">Clasicos</option>
-                                      <option value="Elegantes">Elegantes</option>
-                                      <option value="Personalizados">Personalizados</option>
+                                      <option value="" selected hidden></option>
+                                      <option value="barato">Barato</option>
+                                      <option value="romantico">Romantico</option>
+                                      <option value="sofisticado">Sofisticado</option>
                                     </select>
-                                    <label for="floatingSelect">Selecciona la categoria</label>
-                                  </div> 
+                                    <label for="category">Categoría</label>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-md-3 mb-3">
+                                  <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
+                                  <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
+                              </div>
+                              <div class="col-12 col-md-3 mb-3">
+                                <input  name="images" type="file" class="form-control" id="images" hidden multiple>
+                                <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Marca" type="text" class="form-control" id="Marca" placeholder="Marca">
-                                    <label for="name">Marca</label>
+                            <div class="col-12 mb-3">
+                                <div class="form-floating">
+                                    <textarea name="description" class="form-control" id="description" style="height: 150px;"></textarea>
+                                    <label for="description">Descripción</label>
                                   </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <select name="Material" class="form-select" id="Material" aria-label="Floating label select example">
-                                      <option selected>Material...</option>
-                                      <option value="Clasicos">Plastico</option>
-                                      <option value="Elegantes">Madera</option>
-                                      <option value="Personalizados">Vidrio</option>
-                                      <option value="Personalizados">Aluminio</option>
-                                      <option value="Personalizados">Metal</option>
-                                      <option value="Personalizados">Tela</option>
-                                    </select>
-                                    <label for="floatingSelect">Selecciona la categoria</label>
-                                  </div> 
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Color" type="text" class="form-control" id="Color" placeholder="Color">
-                                    <label for="name">Color</label>
-                                  </div>
-                            </div>
-                            
-                        
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <select name="Capacidad" class="form-select" id="Capacidad" aria-label="Floating label select example">
-                                      <option selected>Capacidad...</option>
-                                      <option value="Clasicos">350 ML</option>
-                                      <option value="Elegantes">500 ML</option>
-                                      <option value="Personalizados">750 ML</option>
-                                      <option value="Personalizados">1 LITRO</option>
-                                     
-                                    </select>
-                                    <label for="floatingSelect">Selecciona la categoria</label>
-                                  </div> 
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Precio" type="text" class="form-control" id="Precio" placeholder="Color">
-                                    <label for="name">Precio</label>
-                                  </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Descuento" type="text" class="form-control" id="Color" placeholder="Descuento">
-                                    <label for="name">Descuento</label>
-                                  </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-floating mb-3">
-                                    <input name="Cantidad" type="text" class="form-control" id="Color" placeholder="Cantidad">
-                                    <label for="name">Cantidad</label>
-                                  </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating mb-3">
-                                    <textarea name="description" class="form-control" style="height: 200px; resize: none;" id="description"></textarea>
-                                    <label for="descripcion">Descripcion</label>
-                                  </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                    <input type="file" class="form-control" id="mainImage" hidden>
-                                    <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
-                            </div> 
-                            <div class="col-12 col-md-6 mb-3">
-                                <input type="file" class="form-control" id="images" hidden>
-                                <label class="btn btn-lg btn-outline-dark w-100" for="images">Imagenes</label>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3  ">
-                                <button class="btn btn-lg btn-dark" for="mainImage">Guardar</button>
+                           
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-lg btn-dark">Guardar cambios</button>
                             </div>
                         </form>
-                       
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <%- include('../partials/scripts') %>
 
-    <%- include('../partials/scripts') %> 
 </body>
 </html>

@@ -6,7 +6,7 @@ const {
   preguntas_frecuentres,
   contacto,
   admin,
-  error,
+ 
 
 } = require("../controllers/indexController");
 

@@ -25,6 +25,7 @@ const controller = {
      
     });
   },
+  
   mate: (req, res) => {
     return res.render("products/mate",
     {
@@ -92,6 +93,7 @@ arma_tu_equipo4: (req, res) => {
     toThousand,
   });
 },
+
 
 
 };
