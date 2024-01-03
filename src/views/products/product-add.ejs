@@ -25,52 +25,128 @@
                             <h3>Nuevo Restaurante</h3>
                             <hr>
                             <div class="col-12 col-md-6 mb-3">
+                              <div class="form-floating">
+                                  <select name="producto" class="form-select" id="producto" aria-label="Floating label select example">
+                                    <option <%= producto=== "mate" && 'selected'%> value="mate">mate</option>
+                                    <option <%= producto=== "termo" && 'selected'%> value="termo">termo</option>
+                                    <option <%= producto=== "yerbero" && 'selected'%> value="yerbero">yerbero</option>
+                                    <option <%= producto=== "bombilla" && 'selected'%> value="bombilla">bombilla</option>
+                                    <option <%= producto=== "combo" && 'selected'%> value="combo">combo</option>
+                                  </select>
+                                  <label for="producto">producto</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
                                 <div class="form-floating ">
-                                    <input name="name" type="text" class="form-control" id="name" >
+                                    <input name="name" type="text" class="form-control" id="name" value="<%= name %>">
                                     <label for="name">Nombre</label>
                                   </div>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                               <div class="form-floating">
-                                <input name="address" type="text" class="form-control" id="address">
-                                <label for="address">Dirección</label>
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3 d-flex justify-content-between align-items-center gap-3">
-                                <div class="form-floating w-100">
-                                  <input name="url_map" type="text" class="form-control" id="address" >
-                                  <label for="address">URL Google Maps</label>
+                                  <select name="material" class="form-select" id="material" aria-label="Floating label select example">
+                                    <option <%= material=== "Madera" && 'selected'%> value="Madera">Madera</option>
+                                    <option <%= material=== "Plastico" && 'selected'%> value="Plastico">Plastico</option>
+                                    <option <%= material=== "Metal" && 'selected'%> value="Metal">Metal</option>
+                                    <option <%= material=== "Aluminio" && 'selected'%> value="Aluminio">Aluminio</option>
+                                    <option <%= material=== "Vidrio" && 'selected'%> value="Vidrio">Vidrio</option>
+                                    <option <%= material=== "Hierbas" && 'selected'%> value="Hierbas">Hierbas</option>
+                                    <option <%= material=== "tela" && 'selected'%> value="tela">Tela</option>
+                                  
+                                  </select>
+                                  <label for="material">material</label>
                                 </div>
-                                <a href="https://www.google.com/maps" target="_blank" class="btn btn-lg btn-outline-dark"><i class="fa-solid fa-map-location-dot"></i></a>
-                              </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                                      <option value="" selected hidden></option>
-                                      <option value="barato">Barato</option>
-                                      <option value="romantico">Romantico</option>
-                                      <option value="sofisticado">Sofisticado</option>
-                                    </select>
-                                    <label for="category">Categoría</label>
-                                  </div>
-                              </div>
-                              <div class="col-12 col-md-3 mb-3">
-                                  <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
-                                  <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
-                              </div>
-                              <div class="col-12 col-md-3 mb-3">
-                                <input  name="images" type="file" class="form-control" id="images" hidden multiple>
-                                <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
                             </div>
-                            <div class="col-12 mb-3">
+                            <div class="col-12 col-md-6 mb-3">
+                              <div class="form-floating ">
+                                  <input name="marca" type="text" class="form-control" id="marca" value="<%=marca %>">
+                                  <label for="marca">marca</label>
+                                </div>
+                          </div>
+                          <div class="col-12 col-md-6 mb-3">
+                            <div class="form-floating">
+                                <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+                                  <option <%= category== "elegantes" && 'selected'%> value="elegantes">Elegantes</option>
+                                  <option <%= category== "clasicos" && 'selected'%> value="clasicos">Clasicos</option>
+                                  <option <%= category== "personalizado" && 'selected'%> value="personalizado">Personalizado</option>
+                                  <option <%= category== "sin Categoria" && 'selected'%> value="sin Categoria">Sin Categoria</option>
+                                  
+                                </select>
+                                <label for="category">category</label>
+                              </div>
+                          </div>
+                          <div class="col-12 col-md-6 mb-3">
+                            <div class="form-floating ">
+                                <input name="precio" type="text" class="form-control" id="precio" value="<%= precio %>">
+                                <label for="precio">Precio</label>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <div class="form-floating">
+                              <select name="color" class="form-select" id="color" aria-label="Floating label select example">
+                                <option <%= color== "marron" && 'selected'%> value="marron">Marron</option>
+                                <option <%= color== "negro" && 'selected'%> value="negro">Negro</option>
+                                <option <%= color== "azul" && 'selected'%> value="azul">Azul</option>
+                                <option <%= color== "verde" && 'selected'%> value="verde">Verde</option>
+                                <option <%= color== "amarillo" && 'selected'%> value="amarillo">Amarillo</option>
+                                <option <%= color== "naranja" && 'selected'%> value="naranja">Naranja</option>
+                                <option <%= color== "violeta" && 'selected'%> value="violeta">Violeta</option>
+                                <option <%= color== "blanco" && 'selected'%> value="blanco">Blanco</option>
+                                <option <%= color== "cafe" && 'selected'%> value="cafe">cafe</option>
+
+                              </select>
+                              <label for="color">color</label>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                          <div class="form-floating ">
+                              <input name="cantidad" type="number" class="form-control" id="cantidad" value="<%= cantidad %>">
+                              <label for="cantidad">Cantidad</label>
+                            </div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="form-floating">
+                            <select name="capacidad"  class="form-select" id="capacidad" aria-label="Floating label select example">
+                              <option <%= capacidad=== "350 ML" && 'selected'%> value="350 ML">350 ML</option>
+                              <option <%= capacidad=== "500 ML" && 'selected'%> value="500 ML">500 ML</option>
+                              <option <%= capacidad=== "750 ML" && 'selected'%> value="750 ML">750 ML</option>
+                              <option <%= capacidad=== "1 LITRO" && 'selected'%> value="1 LITRO">1 LITRO</option>
+                              <option <%= capacidad=== "combo" && 'selected'%> value="combo">combo</option>
+                            </select>
+                            <label for="capacidad">Capacidad</label>
+                          </div>
+                      </div>
+                      <div class="col-12 col-md-6 mb-3">
+                        <div class="form-floating ">
+                            <input name="tamanio" type="number" class="form-control" id="tamanio" value="<%= tamanio %>">
+                            <label for="tamanio">tamaño</label>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-3">
+                      <div class="form-floating ">
+                          <input name="descuento" type="number" class="form-control" id="descuento" value="<%= descuento %>">
+                          <label for="descuento">descuento</label>
+                        </div>
+                  </div>
+                     
+                      <div class="col-12 col-md-3 mb-3">
+                        <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
+                        <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
+                    </div>
+                    <div class="col-12 col-md-3 mb-3">
+                      <input  name="images" type="file" class="form-control" id="images" hidden multiple>
+                      <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
+                  </div>
+
                                 <div class="form-floating">
-                                    <textarea name="description" class="form-control" id="description" style="height: 150px;"></textarea>
+                                    <textarea name="description" class="form-control" id="description" style="height: 150px;"><%= description %></textarea>
                                     <label for="description">Descripción</label>
                                   </div>
                             </div>
+                            
                            
                             <div class="col-12 d-flex justify-content-end">
-                                <button type="submit" class="btn btn-lg btn-dark">Guardar cambios</button>
+                                <button class="btn btn-lg btn-dark">Guardar cambios</button>
                             </div>
                         </form>
 

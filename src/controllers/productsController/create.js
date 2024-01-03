@@ -8,11 +8,11 @@ module.exports = (req,res) => {
     
 
 
-    const {name, address,url_map, description, category} = req.body;
+    const {name,category,tamanio,description,marca,descuento,material,producto,precio,capacidad,cantidad, } = req.body;
 
     const mainImage = req.file;
 
-    const newProduct = new Product(name, address, url_map, description, category, mainImage)
+    const newProduct = new Product(name,category,tamanio,description,marca,descuento,material,producto,precio,capacidad,cantidad, mainImage)
     const products = leerJSON('products');
 
     products.push(newProduct);

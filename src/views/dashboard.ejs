@@ -13,7 +13,8 @@
                 <div class="card">
                     <div class="card-header d-flex justify-content-between">
                         <h4 class="cart-title">Productos</h4>
-                        <a class="btn btn-dark" href="/productos/agregar">Nuevo</a>
+                     <a class="btn btn-dark" href="/productos/agregar">Nuevo</a>
+
                     </div>
                     <div class="card-body table-responsive">
                         <table class="table">
@@ -27,7 +28,7 @@
                               </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({id, name, description,category, mainImage,precio}) => { %>
+                                <% products.forEach(({id, name, description,category,color,producto, mainImage,precio}) => { %>
                                     <tr>
                                         <th scope="row"><%= id %></th>
                                         <td><%= name %></td>
@@ -49,9 +50,9 @@
                                                         <i class="fa-solid fa-trash"></i>
                                                     </button>
                                                     <%- include('./partials/modal-show-product-admin',{ id,
-                                                        name, category, mainImage, description, precio
+                                                        name, category, mainImage, description, precio,producto,
                                                         }) %>
-                                                    <%- include('./partials/modal-warning-delete-product-admin',{ id, name
+                                                    <%- include('./partials/modal-warning-delete-product-admin',{ id, name,producto,
                                                         }) %>
                                                 </div>
                                         </td>
