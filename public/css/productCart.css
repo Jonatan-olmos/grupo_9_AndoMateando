@@ -1,0 +1,154 @@
+.productcart__main{
+    width: 100%;
+    background-color: rgb(255, 251, 251);
+}
+body{
+    background-color: #858C88;
+    font-family: "Comic+Neue"
+}
+.productcart__main{
+    margin-top: 60px;
+}
+.section__main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.productcart__article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.article__individual{
+    width: 100%;
+    
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.article__individual p{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.article__img{
+    width: 100%;
+
+}
+.article__description{
+    font-size: 16px;
+    width: 40%;
+}
+
+.article__aviable{
+    font-size:13px;
+    width: 40%;
+    color: green;
+}
+.article__price{
+    font-size:9px;
+    width: 40%;
+}
+.article__color{
+    font-size: 9px;
+    width: 40%;
+}
+.article__img__box{
+    width: 70%;
+    position: relative;
+    top: 30px;
+}
+.article__relative{
+    display: flex;
+    position: relative;
+    right: 48px;
+    flex-direction: column;
+    font-weight: bold;
+    top:59px;
+}
+.article__borrar{
+    margin-top: 5px;
+
+}
+.article__duplicar{
+    margin-top: 5px;
+}
+.article__relative i{
+    position: relative;
+    left: 55px;
+    bottom: 40px;
+}
+/*tablet*/
+@media(min-width: 428px){
+    .article__description{
+        font-size: 27px !important;
+    }
+    .article__aviable{
+        font-size: 22px!important;
+    }
+    .article__price{
+        font-size:35px!important;
+
+    }
+    .article__color{
+        font-size: 27px!important;
+
+    }
+    .article__individual{
+        margin-top: 35px;
+    }
+    .article__img{
+        width: 85%!important;
+        bottom: 25px !important;
+        position: relative !important;
+    }
+    .article__relative{
+        right: 200px !important;
+        top: 70px !important;
+    }
+
+}
+@media(min-width: 780px){
+    .article__description{
+        font-size: 45px !important;
+    }
+    .article__aviable{
+        font-size: 32px!important;
+    }
+    .article__price{
+        font-size:45px!important;
+
+    }
+    .article__color{
+        font-size: 37px!important;
+
+    }
+    .article__individual{
+        margin-top: 35px;
+        position: relative;
+        right: 70px;
+    }
+    .article__img{
+        width: 77%!important;
+        bottom: 25px !important;
+        position: relative !important;
+    }
+    .article__img__box{
+        width: 100%;
+    }
+    .article__relative{
+        right: 270px !important;
+        top: 88px !important;
+        font-size: 27px;
+    }
+    .article__relative i{
+        position: relative;
+        left: 91px;
+        bottom: 61px;
+    }
+    }
+
+
+    
+
