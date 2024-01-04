@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head',{
-        title : "registro"
-    }) %>
-<body>
+  <%- include('../partials/head', {
+    title: "registro"
+  }) %>
+  <body>
     <%- include('../partials/header') %>
 
     <main class="main__login-registro">
-        <section class="main__login-registro-sec"> 
-        <img src="../images/logo (1).jpg" style="width: 350px; height: 350px;" class="logo">
-    </section> 
-    <section class="main__login-registro-sec">
+      <section class="main__login-registro-sec">
+        <img
+          src="../images/logo (1).jpg"
+          style="width: 350px; height: 350px;"
+          class="logo"
+        />
+      </section>
+      <section class="main__login-registro-sec">
         <form action="/login" method="POST" class="create-login">
-            <div class="control-login">
-                <label>Continúa con Facebook <i class="fa-brands fa-facebook"></i></label>
-                <input type="text" name="continuaFacebook" class="control">
-            </div>
-            <div class="control-login">
-                <label>Continúa con Google <i class="fa-brands fa-google-plus"></i></label>
-                <input type="text" name="continuaGoogle" class="control">
-            </div>
+          <div class="control-login">
+            <label>Nombre</label>
+            <input type="text" name="nombre" class="control" placeholder="Ej. Juan Pérez">
+          </div>
+          <div class="control-login">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" class="control" placeholder="Ej. correo@ejemplo.com">
+          </div>
+          <div class="control-login">
+            <label>Teléfono (opcional)</label>
+            <input type="tel" name="telefono" class="control" placeholder="Ej. 123-456-7890">
+          </div>
+          <div class="control-login">
+            <label>Contraseña</label>
+            <input type="password" name="contrasena" class="control" placeholder="Ej. Contraseña123">
+          </div>
+          <div class="control-login">
+            <label>Confirmar contraseña</label>
+            <input type="password" name="confirmarContrasena" class="control" placeholder="Ej. Contraseña123">
+          </div>
+          <div>
+            <input type="checkbox" name="acepto">
+            <label class="acepto">Acepto los Términos, Condiciones y Políticas de AndoMateando</label>
+          </div>
 
-            <a>O continúa con</a>
-            <div class="control-login">
-                <label>Correo electrónico</label>
-                <input type="text" name="email" class="control">
-            </div>
-            <div class="control-login">
-                <label>Contraseña</label>
-                <input type="text" name="contaseña" class="control">
-            </div>
-            <div >
-                <input type="checkbox" name="acepto">
-                <label class="acepto">Acepto los Términos, Condiciones y Políticas de AndoMateando</label>
-            
-            </div>
+          <button type="submit" class="boton-login">Regístrate</button>
 
-            <button type="submit" class="boton-login">Regístrate</button>
-
-           <nav>
+          <nav>
             <ul class="Register_login--ul">
-                <li><a href="#" class="tienes-cuenta">¿Tienes una cuenta? Inicia Sesión</a></li>
+              <li><a href="#" class="tienes-cuenta">¿Tienes una cuenta? Inicia Sesión</a></li>
             </ul>
-           </nav>
-        
+          </nav>
         </form>
-    </section>
+      </section>
     </main>
     <%- include('../partials/footer') %>
-   
-    
-</body>
+  </body>
 </html>

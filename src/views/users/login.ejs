@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head',{
-        title : "login"
-    }) %>
-<body>
+  <%- include('../partials/head', {
+    title: "login"
+  }) %>
+  <body>
     <%- include('../partials/header') %>
-   
+
     <main class="main__login-registro">
-     <section class="main__login-registro-sec"> 
-        <img class="img-logo-regis" src="../images/logo (1).jpg" >
-    </section> 
-        <section class="main__login-registro-sec">
+      <section class="main__login-registro-sec">
+        <img class="img-logo-regis" src="../images/logo (1).jpg">
+      </section>
+      <section class="main__login-registro-sec">
         <form action="/login" method="POST" class="create-login">
-            <div class="control-login">
-                <label>Username</label>
-                <input type="text" name="Nombre" class="control">
-            </div>
-            <div class="control-login">
-                <label>Password</label>
-                <input type="text" name="password" class="control">
-            </div>
-            <div >
-                <input type="checkbox" name="rememberMe">
-                <label>Remember me</label>
-               
-            </div>
-           <nav>
+          <div class="control-login">
+            <label>Nombre de usuario</label>
+            <input type="text" name="Nombre" class="control" placeholder="Ej. usuario123">
+          </div>
+          <div class="control-login">
+            <label>Contraseña</label>
+            <input type="password" name="password" class="control" placeholder="Ej. Contraseña123">
+          </div>
+          <div>
+            <input type="checkbox" name="rememberMe">
+            <label>Recuérdame</label>
+          </div>
+          <nav>
             <ul class="Register_login--ul">
-                <li><a href="#" class="password">Forgot password</a></li>
+              <li><a href="#" class="password">¿Olvidaste tu contraseña?</a></li>
             </ul>
-           </nav>
+          </nav>
 
-            <button type="submit" class="boton-login">Log in</button>
+          <button type="submit" class="boton-login">Iniciar sesión</button>
 
-           <nav>
+          <nav>
             <ul class="Register_login--ul">
-                <li><a href="./registro" class="password">register</a></li>
-                <li><a href="/views/" class="signin">Or sign in with <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="./registro" class="password">Registrarse</a></li>
+              <li><a href="/views/" class="signin">O inicia sesión con <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></a></li>
             </ul>
-           </nav>
-        
+          </nav>
         </form>
-    </section>
+      </section>
     </main>
     <%- include('../partials/footer') %>
-</body>
+  </body>
 </html>

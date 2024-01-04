@@ -1,21 +1,16 @@
 [
-
-{    "id": 1,
-      "name": "lucas",
-      "apellido": "palacio",
-      "edad": "20",
-      "fecha de nacimiento": "14/1/2023",
-      "cuidad": "moron"
-      "description": "Disfruta de tu mate diario con este mate clásico de alta calidad.",
-      "mainImage": "1.png",
-      "images": [],
-      
-
-
-}
-
-
-
-
-
+  {
+    "id": 1,
+    "nombre": "Usuario1",
+    "email": "usuario1@example.com",
+    "telefono": "123456789",
+    "contraseña": "contrasena123"
+  },
+  {
+    "id": 2,
+    "nombre": "Usuario2",
+    "email": "usuario2@example.com",
+    "telefono": "987654321",
+    "contraseña": "clave456"
+  }
 ]
