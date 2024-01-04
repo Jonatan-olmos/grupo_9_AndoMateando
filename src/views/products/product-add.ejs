@@ -1,74 +1,97 @@
-<!DOCTYPE html>
-<html lang="ES">
 
-<%- include('../partials/head',{
-	title : 'Nuevo'
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../partials/head', {
+    title: 'Nuevo producto'
 }) %>
 
+<body class="bg-light">
 
-<body>
     <%- include('../partials/header-admin') %>
-    <main class="container">
+
+    <main class="container mt-5">
         <section class="row my-5">
             <div class="col-12 col-md-10 mx-auto">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
+                <div class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="/admin" class="text-primary">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Nuevo restaurant</li>
+                                <li class="breadcrumb-item"><a href="/admin" class="text-light">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Nuevo producto</li>
                             </ol>
-                          </nav>
+                        </nav>
                     </div>
                     <div class="card-body">
                         <form action="/productos/crear" method="POST" class="row" enctype="multipart/form-data">
-                            <h3>Nuevo Restaurante</h3>
-                            <hr>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating ">
-                                    <input name="name" type="text" class="form-control" id="name" >
-                                    <label for="name">Nombre</label>
-                                  </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                              <div class="form-floating">
-                                <input name="address" type="text" class="form-control" id="address">
-                                <label for="address">Dirección</label>
-                              </div>
-                            </div>
-                            <div class="col-12 mb-3 d-flex justify-content-between align-items-center gap-3">
-                                <div class="form-floating w-100">
-                                  <input name="url_map" type="text" class="form-control" id="address" >
-                                  <label for="address">URL Google Maps</label>
-                                </div>
-                                <a href="https://www.google.com/maps" target="_blank" class="btn btn-lg btn-outline-dark"><i class="fa-solid fa-map-location-dot"></i></a>
-                              </div>
+                            <h3 class="mb-4">Agregando nuevo producto</h3>
+                            <hr class="mb-4">
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="form-floating">
-                                    <select name="category" class="form-select" id="category" aria-label="Floating label select example">
-                                      <option value="" selected hidden></option>
-                                      <option value="barato">Barato</option>
-                                      <option value="romantico">Romantico</option>
-                                      <option value="sofisticado">Sofisticado</option>
+                                    <input name="name" type="text" class="form-control" id="name" required>
+                                    <label for="name">Nombre</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <select name="producto" class="form-select" id="producto" required>
+                                        <option value="" selected hidden></option>
+                                        <option value="mate">Mate</option>
+                                        <option value="termo">Termo</option>
+                                        <option value="yerbero">Yerbero</option>
+                                        <option value="bombilla">Bombilla</option>
+                                        <option value="combo">Combo</option>
+                                    </select>
+                                    <label for="producto">Tipo de producto</label>
+                                </div>
+                            </div>
+                            <!-- Agrega aquí los campos adicionales según tu nuevo JSON -->
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input name="marca" type="text" class="form-control" id="marca" required>
+                                    <label for="marca">Marca</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input name="material" type="text" class="form-control" id="material" required>
+                                    <label for="material">Material</label>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input name="tamanio" type="text" class="form-control" id="tamanio" required>
+                                    <label for="tamanio">Tamaño</label>
+                                </div>
+                            </div>
+                            <!-- Fin de los campos adicionales -->
+                            <div class="col-12 col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <select name="category" class="form-select" id="category" aria-label="Floating label select example" required>
+                                        <option value="" selected hidden></option>
+                                        <option value="clasicos">Clásicos</option>
+                                        <option value="elegantes">Elegantes</option>
+                                        <option value="personalizado">Personalizado</option>
                                     </select>
                                     <label for="category">Categoría</label>
-                                  </div>
-                              </div>
-                              <div class="col-12 col-md-3 mb-3">
-                                  <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
-                                  <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
-                              </div>
-                              <div class="col-12 col-md-3 mb-3">
-                                <input  name="images" type="file" class="form-control" id="images" hidden multiple>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-3 mb-3">
+                                <input name="mainImage" type="file" class="form-control" id="mainImage" hidden required>
+                                <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
+                            </div>
+                            <div class="col-12 col-md-3 mb-3">
+                                <input name="images" type="file" class="form-control" id="images" hidden multiple required>
                                 <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
                             </div>
                             <div class="col-12 mb-3">
                                 <div class="form-floating">
-                                    <textarea name="description" class="form-control" id="description" style="height: 150px;"></textarea>
+                                    <textarea name="description" class="form-control" id="description" style="height: 150px;" required></textarea>
                                     <label for="description">Descripción</label>
-                                  </div>
-                            </div>
-                           
+                                </div>
+                            </div>                            
+                            <!-- Resto del formulario permanece igual, solo cambian los nombres de los campos -->
+                            <!-- ... -->
                             <div class="col-12 d-flex justify-content-end">
                                 <button type="submit" class="btn btn-lg btn-dark">Guardar cambios</button>
                             </div>

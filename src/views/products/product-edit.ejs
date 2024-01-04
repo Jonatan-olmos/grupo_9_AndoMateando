@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html lang="ES">
+<html lang="es">
 
-<%- include('../partials/head',{
-	title : name
+<%- include('../partials/head', {
+    title: `Editar ${name}`
 }) %>
 
+<body class="bg-light">
 
-<body>
     <%- include('../partials/header-admin') %>
-    <main class="container">
+
+    <main class="container mt-5">
         <section class="row my-5">
             <div class="col-12 col-md-10 mx-auto">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between">
+                <div class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white">
                         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item"><a href="/admin" class="text-primary">Home</a></li>
-                              <li class="breadcrumb-item active" aria-current="page">Editando <%= name %></li>
+                                <li class="breadcrumb-item"><a href="/admin" class="text-light">Inicio</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Editando <%= name %></li>
                             </ol>
-                          </nav>
+                        </nav>
                     </div>
                     <div class="card-body">
-                        <form action="/productos/actualizar/<%= id %>?_method=PUT" class="row" method="POST" enctype="multipart/form-data">
-                            <h3>Editando <%= name %></h3>
-                            <hr>
+                        <form action="/productos/actualizar/<%= id %>?_method=PUT" class="row" method="POST"
+                            enctype="multipart/form-data">
+                            <h3 class="mb-4">Editando <%= name %></h3>
+                            <hr class="mb-4">
                             <div class="col-12 col-md-6 mb-3">
-                              <div class="form-floating">
-                                  <select name="producto" class="form-select" id="producto" aria-label="Floating label select example">
-                                    <option <%= producto=== "mate" && 'selected'%> value="mate">mate</option>
-                                    <option <%= producto=== "termo" && 'selected'%> value="termo">termo</option>
-                                    <option <%= producto=== "yerbero" && 'selected'%> value="yerbero">yerbero</option>
-                                    <option <%= producto=== "bombilla" && 'selected'%> value="bombilla">bombilla</option>
-                                    <option <%= producto=== "combo" && 'selected'%> value="combo">combo</option>
-                                  </select>
-                                  <label for="producto">producto</label>
+                                <div class="form-floating">
+                                    <select name="producto" class="form-select" id="producto"
+                                        aria-label="Floating label select example">
+                                        <option <%= producto=== "mate" && 'selected'%> value="mate">Mate</option>
+                                        <option <%= producto=== "termo" && 'selected'%> value="termo">Termo</option>
+                                        <option <%= producto=== "yerbero" && 'selected'%> value="yerbero">Yerbero</option>
+                                        <option <%= producto=== "bombilla" && 'selected'%> value="bombilla">Bombilla</option>
+                                        <option <%= producto=== "combo" && 'selected'%> value="combo">Combo</option>
+                                    </select>
+                                    <label for="producto">Producto</label>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
@@ -145,9 +148,9 @@
                             </div>
                             
                            
-                            <div class="col-12 d-flex justify-content-end">
-                                <button class="btn btn-lg btn-dark">Guardar cambios</button>
-                            </div>
+                            <div class="col-12 d-flex justify-content-end mt-4">
+                              <button class="btn btn-lg btn-dark">Guardar cambios</button>
+                          </div>
                         </form>
 
                     </div>
