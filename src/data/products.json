@@ -1,12 +1,12 @@
 [
    {
+      "id": 1,
       "cantidad": "100",
       "capacidad": "350 ML",
       "category": "elegantes",
       "color": "marron",
       "description": "Disfruta de tu mate diario con este mate clásico de alta calidad.",
       "descuento": "0",
-      "id": 1,
       "images": [],
       "mainImage": "1.png",
       "marca": "Marca Personal",
@@ -17,19 +17,19 @@
       "tamanio": "7"
    },
    {
-      "cantidad": 50,
+      "cantidad": "50",
       "capacidad": "500 ML",
       "category": "elegantes",
-      "color": "Transparente",
+      "color": "marron",
       "description": "Personaliza tu experiencia de mate con este mate único diseñado según tus preferencias.",
-      "descuento": 8,
+      "descuento": "8",
       "id": 2,
       "images": [],
       "mainImage": "2.png",
       "marca": "Marca Personal",
       "material": "Vidrio",
       "name": "Mate Personalizado",
-      "precio": 29.99,
+      "precio": "29.99",
       "producto": "mate",
       "tamanio": "7"
    },
@@ -151,5 +151,22 @@
       "precio": 4500,
       "producto": "termo",
       "tamanio": "9"
+   },
+   {
+      "id": 10,
+      "producto": "",
+      "name": "",
+      "material": "",
+      "marca": "",
+      "category": "elegantes",
+      "precio": "",
+      "color": "marron",
+      "cantidad": "",
+      "capacidad": "350 ML",
+      "tamanio": "",
+      "descuento": "",
+      "mainImage": null,
+      "images": [],
+      "description": ""
    }
 ]

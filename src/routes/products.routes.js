@@ -1,7 +1,7 @@
 const express = require('express');
-const {  add, edit, create, update, remove } = require('../controllers/productsController/');
+const {  add, edit, create, update, remove, } = require('../controllers/productsController/');
 const upload = require('../middlewares/upload');
-
+const upload2 = require('../middlewares/upload2');
 const router = express.Router();
 const {
   
@@ -19,6 +19,7 @@ const {
   arma_tu_equipo4,
  
 } = require('../controllers/productsController');
+const update2 = require('../controllers/productsController/update2');
 /* /productos */
 
 router
@@ -39,7 +40,7 @@ router
 /*addmin*/
   
   .get('/agregar',add)
-  .post('/crear',upload.single('mainImage'), create)
+  .post('/crear',upload2.single('mainImage'), create)
   .get('/editar/:id',edit)
   .put('/actualizar/:id',upload.single('mainImage'),update)
   .delete('/eliminar/:id',remove)

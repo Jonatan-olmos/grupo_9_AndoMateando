@@ -1,5 +1,3 @@
-const Product = require("../../data/Product")
-
 module.exports = (req,res) => {
-    return res.render('products/product-add',(producto) )
+    return res.render('products/product-add')
 }

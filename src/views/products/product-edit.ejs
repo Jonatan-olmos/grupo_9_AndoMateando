@@ -24,8 +24,7 @@
                     <div class="card-body">
                         <form action="/productos/actualizar/<%= id %>?_method=PUT" class="row" method="POST"
                             enctype="multipart/form-data">
-                            <h3 class="mb-4">Editando <%= name %></h3>
-                            <hr class="mb-4">
+                           
                             <div class="col-12 col-md-6 mb-3">
                                 <div class="form-floating">
                                     <select name="producto" class="form-select" id="producto"
@@ -34,7 +33,7 @@
                                         <option <%= producto=== "termo" && 'selected'%> value="termo">Termo</option>
                                         <option <%= producto=== "yerbero" && 'selected'%> value="yerbero">Yerbero</option>
                                         <option <%= producto=== "bombilla" && 'selected'%> value="bombilla">Bombilla</option>
-                                        <option <%= producto=== "combo" && 'selected'%> value="combo">Combo</option>
+                                        <option <%= producto=== "combo" && 'selected'%>  value="bombilla">Bombilla</option>
                                     </select>
                                     <label for="producto">Producto</label>
                                 </div>
@@ -114,7 +113,7 @@
                               <option <%= capacidad=== "500 ML" && 'selected'%> value="500 ML">500 ML</option>
                               <option <%= capacidad=== "750 ML" && 'selected'%> value="750 ML">750 ML</option>
                               <option <%= capacidad=== "1 LITRO" && 'selected'%> value="1 LITRO">1 LITRO</option>
-                              <option <%= capacidad=== "combo" && 'selected'%> value="combo">combo</option>
+                              <option <%= capacidad=== "combo" && 'selected'%> value="0">o</option>
                             </select>
                             <label for="capacidad">Capacidad</label>
                           </div>
@@ -136,10 +135,7 @@
                         <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
                         <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
                     </div>
-                    <div class="col-12 col-md-3 mb-3">
-                      <input  name="images" type="file" class="form-control" id="images" hidden multiple>
-                      <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
-                  </div>
+                   
 
                                 <div class="form-floating">
                                     <textarea name="description" class="form-control" id="description" style="height: 150px;"><%= description %></textarea>

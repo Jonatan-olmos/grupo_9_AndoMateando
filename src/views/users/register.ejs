@@ -15,21 +15,22 @@
         />
       </section>
       <section class="main__login-registro-sec">
-        <form action="/login" method="POST" class="create-login">
+        <form action="/registro" method="POST" enctype="multipart/form-data" class="create-login">
           <div class="control-login">
-            <label>Nombre</label>
-            <input type="text" name="nombre" class="control" placeholder="Ej. Juan Pérez">
+            <input type="text" name="nombre" class="control" id="nombre" placeholder="Ej. Juan Pérez">
+            <label  for="nombre">Nombre</label>
+            
           </div>
           <div class="control-login">
-            <label>Correo electrónico</label>
-            <input type="email" name="email" class="control" placeholder="Ej. correo@ejemplo.com">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" class="control" id="email" placeholder="Ej. correo@ejemplo.com">
           </div>
           <div class="control-login">
-            <label>Teléfono (opcional)</label>
-            <input type="tel" name="telefono" class="control" placeholder="Ej. 123-456-7890">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" name="telefono" class="control" id="telefono" placeholder="Ej. 123-456-7890">
           </div>
           <div class="control-login">
-            <label>Contraseña</label>
+            <label for="contrasena">Contraseña</label>
             <input type="password" name="contrasena" class="control" placeholder="Ej. Contraseña123">
           </div>
           <div class="control-login">

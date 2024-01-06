@@ -1,15 +1,13 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ES">
 
-<%- include('../partials/head', {
-    title: 'Nuevo producto'
+<%- include('../partials/head',{
+	title : 'Nuevo Producto'
 }) %>
 
-<body class="bg-light">
 
+<body>
     <%- include('../partials/header-admin') %>
-
     <main class="container mt-5">
         <section class="row my-5">
             <div class="col-12 col-md-10 mx-auto">
@@ -26,74 +24,140 @@
                         <form action="/productos/crear" method="POST" class="row" enctype="multipart/form-data">
                             <h3 class="mb-4">Agregando nuevo producto</h3>
                             <hr class="mb-4">
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input name="name" type="text" class="form-control" id="name" required>
-                                    <label for="name">Nombre</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <select name="producto" class="form-select" id="producto" required>
-                                        <option value="" selected hidden></option>
-                                        <option value="mate">Mate</option>
-                                        <option value="termo">Termo</option>
-                                        <option value="yerbero">Yerbero</option>
-                                        <option value="bombilla">Bombilla</option>
-                                        <option value="combo">Combo</option>
-                                    </select>
-                                    <label for="producto">Tipo de producto</label>
-                                </div>
-                            </div>
+
                             <!-- Agrega aquí los campos adicionales según tu nuevo JSON -->
                             <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input name="marca" type="text" class="form-control" id="marca" required>
-                                    <label for="marca">Marca</label>
+                              <div class="form-floating">
+                                  <select name="producto" class="form-select" id="producto" aria-label="Floating label select example">
+                                    <option value="" >seleccionar...</option>
+                                    <option value="mate">Mate</option>
+                                    <option value="termo">Termo</option>
+                                    <option value="yerbero">Yerbero</option>
+                                    <option  value="bombilla">Bombillao</option>
+                                    <option  value="combo">combo</option>
+
+                                  </select>
+                                  <label for="producto">Producto</label>
                                 </div>
                             </div>
+
+                           
                             <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input name="material" type="text" class="form-control" id="material" required>
-                                    <label for="material">Material</label>
-                                </div>
+                                <div class="form-floating ">
+                                    <input name="name" type="text" class="form-control" id="name" >
+                                    <label for="name">Nombre</label>
+                                  </div>
                             </div>
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <input name="tamanio" type="text" class="form-control" id="tamanio" required>
-                                    <label for="tamanio">Tamaño</label>
-                                </div>
-                            </div>
-                            <!-- Fin de los campos adicionales -->
-                            <div class="col-12 col-md-6 mb-3">
-                                <div class="form-floating">
-                                    <select name="category" class="form-select" id="category" aria-label="Floating label select example" required>
-                                        <option value="" selected hidden></option>
-                                        <option value="clasicos">Clásicos</option>
-                                        <option value="elegantes">Elegantes</option>
-                                        <option value="personalizado">Personalizado</option>
-                                    </select>
-                                    <label for="category">Categoría</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-3 mb-3">
-                                <input name="mainImage" type="file" class="form-control" id="mainImage" hidden required>
-                                <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
-                            </div>
-                            <div class="col-12 col-md-3 mb-3">
-                                <input name="images" type="file" class="form-control" id="images" hidden multiple required>
-                                <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <div class="form-floating">
-                                    <textarea name="description" class="form-control" id="description" style="height: 150px;" required></textarea>
-                                    <label for="description">Descripción</label>
-                                </div>
-                            </div>                            
-                            <!-- Resto del formulario permanece igual, solo cambian los nombres de los campos -->
-                            <!-- ... -->
+                           
+                            
+ <div class="col-12 col-md-6 mb-3">
+  <div class="form-floating">
+      <select name="material" class="form-select" id="material" aria-label="Floating label select example">
+        <option value="" >seleccionar...</option>
+        <option value="Madera">Madera</option>
+        <option value="Plastico">Plastico</option>
+        <option value="Metal">Metal</option>
+        <option  value="Aluminio">Aluminio</option>
+        <option   value="Vidrio">Vidrio</option>
+        <option   value="Hierbas">Hierbas</option>
+        <option   value="tela">Tela</option>
+      </select>
+      <label for="material">material</label>
+    </div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+  <div class="form-floating ">
+      <input name="marca" type="text" class="form-control" id="marca" >
+      <label for="marca">marca</label>
+    </div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+    <div class="form-floating">
+        <select name="category" class="form-select" id="category" aria-label="Floating label select example">
+          <option  value="elegantes">Elegantes</option>
+          <option  value="clasicos">Clasicos</option>
+          <option  value="personalizado">Personalizado</option>
+          <option value="sin Categoria">Sin Categoria</option>
+          
+        </select>
+        <label for="category">category</label>
+      </div>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <div class="form-floating ">
+        <input name="precio" type="text" class="form-control" id="precio">
+        <label for="precio">Precio</label>
+      </div>
+</div>
+          
+<div class="col-12 col-md-6 mb-3">
+    <div class="form-floating">
+        <select name="color" class="form-select" id="color" aria-label="Floating label select example">
+          <option  value="marron">Marron</option>
+          <option  value="negro">Negro</option>
+          <option  value="azul">Azul</option>
+          <option  value="verde">Verde</option>
+          <option  value="amarillo">Amarillo</option>
+          <option  value="naranja">Naranja</option>
+          <option  value="violeta">Violeta</option>
+          <option  value="blanco">Blanco</option>
+          <option  value="cafe">cafe</option>
+
+        </select>
+        <label for="color">color</label>
+      </div>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <div class="form-floating ">
+        <input name="cantidad" type="number" class="form-control" id="cantidad" >
+        <label for="cantidad">Cantidad</label>
+      </div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+    <div class="form-floating">
+        <select name="capacidad"  class="form-select" id="capacidad" aria-label="Floating label select example">
+          <option  value="350 ML">350 ML</option>
+          <option  value="500 ML">500 ML</option>
+          <option  value="750 ML">750 ML</option>
+          <option  value="1 LITRO">1 LITRO</option>
+          <option  value="0">o</option>
+        </select>
+        <label for="capacidad">Capacidad</label>
+      </div>
+  </div>
+
+  <div class="col-12 col-md-6 mb-3">
+    <div class="form-floating ">
+        <input name="tamanio" type="number" class="form-control" id="tamanio" >
+        <label for="tamanio">tamaño</label>
+      </div>
+</div>
+<div class="col-12 col-md-6 mb-3">
+  <div class="form-floating ">
+      <input name="descuento" type="number" class="form-control" id="descuento" >
+      <label for="descuento">descuento</label>
+    </div>
+</div>
+
+<div class="col-12 col-md-3 mb-3">
+  <input name="mainImage" type="file" class="form-control" id="mainImage"  hidden>
+  <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
+</div>
+
+
+          <div class="form-floating">
+              <textarea name="description" class="form-control" id="description" style="height: 150px;"></textarea>
+              <label for="description">Descripción</label>
+            </div>
+      </div>
+
                             <div class="col-12 d-flex justify-content-end">
-                                <button class="btn btn-lg btn-dark">Guardar cambios</button>
+                                <button type="submit" class="btn btn-lg btn-dark">Guardar cambios</button>
                             </div>
                         </form>
 

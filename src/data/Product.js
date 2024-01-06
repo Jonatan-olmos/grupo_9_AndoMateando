@@ -1,35 +1,28 @@
 const crypto = require("crypto");
 
-function Product(
-  cantidad,
-  capacidad,
-  category,
-  description,
-  descuento,
-  id,
-  images,
-  mainImage,
-  marca,
-  material,
-  name,
-  precio,
-  producto,
-  tamanio
-) {
-  this.cantidad = cantidad.trim();
-  this.capacidad = capacidad;
-  this.category = category;
-  this.description = description.trim();
-  this.descuento = descuento;
-  this.id = id;
-  this.images = images;
-  this.mainImage = mainImage;
-  this.marca = marca.trim();
-  this.material = material;
-  this.name = name.trim();
-  this.precio = precio.trim();
-  this.producto = producto.trim();
-  this.tamanio = tamanio.trim();
-}
+function Product( producto, name,material,marca,category,precio,color,cantidad,capacidad,tamanio,descuento,mainImage, description
+
+
+
+ 
+  ) {
+   
+    this.id =  lastID +1;
+    this.producto = producto;
+    this.name = name.trim();
+    this.material = material;
+    this.marca = marca.trim();
+    this.category = category;
+    this.precio = precio.trim();
+    this.color = color;
+    this.cantidad = cantidad.trim();
+    this.capacidad =capacidad;
+    this.tamanio = tamanio.trim();
+    this.descuento = descuento.trim();
+    this.mainImage = mainImage ? mainImage.filename : null;
+    this.images = [];
+    this.description = description.trim();
+   
+  }  
 
 module.exports = Product;

@@ -3,16 +3,16 @@ const { existsSync, unlinkSync } = require('fs')
 
 module.exports = (req,res) => {
 
-    const {producto,name,material,marca,category,precio,color,cantidad,capacidad,tamanio,descuento,description,} = req.body;
+    const {producto,name,material,marca,category,precio,color,cantidad,capacidad,tamanio,descuento,description, } = req.body;
 
-    const {id} = req.params
+
 
     const products = leerJSON('products');
 
     const produtsUpdated = products.map(product => {
         if(product.id == id){
             (req.file && existsSync('public/images/productos' + product.mainImage)) && unlinkSync('public/images/productos' + product.mainImage)
-
+         
             product.producto = producto;
             product.name = name.trim();
             product.material = material;
@@ -29,6 +29,7 @@ module.exports = (req,res) => {
 
 
 
+           
 
         }
         return product
