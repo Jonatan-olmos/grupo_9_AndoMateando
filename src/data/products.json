@@ -149,26 +149,10 @@
       "material": "Plastico",
       "name": "Mate Giroscopio 360",
       "precio": 4500,
-      "producto": "termo",
+      "producto": "mate",
       "tamanio": "9"
    },
-   {
-      "id": 10,
-      "producto": "",
-      "name": "",
-      "material": "",
-      "marca": "",
-      "category": "elegantes",
-      "precio": "",
-      "color": "marron",
-      "cantidad": "",
-      "capacidad": "350 ML",
-      "tamanio": "",
-      "descuento": "",
-      "mainImage": null,
-      "images": [],
-      "description": ""
-   },
+  
    {
       "id": 11,
       "producto": "termo",
@@ -184,9 +168,7 @@
       "descuento": "10",
       "mainImage": "vidrio2.jpeg",
       "images": [],
-      "description": "La marca argentina continúa su desarrollo como empresa líder en la fabricación de productos térmicos hace ya 75 años. El diseño y la practicidad de los productos Lumilagro demuestran una esmerada combinación entre experiencia e innovación permanente. La calidad de este termo te brinda confianza y se va a transformar en el compañero ideal de tardes de estudio o juntadas con amigos.
-
-La temperatura justa"
+      "description" : "La marca argentina continúa su desarrollo como empresa líder en la fabricación de productos térmicos hace ya 75 años. El diseño y la practicidad de los productos Lumilagro demuestran una esmerada combinación entre experiencia e innovación permanente. La calidad de este termo te brinda confianza y se va a transformar en el compañero ideal de tardes de estudio o juntadas con amigos. La temperatura justa, "
    },
    {
       "id": 12,
@@ -220,7 +202,7 @@ La temperatura justa"
       "descuento": "10",
       "mainImage": "plastico.jpeg",
       "images": [],
-      "description": "Características Marca Lumilagro Modelo Terra Capacidad 650 mL Material del interior Vidrio Material del exterior Plástico Mantiene contenido frío por 8 h Mantiene contenido caliente por 24 h Sistema de apertura de tapa Tapon Lumilagro Manija Sí Tapa Sí
+      "description": "Características Marca Lumilagro Modelo Terra Capacidad 650 mL Material del interior Vidrio Material del exterior Plástico Mantiene contenido frío por 8 h Mantiene contenido caliente por 24 h Sistema de apertura de tapa Tapon Lumilagro Manija Sí Tapa Sí"
    },
    {
       "id": 14,
@@ -254,9 +236,7 @@ La temperatura justa"
       "descuento": "25",
       "mainImage": "tela_negra.jpeg",
       "images": [],
-      "description": "Diseñadas en ecocuero grueso de excelente calidad Cierre reforzado de fácil apertura Interior plastificado para evitar pérdidas de yerba y azucar, hipoalergenico
-
-Estructura piramidal con base plana que le brinda un soporte firme y evita que se caiga el sobre Colores disponibles: Negro "
+      "description": " Diseñadas en ecocuero grueso de excelente calidad Cierre reforzado de fácil apertura Interior plastificado para evitar pérdidas de yerba y azucar, hipoalergenico estructura piramidal con base plana que le brinda un soporte firme y evita que se caiga el sobre Colores disponibles: Negro "
    },
    {
       "id": 16,
@@ -290,8 +270,6 @@ Estructura piramidal con base plana que le brinda un soporte firme y evita que s
       "descuento": "25",
       "mainImage": "plastica_2.jpeg",
       "images": [],
-      "description": "Diseñadas en ecocuero grueso de excelente calidad Cierre reforzado de fácil apertura Interior plastificado para evitar pérdidas de yerba y azucar, hipoalergenico
-
-Estructura piramidal con base plana que le brinda un soporte firme y evita que se caiga el sobre Colores disponibles: Negro "
+      "description": "Diseñadas en ecocuero grueso de excelente calidad Cierre reforzado de fácil apertura Interior plastificado para evitar pérdidas de yerba y azucar, hipoalergenico estructura piramidal con base plana que le brinda un soporte firme y evita que se caiga el sobre Colores disponibles: Negro "
    }
 ]

@@ -121,7 +121,37 @@
 
 .agregar__carrito:hover {
   background-color: var(--color-verdeOscuro);
+  
 }
+.combos_main-section-img-letra-h4-v{
+  color:#39b54a
+}
+.combos_main-section-img-letra-h4{
+  color:#03264C
+}
+.buy-now-button{
+  background-color: #034c3a;
+  font-size: 10PX;
+  color: #ffffff;
+display: flex;
+flex-wrap: wrap;
+width: 30%;
+  padding: 9px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 15px;
+  margin: 5px;
+}
+
+@media (min-width:415px ) {
+  .buy-now-button{
+
+    width: 25%;
+    font-size: 7px;
+    
+      
+    }}
+
 @media (min-width: 768px) {
   .producto__container {
     display: flex;
@@ -144,4 +174,18 @@
   .envio__info {
     margin-top: 20px;
   }
-}
+  .combos_main-section-img-letra-h4-v{
+    color:#39b54a;
+    padding: 0px;
+    padding-top: 5px;
+    font-size: 12px;
+  }
+
+  .buy-now-button{
+padding-left: 20px;
+    width: 30%;
+    font-size: 12px;
+    
+      
+    }
+};
