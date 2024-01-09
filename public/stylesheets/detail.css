@@ -124,7 +124,16 @@
   
 }
 .combos_main-section-img-letra-h4-v{
-  color:#39b54a
+  color:#39b54a,
+  
+}
+.combos_main-section-img-letra-p{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+
 }
 .combos_main-section-img-letra-h4{
   color:#03264C
@@ -142,7 +151,9 @@ width: 30%;
   margin-bottom: 15px;
   margin: 5px;
 }
-
+.combos_main-section-article{
+  border: solid 10px var(--grisClaro);
+}
 @media (min-width:415px ) {
   .buy-now-button{
 
