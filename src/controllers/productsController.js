@@ -4,6 +4,9 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
+const productsFilePath2 = path.join(__dirname, '../data/productsarmatuequipo.json');
+const productsarmatuequipos = JSON.parse(fs.readFileSync(productsFilePath2, 'utf-8'))
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
@@ -63,18 +66,16 @@ const controller = {
  
 
   arma_tu_equipo: (req, res) => {
-    return res.render("products/arma_tu_equipo",
-    {
-      products,
-			toThousand,
-      
-    });
+    return res.render("products/arma_tu_equipo", { products, productsarmatuequipos, toThousand });
   },
+
+
 
 arma_tu_equipo2: (req, res) => {
   return res.render("products/arma_tu_equipo2",
   {
     products,
+    productsarmatuequipos,
     toThousand,
   });
 },
@@ -83,6 +84,7 @@ arma_tu_equipo3: (req, res) => {
   return res.render("products/arma_tu_equipo3",
   {
     products,
+    productsarmatuequipos,
     toThousand,
   });
 },
@@ -90,6 +92,16 @@ arma_tu_equipo4: (req, res) => {
   return res.render("products/arma_tu_equipo4",
   {
     products,
+    productsarmatuequipos,
+    toThousand,
+  });
+  
+},
+arma_tu_equipo5: (req, res) => {
+  return res.render("products/arma_tu_equipo5",
+  {
+    products,
+    productsarmatuequipos,
     toThousand,
   });
 },

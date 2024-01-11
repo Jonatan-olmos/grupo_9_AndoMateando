@@ -78,7 +78,7 @@
 
 .fa-filter {
     color: var(--verdeOscuro);
-    margin-right: 10%;
+    margin-left: 35%;
     margin-bottom: 20px;
 }
 /*atras y siguiente */
@@ -108,6 +108,11 @@
 }
 
 @media(min-width:415px) {
+    .fa-filter {
+        
+        margin-left: 80%;
+       
+    }
     .combos_main {
         max-width: 100%x;
         width: 100%;
