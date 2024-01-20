@@ -15,19 +15,28 @@
         />
       </section>
       <section class="main__login-registro-sec">
+        <% if (locals.errors) {
+          errors.forEach(error => { %>
+            <p class="text-danger"><%= error.msg %></p>
+         <%  })
+        } 
+        %>
         <form action="/registro" method="POST" enctype="multipart/form-data" class="create-login">
           <div class="control-login">
-            <input type="text" name="nombre" class="control" id="nombre" placeholder="Ej. Juan Pérez">
             <label  for="nombre">Nombre</label>
-            
+            <input type="text" name="nombre" class="control" id="nombre" value="<%= locals.old && old.nombre ? old.name : '' %>"  placeholder="Ej. Juan Pérez">
           </div>
           <div class="control-login">
             <label for="email">Correo electrónico</label>
-            <input type="email" name="email" class="control" id="email" placeholder="Ej. correo@ejemplo.com">
+            <input type="email" name="email" class="control" id="email" value="<%= locals.old && old.email ? old.email : '' %>" placeholder="Ej. correo@ejemplo.com">
           </div>
           <div class="control-login">
             <label for="telefono">Teléfono (opcional)</label>
-            <input type="tel" name="telefono" class="control" id="telefono" placeholder="Ej. 123-456-7890">
+            <input type="tel" name="telefono" class="control" id="telefono" value="<%= locals.old && old.telefono ? old.telefono : '' %>" placeholder="Ej. 26112345">
+          </div>
+          <div class="control-login">
+            <label for="image">Imagen de perfil</label>
+            <input type="file" name="image" class="control" id="image" >
           </div>
           <div class="control-login">
             <label for="contrasena">Contraseña</label>
@@ -48,7 +57,7 @@
             <ul class="Register_login--ul">
               <li><a href="#" class="tienes-cuenta">¿Tienes una cuenta? Inicia Sesión</a></li>
             </ul>
-          </nav>
+          </nav>  
         </form>
       </section>
     </main>

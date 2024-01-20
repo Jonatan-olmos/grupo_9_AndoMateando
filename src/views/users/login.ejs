@@ -12,9 +12,15 @@
       </section>
       <section class="main__login-registro-sec">
         <form action="/login" method="POST" class="create-login">
+          <% if (locals.errors) {
+            errors.forEach(error => { %>
+              <p class="text-danger"><%= error.msg %></p>
+           <%  })
+          } 
+          %>
           <div class="control-login">
-            <label>Nombre de usuario</label>
-            <input type="text" name="Nombre" class="control" placeholder="Ej. usuario123">
+            <label for="email">Correo electrónico</label>
+            <input type="email" name="email" class="control" id="email" value="<%= locals.old && old.email ? old.email : '' %>" placeholder="Ej. correo@ejemplo.com">
           </div>
           <div class="control-login">
             <label>Contraseña</label>
@@ -37,7 +43,7 @@
               <li><a href="./registro" class="password">Registrarse</a></li>
               <li><a href="/views/" class="signin">O inicia sesión con <i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></a></li>
             </ul>
-          </nav>
+          </nav>  
         </form>
       </section>
     </main>
