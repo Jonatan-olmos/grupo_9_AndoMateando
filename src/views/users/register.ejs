@@ -15,31 +15,52 @@
         />
       </section>
       <section class="main__login-registro-sec">
-        <form action="/registro" method="POST" enctype="multipart/form-data" class="create-login">
+        <form action="" method="POST" >
           <div class="control-login">
-            <input type="text" name="nombre" class="control" id="nombre" placeholder="Ej. Juan Pérez">
             <label  for="nombre">Nombre</label>
-            
+            <input 
+            type="text" 
+            name="nombre" 
+            class="control <%= locals.error && errors.nombre ? 'is-is-invalid' : null %>" 
+            id="name"
+            value="<%= locals.old && old.nombre ? old.nombre : null  %>"
+            />
+            <small class="text-danger ms-2">
+              <%= locals.errors && errors.nombre ? errors.nombre.msg : null %>
+            </small>
+        
           </div>
           <div class="control-login">
             <label for="email">Correo electrónico</label>
-            <input type="email" name="email" class="control" id="email" placeholder="Ej. correo@ejemplo.com">
+            <input type="email" name="email" class="control <%= locals.errors && errors.email ? 'is-invalid' : null %>" id="email" placeholder="correo@andomateando.com" value="<%= locals.old && old.email ? old.email : null %>" />
+            <small class="text-danger ms-2">
+              <%= locals.errors && errors.email ? errors.email.msg : null %>
+            </small>
           </div>
           <div class="control-login">
             <label for="telefono">Teléfono (opcional)</label>
-            <input type="tel" name="telefono" class="control" id="telefono" placeholder="Ej. 123-456-7890">
+            <input type="tel" name="telefono" class="control " id="telefono" placeholder="Ej. 123-456-7890">
           </div>
           <div class="control-login">
             <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena" class="control" placeholder="Ej. Contraseña123">
+            <input type="password" name="contrasena" class="control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" placeholder="Ej: tomateUnMate123" id="password" />
+            <small class="text-danger ms-2">
+              <%= locals.errors && errors.contrasena ? errors.contrasena.msg : null %>
+            </small>
           </div>
           <div class="control-login">
             <label>Confirmar contraseña</label>
-            <input type="password" name="confirmarContrasena" class="control" placeholder="Ej. Contraseña123">
+            <input type="password" name="contrasena2" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="password2" />
+            <small class="text-danger ms-2">
+              <%= locals.errors && errors.contrasena2 ? errors.contrasena2.msg : null %>
+            </small>
           </div>
           <div>
-            <input type="checkbox" name="acepto">
-            <label class="acepto">Acepto los Términos, Condiciones y Políticas de AndoMateando</label>
+            <input class="form-check-input" type="checkbox" value="1" id="remember" name="acepto" />
+            <label class="acepto" for="remember">Acepto los Términos, Condiciones y Políticas de AndoMateando</label>
+            <small class="text-danger ms-2">
+              <%= locals.errors && errors.remember ? errors.remember.msg : null %>
+            </small>
           </div>
 
           <button type="submit" class="boton-login">Regístrate</button>
