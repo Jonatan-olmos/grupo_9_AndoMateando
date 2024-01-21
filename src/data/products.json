@@ -304,5 +304,22 @@
       "mainImage": "gris.jpeg",
       "images": [],
       "description": "Categorías:Set de mates para Dama, Set materos con cartera, Todos los productos.Etiquetas:Bombilla, Mate, Producto, Set de mate, Set de mates para regalar, Set para dama, Yerbera y azucarera"
+   },
+   {
+      "id": 20,
+      "producto": "mate",
+      "name": "matematico",
+      "material": "Plastico",
+      "marca": "matiasmartin",
+      "category": "clasicos",
+      "precio": "1800",
+      "color": "marron",
+      "cantidad": "1",
+      "capacidad": "350 ML",
+      "tamanio": "10",
+      "descuento": "10",
+      "mainImage": null,
+      "images": [],
+      "description": "NUEVO MATE"
    }
 ]
