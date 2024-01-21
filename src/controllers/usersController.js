@@ -30,4 +30,7 @@ module.exports = {
 		return res.redirect("/register");
 
   },
+  perfil : (req,res) => {
+	return res.render('users/perfil')
+}
 };
