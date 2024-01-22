@@ -1,13 +1,14 @@
 const { leerJSON } = require("../data");
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, "../data/products.json");
+const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   index: (req, res) => {
+    console.log(req.session);
     const products = leerJSON("products");
 
     return res.render("index", {
@@ -16,11 +17,10 @@ module.exports = {
   },
 
   cart: (req, res) => {
-    return res.render("productCart",
-    {
+    return res.render("productCart", {
       products,
-			toThousand,
-    })
+      toThousand,
+    });
   },
   mateartips: (req, res) => {
     return res.render("extras/mateartips");

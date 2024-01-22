@@ -1,33 +1,73 @@
-const fs = require('fs');
-const path = require('path');
+const { validationResult } = require("express-validator");
+const User = require("../data/User");
+const { leerJSON, escribirJSON } = require("../data");
 
-const usuarioFilePath = path.join(__dirname, '../data/usuarios.json');
-const usuarios = JSON.parse(fs.readFileSync(usuarioFilePath, 'utf-8'));
 module.exports = {
-  login: (req, res) => {
-    return res.render("users/login");
-  },
-  register: (req, res) => {
-    return res.render("users/register");
-  },
-  createUser: (req, res) => {
-    const lastID =usuarios[usuarios.length -1].id;
-		const {nombre, telefono,email,contraseña} = req.body;
+    register : (req,res) => {
+        return res.render('users/register')
+    },
+    processRegister : (req,res) => {
+        const errors = validationResult(req);
+        const {name, surname, email, password} = req.body;
 
-		const newUsuario = {
-			id: lastID +1,
-		  nombre: nombre.trim(),
-			telefono: telefono.trim(),
-			email: email.trim(),
-			contraseña: contraseña.trim(),
-		
-			
-		};
+        if(errors.isEmpty()){
 
-		usuarios.push(newUsuario)
-		fs.writeFileSync(usuarioFilePath, JSON.stringify(usuarios), 'utf-8')
-		
-		return res.redirect("/register");
+            const users = leerJSON('users');
+            const newUser = new User(name, surname, email, password);
+            users.push(newUser);
 
-  },
-};
+            escribirJSON(users, 'users')
+
+            return res.redirect('/usuarios/ingreso')
+            
+
+        }else{
+            return res.render('users/register',{
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
+
+    },
+    login : (req,res) => {
+        return res.render('users/login')
+    },
+    processLogin : (req,res) => {
+        const errors = validationResult(req);
+        const {email, remember} = req.body;
+
+        if(errors.isEmpty()){
+
+        const {id, name, role} = leerJSON('users').find(user => user.email === email)
+
+            req.session.userLogin = {
+                id,
+                name,
+                role
+            }
+
+            remember && res.cookie('Ando-Mateando_user',req.session.userLogin,{
+                maxAge : 1000 * 60 * 2
+            })
+
+            return res.redirect('/')
+
+        }else {
+            return res.render('users/login',{
+                errors : errors.mapped()
+            })
+        }
+    },
+    logout : (req,res) => {
+        
+        req.session.destroy();
+        res.cookie('Ando-Mateando_user',null,{
+            maxAge : -1
+        })
+
+        return res.redirect('/')
+    },
+    profile : (req,res) => {
+        return res.render('users/profile')
+    }
+}
