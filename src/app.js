@@ -8,13 +8,14 @@ const methodOverride = require('method-override');
 var indexRouter = require('./routes/index.routes');
 var usersRouter = require('./routes/users.routes');
 const productsRouter = require('./routes/products.routes'); 
-
+var logMiddleware = require('./middlewares/logMiddleware');
 var app = express();
 
 // view engine setup
 app
 .set('views', path.join(__dirname, 'views'))
 .set('view engine', 'ejs')
+.use(logMiddleware)
 .use(methodOverride('_method'))
 .use(logger('dev'))
 .use(express.json())
@@ -24,7 +25,7 @@ app
 
 .use('/', indexRouter)
 .use('/usuarios', usersRouter)
-.use('/productos', productsRouter)
+.use('/productos', productsRouter)  
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
