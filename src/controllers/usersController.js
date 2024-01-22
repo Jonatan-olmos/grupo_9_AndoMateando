@@ -32,7 +32,7 @@ module.exports = {
     login : (req,res) => {
         return res.render('users/login')
     },
-	processLogin : (req,res) => {
+    processLogin : (req,res) => {
         const errors = validationResult(req);
         const {email, remember} = req.body;
 
@@ -46,7 +46,7 @@ module.exports = {
                 role
             }
 
-            remember && res.cookie('kitchening4EV3R_user',req.session.userLogin,{
+            remember && res.cookie('Ando-Mateando_user',req.session.userLogin,{
                 maxAge : 1000 * 60 * 2
             })
 
@@ -61,13 +61,13 @@ module.exports = {
     logout : (req,res) => {
         
         req.session.destroy();
-        res.cookie('',null,{
+        res.cookie('Ando-Mateando_user',null,{
             maxAge : -1
         })
 
         return res.redirect('/')
     },
-    perfil : (req,res) => {
-        return res.render('users/perfil')
+    profile : (req,res) => {
+        return res.render('users/profile')
     }
 }
