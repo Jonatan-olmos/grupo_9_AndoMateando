@@ -1,9 +1,11 @@
 const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
-
+const { leerJSON, escribirJSON } = require("../data");
 const usuarioFilePath = path.join(__dirname, "../data/usuarios.json");
 const usuarios = JSON.parse(fs.readFileSync(usuarioFilePath, "utf-8"));
+
+const User = require("../data/User");
 
 module.exports = {
   register: (req, res) => {
@@ -11,9 +13,16 @@ module.exports = {
   },
   processRegister: (req, res) => {
     const errors = validationResult(req);
+    const { nombre, email, password } = req.body;
 
     if (errors.isEmpty()) {
-      //registrar el ususario
+      const users = leerJSON("usuarios");
+      const newUser = new User(nombre, email, password);
+
+      users.push(newUser);
+
+      escribirJSON(users, "usuarios");
+      return res.redirect("/usuarios/ingreso");
     } else {
       return res.render("users/register", {
         old: req.body,

@@ -4,15 +4,13 @@
     "nombre": "Usuario1",
     "email": "usuario1@example.com",
     "telefono": "123456789",
-    "contraseña": "contrasena123",
-    "contraseña2": "contrasena123"
+    "password": "contrasena123"
   },
   {
     "id": 2,
     "nombre": "Usuario2",
     "email": "usuario2@example.com",
     "telefono": "987654321",
-    "contraseña": "clave456",
-    "contraseña2": "clave456"
+    "password": "clave456"
   }
 ]

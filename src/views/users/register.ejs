@@ -15,14 +15,14 @@
         />
       </section>
       <section class="main__login-registro-sec">
-        <form action="" method="POST" >
-          <div class="control-login">
+        <form action="" method="POST" class="row" >
+          <div class="control-login" >
             <label  for="nombre">Nombre</label>
             <input 
             type="text" 
             name="nombre" 
             class="control <%= locals.error && errors.nombre ? 'is-is-invalid' : null %>" 
-            id="name"
+            id="nombre"
             value="<%= locals.old && old.nombre ? old.nombre : null  %>"
             />
             <small class="text-danger ms-2">
@@ -42,22 +42,25 @@
             <input type="tel" name="telefono" class="control " id="telefono" placeholder="Ej. 123-456-7890">
           </div>
           <div class="control-login">
-            <label for="contrasena">Contraseña</label>
-            <input type="password" name="contrasena" class="control <%= locals.errors && errors.contrasena ? 'is-invalid' : null %>" placeholder="Ej: tomateUnMate123" id="password" />
+            <label for="password">Contraseña</label>
+            <input type="password" name="password" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" placeholder="Ej: tomateUnMate123" id="password" />
             <small class="text-danger ms-2">
-              <%= locals.errors && errors.contrasena ? errors.contrasena.msg : null %>
+              <%= locals.errors && errors.password ? errors.password.msg : null %>
             </small>
           </div>
           <div class="control-login">
             <label>Confirmar contraseña</label>
-            <input type="password" name="contrasena2" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="password2" />
+            <input type="password" name="password2" class="control <%= locals.errors && errors.password ? 'is-invalid' : null %>" id="password2" />
             <small class="text-danger ms-2">
-              <%= locals.errors && errors.contrasena2 ? errors.contrasena2.msg : null %>
+              <%= locals.errors && errors.password2 ? errors.password2.msg : null %>
             </small>
           </div>
           <div>
-            <input class="form-check-input" type="checkbox" value="1" id="remember" name="acepto" />
-            <label class="acepto" for="remember">Acepto los Términos, Condiciones y Políticas de AndoMateando</label>
+            <input class="form-check-input" type="checkbox" value="1" id="remember" name="remember" />
+            <label class="form-check-label" for="remember">
+              Acepto <a href="" class="link-dark" data-bs-toggle="modal"
+                          data-bs-target="#exampleModal"> los términos y condiciones de Ando Mateando
+                        </a> </label>
             <small class="text-danger ms-2">
               <%= locals.errors && errors.remember ? errors.remember.msg : null %>
             </small>
@@ -72,6 +75,38 @@
           </nav>
         </form>
       </section>
+
+       <!-- Modal -->
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Términos y condiciones Ando Mateando</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ol class="small">
+                <li>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores molestias quibusdam placeat. Ullam
+                  laborum iure accusantium et ab nisi eaque, corporis veniam ipsum debitis asperiores, totam quos
+                  aliquam dolores, nobis labore a obcaecati sapiente suscipit? Unde, totam ullam neque eius eos ut
+                  atque explicabo aperiam? Fuga tenetur cupiditate possimus eum?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illum ipsa fuga deleniti beatae
+                  doloremque ipsum repudiandae iusto doloribus explicabo ab, ad animi dolores nisi?
+                </li>
+                <li>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit minima possimus sequi voluptates,
+                  exercitationem provident modi, commodi consequuntur architecto, qui soluta quisquam. Vitae nemo,
+                  blanditiis laborum odit iusto odio amet porro ducimus.
+                </li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </main>
     <%- include('../partials/footer') %>
   </body>
