@@ -28,6 +28,8 @@ app
   .use(
     session({
       secret: "Ando Mateando!!",
+      resave : true,
+    saveUninitialized : true
     })
 
   )

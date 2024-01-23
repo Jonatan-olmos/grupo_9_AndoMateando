@@ -19,6 +19,7 @@ const {
   arma_tu_equipo3,
   arma_tu_equipo4,
   arma_tu_equipo5,
+ 
 } = require('../controllers/productsController');
 const update2 = require('../controllers/productsController/update2');
 /* /productos */
@@ -33,6 +34,8 @@ router
 .get("/arma_tu_equipo4", arma_tu_equipo4)
 .get("/arma_tu_equipo5", arma_tu_equipo5)
 .get("/todos_productos", todos_los_productos)
+
+
 .get('/detalle/:id', detail)
 .get("/mate", mate)
 .get("/mates_personalizados", mates_personalizados)

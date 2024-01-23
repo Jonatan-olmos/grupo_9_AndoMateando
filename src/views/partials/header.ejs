@@ -4,17 +4,16 @@
     </div>    
     <div class="buscador__nav">
             <nav class="nav_">
-                <div class="buscar__header">
-                    <input type="text" placeholder="search...">
-                    <button type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
+                <form class="d-flex" action="/productos/todos_productos2/buscar" method="GET">
+                  <input class="buscar__header" type="keyword2" placeholder="keyword2" aplaceholder="keyword2" ria-label="keyword2"name="keyword2">
+                  <button class="btn btn-outline-success" type="keyword2"><i class="fa fa-search"></i>Buscar</button>
+              </form>
+               
             </nav>
     </div>
     <div class="icons__container">
         <a href="/usuarios/ingreso"><i class="fa-regular fa-user"></i></a>
-        <a  href="/usuarios/salir">Salir</a>
+       
         <a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a>
         
 
@@ -29,10 +28,17 @@
             <li><a class="li_nav" href="/contacto">Contacto</a></li>
             <% if (locals.userLogin) { %>
                 <% if (userLogin.role === "admin") { %>
-                    <li class="animate__animated animate__fadeInDown"><a href="/admin">dashboard</a></li>
+                    <li><a href="/admin">dashboard</a></li>
                 <% }else{ %>
-                    <li class="animate__animated animate__fadeInDown"><a href="/usuarios/Perfil">Perfil</a></li>
-                <% } }%>%>
+                    <li ><a href="/usuarios/reservas">reservas</a></li>
+                <% } %>
+
+                <li ><a href="/usuarios/perfil">Perfil</a></li>
+                <li ><a href="/usuarios/salir">Salir</a></li>
+            <% }else{ %>
+                <li ><a href="/usuarios/ingreso">ingresá</a></li>
+                <li><a href="/usuarios/registro">registrate</a></li>
+            <% } %>
         </ul> 
         <label for="click" class="abrir-menu"><i class="fas fa-bars"></i></label>
         <input type="checkbox" id="click">

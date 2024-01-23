@@ -20,6 +20,7 @@ const controller = {
     });
 
   },
+ 
   detail: (req, res) => {
     const product = products.find(product => product.id === +req.params.id)
 		return res.render('products/detail',{

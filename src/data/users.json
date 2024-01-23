@@ -1,12 +1,5 @@
 [
-   {
-      "id": "6c2714cb-a55b-4228-adcc-fe8063f34608",
-      "name": "Admin",
-      "surname": "Kitchening",
-      "email": "admin@gmail.com",
-      "password": "$2a$10$ptWyEh10wr9e35sk4FxtzOtopF/setiAsglRRH/8vCUkNLsUY3Md6",
-      "role": "admin"
-   },
+   
    {
       "id": "2e7c4668-3198-473d-a48b-6d0b61ddd48c",
       "name": "User",
@@ -21,6 +14,6 @@
       "surname": "Olmos",
       "email": "jon.ol.23@gmail.com",
       "password": "$2a$10$ffNw.ISgyBw8NUfK2hReE.JTvVeLkrHmTbC5OiMdBrmZf0sUP0QPO",
-      "role": "admin"
+      "role": "user"
    }
 ]
