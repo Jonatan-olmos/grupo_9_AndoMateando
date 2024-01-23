@@ -39,4 +39,7 @@ module.exports = {
       products,
     });
   },
+  terminos_y_condiciones: (req, res) => {
+    return res.render("extras/terminos_y_condiciones");
+  },
 };
