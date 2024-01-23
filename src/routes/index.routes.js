@@ -6,10 +6,7 @@ const {
   preguntas_frecuentres,
   contacto,
   admin,
-  searchAdmin,
-  searchAdmin2,
-  todos_los_productos2,
- 
+  terminos_y_condiciones,
 
 } = require("../controllers/indexController");
 const checkAdmin = require('../middlewares/checkAdmin');
@@ -19,12 +16,12 @@ const router = express.Router();
 router
 
   .get("/", index)
-  .get('/productos/todos_productos/buscar', searchAdmin2)
+ 
   .get("/carrito", cart)
   .get("/mateartips", mateartips)
   .get("/contacto", contacto)
   .get("/preguntas_frecuentes", preguntas_frecuentres)
   .get("/admin", admin)
-  .get('/admin/productos/buscar', searchAdmin)
-  .get("/todos_productos2", todos_los_productos2)
+  .get("/terminos-y-condiciones", terminos_y_condiciones);
+
 module.exports = router;

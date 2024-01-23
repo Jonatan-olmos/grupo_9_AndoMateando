@@ -4,25 +4,25 @@
 
   <body>
     <%- include('../partials/header') %>
-    <main  class="main__login-registro">
-      <section class="main__login-registro-sec">
+    <main  class="login-register-container">
+      <section class="logo-section-register">
         <img
           src="../images/logo (1).jpg"
           style="width: 350px; height: 350px;"
           class="logo"
         />
       </section>
+      <section class="form-section-register">
 
-        <section  class="main__login-registro-sec">
-         
-          <div class="col-12 col-md-10 col-lg-6 mx-auto my-5">
-            <div class="card shadow">
-              <div class="card-header">
+   
+      
+            <div class="card-shadow">
+              <div class="card-header-register">
                 <h4 class="card-title">Perfil de usuario</h4>
               </div>
-              <div class="card-body">
-                <form action="" class="row" method="POST">
-                  <div class="col-12 col-md-6 mb-3">
+              <div class="form-check">
+                <form action="/usuarios/perfil" class="row" method="POST">
+                  <div class="form-check">
                     <label for="name" class="form-label">Nombre</label>
                     <input type="text" name="name"
                       class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>" id="name"
@@ -31,7 +31,7 @@
                       <%= locals.errors && errors.name ? errors.name.msg : null %>
                     </small>
                   </div>
-                  <div class="col-12 col-md-6 mb-3">
+                  <div class="form-check">
                     <label for="surname" class="form-label">Apellido</label>
                     <input type="text" name="surname"
                       class="form-control <%= locals.errors && errors.surname ? 'is-invalid' : null %>" id="surname"
@@ -40,7 +40,7 @@
                       <%= locals.errors && errors.surname ? errors.surname.msg : null %>
                     </small>
                   </div>
-                  <div class="mb-3">
+                  <div class="form-check">
                     <label for="email" class="form-label">Correo electrónico</label>
                     <input type="email" name="email"
                       class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" id="email"
@@ -49,7 +49,7 @@
                       <%= locals.errors && errors.email ? errors.email.msg : null %>
                     </small>
                   </div>
-                  <div class="col-12 col-md-6 mb-3">
+                  <div class="form-check">
                     <label for="province" class="form-label">Provincia</label>
                     <input type="province" name="province"
                       class="form-control"
@@ -58,7 +58,7 @@
                       <%= locals.errors && errors.password ? errors.password.msg : null %>
                     </small>
                   </div>
-                  <div class="col-12 col-md-6 mb-3">
+                  <div class="form-check">
                     <label for="city" class="form-label">Ciudad</label>
                     <input type="password" name="city"
                       class="form-control"
@@ -69,21 +69,19 @@
                     </small>
                   </div>
                 
-                  <div class="col-12 col-md-6 mb-3">
-                    <button class="btn btn-dark w-100">Actualizar datos</button>
+                  <div class="form-group">
+                    <button  class="main-btn">Actualizar datos</button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
-        </section>
-
+        
+      </section>
         
       
-            </div>
-          </div>
-        </div>
-        
+          
+      
     </main>
     <%- include('../partials/footer') %>
   </body>

@@ -15,21 +15,7 @@ module.exports = {
       products,
     });
   },
-  searchAdmin2 : (req,res) => {
-
-    const {keyword2} = req.query
-
-    const products = leerJSON('products');
-
-    const result = products.filter((product) => {
-        return product.name.toLowerCase().includes(keyword2.toLowerCase()) || product.producto.toLowerCase().includes(keyword2.toLowerCase())
-    });
-
-    return res.render("/productos/todos_productos2", {
-        products : result,
-        keyword2
-    })
-},
+ 
 todos_los_productos2: (req, res) => {
   return res.render("products/productos2",
   {
@@ -61,19 +47,8 @@ todos_los_productos2: (req, res) => {
       products,
     });
   },
-  searchAdmin : (req,res) => {
-
-    const {keyword} = req.query
-
-    const products = leerJSON('products');
-
-    const result = products.filter((product) => {
-        return product.name.toLowerCase().includes(keyword.toLowerCase()) || product.producto.toLowerCase().includes(keyword.toLowerCase())
-    });
-
-    return res.render("dashboard", {
-        products : result,
-        keyword
-    })
-}
+  terminos_y_condiciones: (req, res) => {
+    return res.render("extras/terminos_y_condiciones");
+  },
+  
 };

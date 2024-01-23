@@ -46,7 +46,7 @@ module.exports = {
                 role
             }
 
-            remember && res.cookie('Ando-Mateando_user',req.session.userLogin,{
+            remember && res.cookie('andoMateando_user',req.session.userLogin,{
                 maxAge : 1000 * 60 * 2
             })
 
@@ -61,7 +61,7 @@ module.exports = {
     logout : (req,res) => {
         
         req.session.destroy();
-        res.cookie('Ando-Mateando_user',null,{
+        res.cookie('andoMateando_user',null,{
             maxAge : -1
         })
 
@@ -69,5 +69,32 @@ module.exports = {
     },
     profile : (req,res) => {
         return res.render('users/profile')
+    },
+    profileUpload : (req, res) => {
+        const errors = validationResult(req);
+        const {name, surname, province} = req.body;
+        const {id} = req.params;
+        
+        if (errors.isEmpty()) {
+            users.forEach(usuario => {
+                if(usuario.id === req.params.id){
+                    usuario.name = name ? name.trim() : usuario.name;
+                    usuario.surname = surname ? surname.trim() : usuario.surname;
+                    usuario.province = province ? province.trim() : usuario.province;
+
+                }
+            })
+            escribirJSON(users, 'users')
+
+            return res.redirect('users/profile' + req.params.id)
+        } else {
+            const user = users.find((user)=>user.id === req.params.id);
+            return res.render('users/profile',{
+                errors: errors.mapped(),
+                ...user
+            })
+        }
+            
+
     }
 }
