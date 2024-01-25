@@ -30,11 +30,9 @@
                 <% if (userLogin.role === "admin") { %>
                     <li class="animate__animated animate__fadeInDown"><a href="/admin">dashboard</a></li>
                 <% }else{ %>
-                    <li class="animate__animated animate__fadeInDown"><a href="/usuarios/reservas">reservas</a></li>
-                <% } %>
-
-                <li class="animate__animated animate__fadeInDown"><a href="/usuarios/perfil">Perfil</a></li>
-                <li class="animate__animated animate__fadeInDown"><a href="/usuarios/salir">Salir</a></li>
+                    <li class="animate__animated animate__fadeInDown"><a href="/usuarios/perfil">perfil</a></li>
+                    <li class="animate__animated animate__fadeInDown"><a href="/usuarios/salir">Salir</a></li>
+                    <% } %>
             <% }else{ %>
                 <li class="animate__animated animate__fadeInDown"><a href="/usuarios/ingreso">ingresá</a></li>
                 <li class="animate__animated animate__fadeInDown"><a href="/usuarios/registro">registrate</a></li>

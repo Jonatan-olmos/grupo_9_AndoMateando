@@ -1,5 +1,4 @@
 [
-  
    {
       "id": "c249a1ab-b33c-4614-9381-3c7d4287b378",
       "name": "Jonatan",
@@ -22,6 +21,14 @@
       "surname": "Olmos",
       "email": "Francojesusolmos@gmail.com",
       "password": "$2a$10$.dTnXtUHp6ammvhi5gvUxu3r7GyU0wBCcQhiW68wFIKZGiMJT5GnK",
+      "role": "user"
+   },
+   {
+      "id": "2821918c-35d5-4c5f-8a05-1feff610c1a0",
+      "name": "facundo",
+      "surname": "ramirez",
+      "email": "ramirezfacundo1996@gmail.com",
+      "password": "$2a$10$TLT57wivs09RBU9icV.wc.Pt488QFZg3Uho/gTGqXX.K/tNqaosoW",
       "role": "user"
    }
 ]
