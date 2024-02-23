@@ -2,7 +2,7 @@
 
 const productsJSON = require("../../data/products.json");
 
-const productDB = productsJSON.map((product) => {
+const productDB = productsJSON.map((product, index) => {
   return {
     name: product.name,
     description: product.description,
@@ -10,6 +10,7 @@ const productDB = productsJSON.map((product) => {
     discount: product.descuento,
     quantityInStock: 5,
     categoryId: product.category == "elegante" ? 1 : 2,
+    brandId: index + 1,
     createdAt: new Date(),
     updatedAt: new Date(),
   };
