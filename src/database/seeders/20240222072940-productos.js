@@ -8,6 +8,7 @@ const productDB = productsJSON.map((product, index) => {
     description: product.description,
     price: product.precio,
     discount: product.descuento,
+    mainImage: product.mainImage,
     quantityInStock: 5,
     categoryId: product.category == "elegante" ? 1 : 2,
     brandId: index + 1,

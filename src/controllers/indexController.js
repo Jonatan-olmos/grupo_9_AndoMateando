@@ -15,15 +15,13 @@ module.exports = {
       products,
     });
   },
- 
-todos_los_productos2: (req, res) => {
-  return res.render("products/productos2",
-  {
-    products,
-    toThousand,
-  });
 
-},
+  todos_los_productos2: (req, res) => {
+    return res.render("products/productos2", {
+      products,
+      toThousand,
+    });
+  },
   cart: (req, res) => {
     return res.render("productCart", {
       products,
@@ -50,5 +48,4 @@ todos_los_productos2: (req, res) => {
   terminos_y_condiciones: (req, res) => {
     return res.render("extras/terminos_y_condiciones");
   },
-  
 };

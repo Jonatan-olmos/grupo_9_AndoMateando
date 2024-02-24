@@ -24,6 +24,9 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER,
       },
+      mainImage: {
+        type: Sequelize.STRING,
+      },
       quantityInStock: {
         type: Sequelize.INTEGER,
         allowNull: false,
