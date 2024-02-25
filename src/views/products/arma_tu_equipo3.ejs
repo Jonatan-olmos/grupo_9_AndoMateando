@@ -106,7 +106,7 @@
            
             <div class="combos_menu_destacados-imagenes">
                 
-                <%products.filter(product => product.producto === "yerbero").forEach(product => { %>
+                <%products.filter(product => product.typeproductsId === 3 ).forEach(product => { %>
                     <a href="/productos/arma_tu_equipo5"></a><%- include('../partials/cardProduct2',{
                         product
                     }) %>

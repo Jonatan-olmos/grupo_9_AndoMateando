@@ -12,12 +12,12 @@
                 <%- include('../partials/banner_1') %>
                     <!---section--->
                     <section class="combos_productos-titulo">
-                        <h1 class="combos_productos-titulo-h1">mates</h1>
+                        <h1 class="combos_productos-titulo-h1">termo</h1>
                     </section>
                     <i class="fa-sharp fa-solid fa-filter"> filtrar</i>
                     <section class="arma_tu_equipo_atras_sig">
                         <h1 class="arma_tu_equipo_atras_sig-h1"><a href="/productos/arma_tu_equipo">atras</a></h1>
-                       <h1 class="arma_tu_equipo_atras_sig-h1-2"> <a href="/productos/arma_tu_equipo3">siguiente</a></h1>
+                       <h1 class="arma_tu_equipo_atras_sig-h1-2"> <a href="/productos/arma_tu_equipo2">siguiente</a></h1>
                     </section>
                     <section class="menu-3-armatuequipo">
                         <article  class="menu-3-armatuequipo-article">
@@ -110,7 +110,7 @@
            
     <div class="combos_menu_destacados-imagenes">
         
-        <%products.filter(product => product.producto === "termo").forEach(product => { %>
+        <%products.filter(product => product.typeproductsId === 2 ).forEach(product => { %>
             <a href="/productos/arma_tu_equipo3"></a><%- include('../partials/cardProduct2',{
                 product
             }) %>

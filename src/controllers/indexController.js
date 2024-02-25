@@ -17,6 +17,7 @@ module.exports = {
   },
 
   todos_los_productos2: (req, res) => {
+   
     return res.render("products/productos2", {
       products,
       toThousand,

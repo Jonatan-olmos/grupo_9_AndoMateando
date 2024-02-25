@@ -24,7 +24,7 @@
            
             <div class="combos_menu_destacados-imagenes">
                
-                <%products.filter(product => product.producto === "yerbero").forEach(product => { %>
+                <%products.filter(product => product.typeproductsId === 3).forEach(product => { %>
                     <%- include('../partials/cardProduct',{
                         product
                     }) %>

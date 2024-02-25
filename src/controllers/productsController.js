@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-const productsFilePath = path.join(__dirname, "../data/products.json");
-const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const productsFilePath = path.join(__dirname, "../data/products.json");
+//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const productsFilePath2 = path.join(
   __dirname,
@@ -17,7 +17,10 @@ const db = require("../database/models");
 
 const controller = {
   todos_los_productos: (req, res) => {
-    db.Products.findAll()
+    db.Products.findAll(
+      //{include : ['typeproducts'] }
+      )
+    
       .then((products) => {
         return res.render("products/productos", {
           products,
@@ -36,71 +39,141 @@ const controller = {
   },
 
   mate: (req, res) => {
-    return res.render("products/mate", {
-      products,
-      toThousand,
-    });
+    db.Products.findAll(
+     // {include : ['typeproducts'] }
+      )
+    
+      .then((products) => {
+        return res.render("products/mate", {
+          products,
+          toThousand,
+        });
+      })
+      .catch((error) => console.log(error)); 
+    
   },
   mates_personalizados: (req, res) => {
     return res.render("products/mates_personalizados");
   },
   set_yerbero: (req, res) => {
-    return res.render("products/set_yerbero", {
-      products,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/set_yerbero", {
+           products,
+           toThousand,
+         });
+       })
+       .catch((error) => console.log(error)); 
+    
   },
 
   super_combos: (req, res) => {
-    return res.render("products/super_combos", {
-      products,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/super_combos", {
+           products,
+           toThousand,
+         });
+       })
+       .catch((error) => console.log(error)); 
   },
 
   termos: (req, res) => {
-    return res.render("products/termos", {
-      products,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/termos", {
+           products,
+           toThousand,
+         });
+       })
+       .catch((error) => console.log(error)); 
+  
   },
 
   arma_tu_equipo: (req, res) => {
-    return res.render("products/arma_tu_equipo", {
-      products,
-      productsarmatuequipos,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/arma_tu_equipo", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+       .catch((error) => console.log(error)); 
+   
   },
 
   arma_tu_equipo2: (req, res) => {
-    return res.render("products/arma_tu_equipo2", {
-      products,
-      productsarmatuequipos,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/arma_tu_equipo2", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+       .catch((error) => console.log(error)); 
+    
   },
 
   arma_tu_equipo3: (req, res) => {
-    return res.render("products/arma_tu_equipo3", {
-      products,
-      productsarmatuequipos,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/arma_tu_equipo3", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+    
   },
   arma_tu_equipo4: (req, res) => {
-    return res.render("products/arma_tu_equipo4", {
-      products,
-      productsarmatuequipos,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/arma_tu_equipo4", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+       .catch((error) => console.log(error)); 
+    
   },
   arma_tu_equipo5: (req, res) => {
-    return res.render("products/arma_tu_equipo5", {
-      products,
-      productsarmatuequipos,
-      toThousand,
-    });
+    db.Products.findAll(
+      // {include : ['typeproducts'] }
+       )
+     
+       .then((products) => {
+         return res.render("products/arma_tu_equipo5", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+       .catch((error) => console.log(error)); 
+    
   },
 };
 module.exports = controller;

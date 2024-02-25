@@ -23,7 +23,7 @@
    
             <div class="combos_menu_destacados-imagenes">
                 
-                <%products.filter(product => product.producto === "termo").forEach(product => { %>
+                <%products.filter(product =>product.typeproductsId === 2).forEach(product => { %>
                     <%- include('../partials/cardProduct',{
                         product
                     }) %>
