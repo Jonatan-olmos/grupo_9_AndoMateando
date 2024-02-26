@@ -15,19 +15,23 @@ module.exports = {
           name: "termo",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },{
+        },
+        {
           name: "yerbero",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },{
+        },
+        {
           name: "bombilla",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },{
+        },
+        {
           name: "combo",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },,{
+        },
+        {
           name: "bolso",
           createdAt: new Date(),
           updatedAt: new Date(),
