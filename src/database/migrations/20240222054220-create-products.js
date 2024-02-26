@@ -27,6 +27,21 @@ module.exports = {
       mainImage: {
         type: Sequelize.STRING,
       },
+      cantidad: {
+        type: Sequelize.STRING,
+      },
+      capacidad: {
+        type: Sequelize.STRING,
+      },
+       marca: {
+        type: Sequelize.STRING,
+      },
+      material: {
+        type: Sequelize.STRING,
+      },
+      tamanio: {
+        type: Sequelize.STRING,
+      },
       quantityInStock: {
         type: Sequelize.INTEGER,
         allowNull: false,

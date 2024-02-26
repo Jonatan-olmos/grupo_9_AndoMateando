@@ -1,5 +1,5 @@
 const { check, body } = require("express-validator");
-const { leerJSON } = require("../src/data");
+const db = require("../database/models");
 
 module.exports = [
   check("name")
@@ -32,15 +32,21 @@ module.exports = [
     .withMessage("El email tiene un formato inválido")
     .bail()
     .custom((value, { req }) => {
-      const users = leerJSON("users");
-      const user = users.find((user) => user.email === value.trim());
-
-      if (user) {
-        return false;
-      }
-      return true;
-    })
-    .withMessage("El email ya se encuentra registrado"),
+      return db.User.findOne({
+        where: {
+          email: value,
+        },
+      })
+        .then((user) => {
+          if (user) {
+            return Promise.reject();
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          return Promise.reject("El email ya se encuentra registrado");
+        });
+    }),
   check("password")
     .notEmpty()
     .withMessage("La contraseña es obligatoria")
