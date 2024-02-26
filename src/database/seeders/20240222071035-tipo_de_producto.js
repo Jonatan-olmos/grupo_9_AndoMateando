@@ -27,7 +27,8 @@ module.exports = {
           name: "combo",
           createdAt: new Date(),
           updatedAt: new Date(),
-        },,{
+        },
+        {
           name: "bolso",
           createdAt: new Date(),
           updatedAt: new Date(),

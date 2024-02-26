@@ -17,7 +17,6 @@ module.exports = {
   },
 
   todos_los_productos2: (req, res) => {
-   
     return res.render("products/productos2", {
       products,
       toThousand,
@@ -39,14 +38,38 @@ module.exports = {
   contacto: (req, res) => {
     return res.render("extras/contacto");
   },
-  admin: (req, res) => {
-    const products = leerJSON("products");
 
-    return res.render("dashboard", {
-      products,
-    });
-  },
   terminos_y_condiciones: (req, res) => {
     return res.render("extras/terminos_y_condiciones");
+  },
+  admin: (req, res) => {
+    db.products
+      .findAll()
+      .then((products) => {
+        //return res.send(products)
+        return res.render("dashboard", {
+          products,
+        });
+      })
+      .catch((error) => console.log(error));
+  },
+  searchAdmin: (req, res) => {
+    const { keyword } = req.query;
+
+    db.Restaurant.findAll({
+      where: {
+        name: {
+          [Op.substring]: keyword,
+        },
+      },
+      include: ["address", "category"],
+    })
+      .then((result) => {
+        return res.render("dashboard", {
+          products: result,
+          keyword,
+        });
+      })
+      .catch((error) => console.log(error));
   },
 };

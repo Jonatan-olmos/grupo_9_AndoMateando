@@ -17,8 +17,10 @@ const db = require("../database/models");
 
 const controller = {
   todos_los_productos: (req, res) => {
-    db.Products.findAll(
-      //{include : ['typeproducts'] }
+    db.Products.findAll({
+      include : ['category','typeproducts']
+  }
+     
       )
     
       .then((products) => {
@@ -31,16 +33,30 @@ const controller = {
   },
 
   detail: (req, res) => {
-    const product = products.find((product) => product.id === +req.params.id);
-    return res.render("products/detail", {
-      ...product,
-      toThousand,
-    });
+   // const product = db.find((product) => product.id === +req.params.id);
+    const { id } = req.params;
+
+    db.products.findByPk(id, //{include: ["images", "category", "address"], }
+    )
+      .then((resto) => {
+        db.products.findAll(
+        ).then((products) => {
+          return res.render("productos/detalle", {
+            ...products.dataValues,
+            relateds,
+          });
+        });
+      })
+      .catch((error) => console.log(error));
   },
+
+ 
 
   mate: (req, res) => {
     db.Products.findAll(
-     // {include : ['typeproducts'] }
+      {
+        include : ['category','typeproducts']
+    }
       )
     
       .then((products) => {
@@ -57,7 +73,9 @@ const controller = {
   },
   set_yerbero: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category','typeproducts']
+    }
        )
      
        .then((products) => {
@@ -66,15 +84,15 @@ const controller = {
            toThousand,
          });
        })
-       .catch((error) => console.log(error)); 
-    
+       .catch((error) => console.log(error));
+
   },
 
   super_combos: (req, res) => {
     db.Products.findAll(
       // {include : ['typeproducts'] }
        )
-     
+
        .then((products) => {
          return res.render("products/super_combos", {
            products,
