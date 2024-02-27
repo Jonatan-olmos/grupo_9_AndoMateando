@@ -22,7 +22,7 @@
                <li eclass="dropdown"><i class="fa-regular fa-user"></i><a hrf=""> </a> 
                    <ul> 
                        <% if (locals.userLogin) { %>
-                           <% if (userLogin.role === "admin") { %>
+                           <% if (userLogin.role === 1) { %>
                                <li class="animate__animated animate__fadeInDown"><span></span><a href="/admin">dashboard</a></li>
                                <li class="animate__animated animate__fadeInDown"><span></span><a href="/usuarios/perfil">perfil</a></li>
                                <li class="animate__animated animate__fadeInDown"><span></span><a href="/usuarios/salir">Salir</a></li>

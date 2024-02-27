@@ -41,8 +41,7 @@ module.exports = {
     return res.render("extras/terminos_y_condiciones");
   },
   admin: (req, res) => {
-    db.products
-      .findAll()
+    db.Products.findAll()
       .then((products) => {
         //return res.send(products)
         return res.render("dashboard", {
