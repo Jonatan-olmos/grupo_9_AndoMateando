@@ -7,7 +7,6 @@ const {
   remove,
 } = require("../controllers/productsController/");
 const upload = require("../middlewares/upload");
-const upload2 = require("../middlewares/upload2");
 const router = express.Router();
 
 const {
@@ -25,7 +24,7 @@ const {
   arma_tu_equipo4,
   arma_tu_equipo5,
 } = require("../controllers/productsController");
-const update2 = require("../controllers/productsController/update2");
+
 /* /productos */
 
 router
@@ -49,9 +48,29 @@ router
   /*admin*/
 
   .get("/agregar", add)
-  .post("/crear", upload2.single("mainImage"), create)
+  .post(
+    "/crear",
+    upload.fields([
+      {
+        name: "mainImage",
+      },
+      {
+        name: "images",
+      },
+      
+    ]),
+    create
+  )
   .get("/editar/:id", edit)
-  .put("/actualizar/:id", upload.single("mainImage"), update)
-  .delete("/eliminar/:id", remove);
+  .put("/actualizar/:id",  upload.fields([
+    {
+      name: "mainImage",
+    },
+    {
+      name: "images",
+    },
+   
+  ]), update)
+  .delete("/eliminar/:id", remove)
 
 module.exports = router;

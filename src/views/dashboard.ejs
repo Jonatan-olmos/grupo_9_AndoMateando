@@ -31,7 +31,7 @@
                             </thead>
                             <tbody>
                                
-                                <% products.forEach(({ id, name, description, category, mainImage, precio,tamanio,producto,color,marca,cantidad }) => { %>
+                                <% products.forEach(({ id, name, description, category, image, price,tamanio,producto,color,brand, quantityInStock }) => { %>
                                     <tr>
                                         <th scope="row"><%= id %></th>
                                         <td><%= name %></td>
@@ -55,7 +55,7 @@
                                         </td>
                                     </tr>
                                     <%- include('./partials/modal-show-product-admin',{ id,
-                                        name, category, mainImage, description, precio,tamanio,color,marca,cantidad
+                                        name, category, image, description,price ,tamanio,color,brand,quantityInStock
                                         }) %>
                                     <%- include('./partials/modal-warning-delete-product-admin',{ id, name
                                         }) %>

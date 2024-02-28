@@ -6,12 +6,16 @@ const db = require("../database/models");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   index: (req, res) => {
-    console.log(req.session);
-    const products = leerJSON("products");
-
-    return res.render("index", {
-      products,
-    });
+    db.Products.findAll({
+      include : ['category', 'materials','capabilitie','typeproducts']
+  })
+      .then(products => {
+          //return res.send(products)
+          return res.render('index', {
+              products
+          })
+      })
+      .catch(error => console.log(error))
   },
 
   todos_los_productos2: (req, res) => {
@@ -41,7 +45,9 @@ module.exports = {
     return res.render("extras/terminos_y_condiciones");
   },
   admin: (req, res) => {
-    db.Products.findAll()
+    db.Products.findAll({
+      include : ['category', 'materials','capabilitie','typeproducts']
+  })
       .then((products) => {
         //return res.send(products)
         return res.render("dashboard", {
@@ -53,13 +59,13 @@ module.exports = {
   searchAdmin: (req, res) => {
     const { keyword } = req.query;
 
-    db.Restaurant.findAll({
+    db.Products.findAll({
       where: {
         name: {
           [Op.substring]: keyword,
         },
       },
-      include: ["address", "category"],
+      include: ['category','Material','capabilitie','typeproducts'],
     })
       .then((result) => {
         return res.render("dashboard", {

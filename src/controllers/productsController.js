@@ -18,7 +18,7 @@ const db = require("../database/models");
 const controller = {
   todos_los_productos: (req, res) => {
     db.Products.findAll({
-      include : ['category','typeproducts']
+      include : ['category', ]
   }
      
       )
@@ -33,16 +33,18 @@ const controller = {
   },
 
   detail: (req, res) => {
-   // const product = db.find((product) => product.id === +req.params.id);
+    
     const { id } = req.params;
 
-    db.products.findByPk(id, //{include: ["images", "category", "address"], }
+    db.products.findByPk(id,
     )
-      .then((resto) => {
-        db.products.findAll(
-        ).then((products) => {
-          return res.render("productos/detalle", {
-            ...products.dataValues,
+      .then((resto) => { 
+        db.products.findAll({
+          where: value ,
+          
+        }).then((relateds) => {
+          return res.render("productos/detail", {
+            ...resto.dataValues,
             relateds,
           });
         });
@@ -55,7 +57,7 @@ const controller = {
   mate: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category','typeproducts']
+        include : ['category', ]
     }
       )
     
@@ -74,7 +76,7 @@ const controller = {
   set_yerbero: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category','typeproducts']
+        include : ['category', ]
     }
        )
      
@@ -90,7 +92,9 @@ const controller = {
 
   super_combos: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
 
        .then((products) => {
@@ -104,7 +108,9 @@ const controller = {
 
   termos: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {
@@ -119,7 +125,9 @@ const controller = {
 
   arma_tu_equipo: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {
@@ -135,7 +143,9 @@ const controller = {
 
   arma_tu_equipo2: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {
@@ -151,7 +161,9 @@ const controller = {
 
   arma_tu_equipo3: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {
@@ -165,7 +177,9 @@ const controller = {
   },
   arma_tu_equipo4: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {
@@ -180,7 +194,9 @@ const controller = {
   },
   arma_tu_equipo5: (req, res) => {
     db.Products.findAll(
-      // {include : ['typeproducts'] }
+      {
+        include : ['category', ]
+    }
        )
      
        .then((products) => {

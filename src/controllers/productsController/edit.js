@@ -1,14 +1,12 @@
-const { leerJSON } = require("../../data");
+const db = require('../../database/models')
 
 module.exports = (req,res) => {
 
     const {id} = req.params;
 
-    const products = leerJSON('products');
-
-    const product = products.find(product => product.id == id);
-
-    return res.render('products/product-edit',{
-        ...product
+   
+    const categories = db.Category.findAll({
+        order: [['name']]
     })
+       
 }

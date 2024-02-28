@@ -11,43 +11,57 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
+    
       },
       description: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
+    
       },
       price: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
+    
       },
       discount: {
         type: Sequelize.INTEGER,
+        allowNull: true,
+    
       },
-      mainImage: {
+      image: {
+      type: Sequelize.STRING,
+      allowNull: true,
+    
+    },
+    quantityInStock: {
         type: Sequelize.STRING,
+        allowNull: true,
+      
       },
-      cantidad: {
+      brand: {
         type: Sequelize.STRING,
-      },
-      capacidad: {
-        type: Sequelize.STRING,
-      },
-       marca: {
-        type: Sequelize.STRING,
-      },
-      material: {
-        type: Sequelize.STRING,
+        allowNull: true,
+
       },
       tamanio: {
         type: Sequelize.STRING,
+        allowNull: true,
+      
+      },color: {
+        type: Sequelize.STRING,
+        allowNull: true,
+
       },
       quantityInStock: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
       },
       categoryId: {
         type: Sequelize.INTEGER,
+        allowNull: true,
+        
+
         references: {
           model: {
             tableName: "Categories",
@@ -62,14 +76,27 @@ module.exports = {
           },
         },
       },
-      brandId: {
+     compatibilitieId: {
         type: Sequelize.INTEGER,
+        allowNull: true,
+   
         references: {
           model: {
-            tableName: "Brands",
+            tableName: "Capabilities",
           },
         },
       },
+      materialsId: {
+        type: Sequelize.INTEGER,
+ 
+        allowNull: true,
+        references: {
+          model: {
+            tableName: "Materials",
+          },
+        },
+      },
+   
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -4,23 +4,39 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      "Categories",
+      "Materials",
       [
         {
-          name: "Elegante",
+          name: "Madera",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "Clasico",
+          name: "Plastico",
           createdAt: new Date(),
           updatedAt: new Date(),
         }, {
-          name: "Personalizados",
+          name: "Metal",
           createdAt: new Date(),
           updatedAt: new Date(),
         }, {
-          name: "Sin Categoría",
+          name: "Aluminio",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }, {
+          name: "Vidrio",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }, {
+          name: "Hierbas",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        }, {
+          name: "Tela",
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },{
+          name: "Sin Especificar",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

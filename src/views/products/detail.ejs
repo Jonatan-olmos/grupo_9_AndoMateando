@@ -10,7 +10,7 @@
     <main class="main">
         <article class="producto__container">
             <div class="producto__imagen">
-                <img src="/images/productos/<%= mainImage %>" alt="Mate Imperial">
+                <img src="/images/productos/<%= image %>" alt="Mate Imperial">
             </div>
             <div class="info__producto">
                 <h2><%= name %></h2>
@@ -22,9 +22,9 @@
                     <li>Material: <%= material %></li>
                     <li>Tamaño: <%= tamanio %>CM</li>
                     <li>Capacidad: <%= capacidad %>ML</li>
-                    <li>Marca: <%= marca%></li>
+                    <li>Marca: <%= brand%></li>
                    
-                    <li>Disponible: <%= cantidad %></li>
+                    <li>Disponible: <%= quantityInStock %></li>
                 </ul>
                 
                 <% if (descuento){ %>
