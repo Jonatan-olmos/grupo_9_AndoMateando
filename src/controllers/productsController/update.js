@@ -1,66 +1,119 @@
 const { validationResult } = require("express-validator");
 const { existsSync, unlinkSync } = require("fs");
 const db = require("../../database/models");
+const products = require("../../database/models/products");
 
 module.exports = (req, res) => {
-    const errors = validationResult(req);
-  
-    if (errors.isEmpty()) {
-      const image = req.files.mainImage;
-      const images = req.files.images;
-      const { name,  brand,  price, color, quantityInStock, compatibilitieId, tamanio, discount, description } = req.body;
-  
-      db.Products.create({
-      name, 
-      description,
-      price,
-      discount,   
-      quantityInStock,
-      brand,
-      tamanio,
-      color,
-      image : image ? image[0].filename : null,
-    
-      })
-      .then(newProduct => {
-              
-        this.images = images ? images.map(image => image.filename) : [];
-        if(images){
-            
-            const imagesDB = images.map(image => {
-                return {
-                    name : image.filename,
-                    id_product : newProduct.id
-                }
+  const image = req.files.mainImage;
+  const images = req.files.images;
+  const {
+    typeproductsId,
+    name,
+    materialsId,
+    brand,
+    categoryId,
+    price,
+    color,
+    quantityInStock,
+    compatibilitieId,
+    tamanio,
+    discount,
+    description,
+  } = req.body;
+  const { id } = req.params;
+  const errors = validationResult(req);
+  if (errors.isEmpty()) {
+  db.Products.update(
+    {
+        typeproductsId,
+        name,
+        materialsId,
+        brand,
+        categoryId,
+        price,
+        color,
+        quantityInStock,
+        compatibilitieId,
+        tamanio,
+        discount,
+        description,
+    },
+    {
+      where: {
+        id,
+      },
+    }
+  ).then(() => {
+      if (images) {
+          resto.images.forEach((image) => {
+            existsSync("public/images/" + image.file) &&
+              unlinkSync("public/images/" + image.file);
+          });
+
+          db.Image.destroy({
+              where : {
+                productsId : id
+              }
+            }).then(() => {
+              const imagesDB = images.map(image => {
+                  return {
+                      file: image.filename,
+                      productsId : resto.id
+                  }
+              }) 
+
+              db.Image.bulkCreate(imagesDB, {
+                  validate : true
+              }).then(result => {
+                  console.log(result);
+                  return res.redirect("/admin");
+              })
             })
-            db.Image.bulkCreate(imagesDB, {
-                validate : true
-            }).then(result => {
-                console.log(result);
-                return res.redirect("/admin")
-            })
-        }else{
-            return res.redirect("/admin")
-        }
+          }else {
+            return res.redirect("/admin");
+
+          }       
+  }).catch(error => console.log(error));
+
+} else {
+image &&
+existsSync("public/images/" + image.filename) &&
+unlinkSync("public/images/" + image.filename);
+
+if (images) {
+images.forEach((image) => {
+  existsSync("public/images/" + image) &&
+    unlinkSync("public/images/" + image);
+});
+}
+
+
+const resto = db.Products.findByPk(id, {
+    include : ['category','typeproducts','materials','capabilitie']
+})
+const categories = db.Category.findAll({
+    order: [['name']]
+})
+const typeproductes = db.Typeproducts.findAll({
+    order: [['name']]
+})
+const materiales = db.Material.findAll({
+    order: [['name']]
+})
+const compatibilities = db.Capabilitie.findAll({
+    order: [['name']]
+})
+    Promise.all([resto, categories, typeproductes, materiales,compatibilities])
+    .then(([resto, categories, typeproductes,materiales,compatibilities]) => {
+        return res.render('products/product-edit',{
+            ...resto.dataValues,
+            categories,
+            typeproductes,
+            materiales,
+            compatibilities
+        })
     })
     .catch(error => console.log(error))
-  }else{
-    if (mainImage){
-    fs.existsSync(`public/images/products/${mainImage[0].filename}`) &&
-    fs.unlinkSync(`public/images/products/${mainImage[0].filename}`);
-    }
-    if (images){
-        images.forEach((image) => {
-            fs.existsSync(`public/images/products/${image}`) &&
-            fs.unlinkSync(`public/images/products/${image}`);
-            
-        });
-    }
-  
-  
-  
-  }
-  }
 
-
-
+}
+}  
