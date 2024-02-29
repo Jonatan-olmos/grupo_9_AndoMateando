@@ -126,7 +126,7 @@ const controller = {
   arma_tu_equipo: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category', ]
+        include : ['category', 'materials','capabilitie','typeproducts' ]
     }
        )
      
@@ -144,7 +144,7 @@ const controller = {
   arma_tu_equipo2: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category', ]
+        include : ['category', 'materials','capabilitie','typeproducts' ]
     }
        )
      
@@ -162,7 +162,7 @@ const controller = {
   arma_tu_equipo3: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category', ]
+        include : ['category', 'materials','capabilitie','typeproducts' ]
     }
        )
      
@@ -178,7 +178,7 @@ const controller = {
   arma_tu_equipo4: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category', ]
+        include : ['category', 'materials','capabilitie','typeproducts' ]
     }
        )
      
@@ -195,7 +195,7 @@ const controller = {
   arma_tu_equipo5: (req, res) => {
     db.Products.findAll(
       {
-        include : ['category', ]
+        include : ['category', 'materials','capabilitie','typeproducts' ]
     }
        )
      

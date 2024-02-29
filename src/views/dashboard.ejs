@@ -25,18 +25,18 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Descripción</th>
-                                    <th scope="col">Categoría</th>
+                                    <th scope="col">producto</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                
-                                <% products.forEach(({ id, name, description, category, image, price,tamanio,producto,color,brand, quantityInStock }) => { %>
+                                <% products.forEach(({ id, name,typeproducts, description, category, image, price,tamanio,producto,color,brand, quantityInStock,discount }) => { %>
                                     <tr>
                                         <th scope="row"><%= id %></th>
                                         <td><%= name %></td>
                                         <td><%= description %></td>
-                                        <td><%= producto %></td>
+                                        <td><%= typeproducts.name %></td>
                                         <td>
                                             <div class="btn-group" role="group">
                                                 <button class="btn btn-outline-primary"
@@ -55,7 +55,7 @@
                                         </td>
                                     </tr>
                                     <%- include('./partials/modal-show-product-admin',{ id,
-                                        name, category, image, description,price ,tamanio,color,brand,quantityInStock
+                                        name, category, image, description,price ,tamanio,color,brand,quantityInStock,discount
                                         }) %>
                                     <%- include('./partials/modal-warning-delete-product-admin',{ id, name
                                         }) %>
