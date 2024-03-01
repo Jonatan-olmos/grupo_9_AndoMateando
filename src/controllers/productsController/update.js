@@ -1,7 +1,7 @@
 const { validationResult } = require("express-validator");
 const { existsSync, unlinkSync } = require("fs");
 const db = require("../../database/models");
-const products = require("../../database/models/products");
+
 
 module.exports = (req, res) => {
   const image = req.files.mainImage;
@@ -21,9 +21,14 @@ module.exports = (req, res) => {
     description,
   } = req.body;
   const { id } = req.params;
+
   const errors = validationResult(req);
+
   if (errors.isEmpty()) {
-  db.Products.update(
+    db.Products.findByPk(id,{
+      include : ['images']
+  }).then((resto) => {
+    db.Products.update(
     {
         typeproductsId,
         name,
@@ -73,8 +78,8 @@ module.exports = (req, res) => {
             return res.redirect("/admin");
 
           }       
-  }).catch(error => console.log(error));
-
+  })
+}).catch(error => console.log(error));
 } else {
 image &&
 existsSync("public/images/" + image.filename) &&
