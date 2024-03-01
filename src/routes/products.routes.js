@@ -7,6 +7,8 @@ const {
   remove,
 } = require("../controllers/productsController/");
 const upload = require("../middlewares/upload");
+const productAddValidator = require("../validations/product-add-validator");
+const productEditValidator = require("../validations/product-edit-validator");
 const router = express.Router();
 
 const {

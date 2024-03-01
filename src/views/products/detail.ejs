@@ -2,7 +2,7 @@
 <html lang="en">
 
     <%- include('../partials/head',{
-        title: name
+        
     }) %>
 
 <body>
@@ -10,37 +10,37 @@
     <main class="main">
         <article class="producto__container">
             <div class="producto__imagen">
-                <img src="/images/productos/<%= image %>" alt="Mate Imperial">
+                <img src="/images/productos/<%= products.image %>" alt="Mate Imperial">
             </div>
             <div class="info__producto">
-                <h2><%= name %></h2>
+                <h2><%= products.name %></h2>
                 <p>
-                   <%= description %>
+                   <%= products.description %>
                
                 </p>
                 <ul>
-                    <li>Material: <%= material %></li>
-                    <li>Tamaño: <%= tamanio %>CM</li>
-                    <li>Capacidad: <%= capacidad %>ML</li>
-                    <li>Marca: <%= brand%></li>
+                    <li>Material: <%= products.materials.name %></li>
+                    <li>Tamaño: <%= products.tamanio %>CM</li>
+                    <li>Capacidad: <%= products.capabilitie.name %></li>
+                    <li>Marca: <%= products.brand%></li>
                    
-                    <li>Disponible: <%= quantityInStock %></li>
+                    <li>Disponible: <%= products.quantityInStock %></li>
                 </ul>
                 
-                <% if (descuento){ %>
+                <% if (products.descuento){ %>
                     <p >
-                        <span>$<%= toThousand(precio) %></span>
+                        <span>$<%= toThousand(products.precio) %></span>
                         /
-                        <b><%= descuento%>% OFF</b>
+                        <b><%= products.descuento%>% OFF</b>
                     </p>
                 
                         <p >
-                            $ <%= toThousand((precio - (precio * descuento) / 100).toFixed(0)) %>
+                            $ <%= toThousand((products.precio - (products.precio * products.descuento) / 100).toFixed(0)) %>
                         </p>
                     <% } else{ %>
                     
                     <p >
-                        $ <%= precio %>
+                        $ <%= products.price %>
                     </p>
                     <% } %>
                 <label for="cantidad">Cantidad:</label>

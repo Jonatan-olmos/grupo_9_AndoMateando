@@ -32,27 +32,26 @@ const controller = {
       .catch((error) => console.log(error));
   },
 
-  detail: (req, res) => {
-    
-    const { id } = req.params;
+  detail:  (req, res) => {
 
-    db.products.findByPk(id,
-    )
-      .then((resto) => { 
-        db.products.findAll({
-          where: value ,
-          
-        }).then((relateds) => {
-          return res.render("productos/detail", {
-            ...resto.dataValues,
-            relateds,
-          });
-        });
-      })
-      .catch((error) => console.log(error));
-  },
+    const productId = req.params.id;
+   
+  db.Products.findByPk(productId, {
+    include : ['category', 'materials','capabilitie','typeproducts']
 
- 
+  })
+    .then(products => {
+      if (!products) {
+        return res.status(404).send('Producto no encontrado');
+      }
+
+      res.render('products/detail', { products 
+       });
+    }) 
+   
+    .catch(error => console.log(error));
+},
+
 
   mate: (req, res) => {
     db.Products.findAll(

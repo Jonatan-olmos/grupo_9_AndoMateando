@@ -150,15 +150,11 @@
                   <div class="col-12 col-md-3 mb-3">
                     <input name="mainImage" type="file" class="form-control" id="mainImage" hidden>
                     <label class="btn btn-lg btn-outline-dark w-100" for="mainImage">Imagen principal</label>
-                    <small class="text-danger ms-2">
-                      <%= (locals.errors && errors.mainImage) && errors.mainImage.msg %>
-                    </small>
-
-                  </div>
-                  <div class="col-12 col-md-3 mb-3">
-                    <input name="images" type="file" class="form-control" id="images" hidden multiple>
-                    <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
-                  </div>
+                </div>
+                <div class="col-12 col-md-3 mb-3">
+                  <input  name="images" type="file" class="form-control" id="images" hidden multiple>
+                  <label class="btn btn-lg btn-outline-dark w-100" for="images">Imágenes</label>
+              </div>
 
                   <div class="col-12 mb-3">
                     <div class="form-floating">
