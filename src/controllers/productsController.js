@@ -45,7 +45,7 @@ const controller = {
         return res.status(404).send('Producto no encontrado');
       }
 
-      res.render('products/detail', { products 
+      res.render('products/detail', { products,toThousand,
        });
     }) 
    

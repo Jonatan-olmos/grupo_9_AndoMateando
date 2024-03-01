@@ -27,15 +27,15 @@
                     <li>Disponible: <%= products.quantityInStock %></li>
                 </ul>
                 
-                <% if (products.descuento){ %>
+                <% if (products.discount){ %>
                     <p >
-                        <span>$<%= toThousand(products.precio) %></span>
+                        <span>$<%= toThousand(products.price) %></span>
                         /
-                        <b><%= products.descuento%>% OFF</b>
+                        <b><%= products.discount%>% OFF</b>
                     </p>
                 
                         <p >
-                            $ <%= toThousand((products.precio - (products.precio * products.descuento) / 100).toFixed(0)) %>
+                            $ <%= toThousand((products.price - (products.price * products.discount) / 100).toFixed(0)) %>
                         </p>
                     <% } else{ %>
                     
@@ -48,20 +48,21 @@
                 <button class="agregar__carrito"> <i class="fas fa-shopping-cart"></i></button>
                 <div class="combos_main-section-div-letra">
                     <h2  href="#" class="buy-now-button">COMPRAR AHORA</h2>
-                                
+
                     <h2 href="#" class="buy-now-button">AGREGAR AL CARRO</h2>
                 </div>
+                <div class="envio__info">
+                    <p>¡Envío gratis para compras mayores a $35.00!</p>
+                    <label for="codigoPostal">Ingresa tu código postal:</label>
+                    <input type="text" id="codigoPostal" placeholder="Ej. 12345">
+                    <button class="calcular__envio-botton">Calcular</button>
+                </div>
             </div>
-           
+          
+    
         </article>
 
-        <div class="envio__info">
-            <p>¡Envío gratis para compras mayores a $35.00!</p>
-            <label for="codigoPostal">Ingresa tu código postal:</label>
-            <input type="text" id="codigoPostal" placeholder="Ej. 12345">
-            <button class="calcular__envio">Calcular</button>
-        </div>
-
+        
         
     </main>
     

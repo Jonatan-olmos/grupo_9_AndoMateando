@@ -6,9 +6,12 @@
     <br><h2 class="combos_main-section-img-letra"><%= product.name %></h2>
     <div class="combos_main-section-div-letra">
         <h3 class="combos_main-section-img-letra-h3"> precio:    </h3>                    
-            <h4 class="combos_main-section-img-letra-h4"> $<%= toThousand((product.precio - (product.precio * product.descuento)/ 100).toFixed(0))%></h4>
-            <% if (product.descuento) { %>
-                <span class="combos_main-section-img-letra-h4-v"><%= product.descuento %>% OFF</span>
+            <h4 class="combos_main-section-img-letra-h4"> $<%= toThousand((product.price - (product.price * product.discount)/ 100).toFixed(0))%></h4>
+            <% if (product.discount) { %>
+                <span class="combos_main-section-img-letra-h4-v"><%= product.discount %>OFF</span>
+            <% }else{ %><p >
+            <%= products.price %>
+            </p>
             <% } %>
        
     </div>
