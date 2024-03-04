@@ -1,456 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap");
-
-/* -----------------------> HEADER <-----------------------------*/
-
-/* ---------------- Estilos para el encabezado --------------------- */
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-}
-
+/* Estilos generales */
 .header {
-  background-color: #d9e2d5;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 85px;
-  padding-bottom: 15px;
-  width: 100%;
-padding-bottom: auto;
-}
-.header,
-
-
-.nav a {
-  font-weight: 500; /* O el peso de fuente que prefieras */
-  font-size: 20px;
-}
-
-.header div {
-  flex-grow: 1;
-}
-
-.header .logo {
-  height: 60px;
-  width: auto;
-  margin-left: 10px;
-  cursor: pointer;
-  border-radius: 5%;
-}
-
-.header .logo img {
-  height: 50px;
-  width: auto;
-  transition: all 0.3s;
-}
-
-.buscador__nav {
-  position: relative;
-  display: flex;
-  margin: auto 0;
-  height: 35px;
-  line-height: 35px;
-}
-.nav{
-  top: 50px;
-
-}
-
-.buscador__nav input {
-  width: calc(100% - 40px); /* Resta el ancho del bot�n de b�squeda al 100% */
-  height: 100%;
-  border: none;
-  outline: none;
-  background: #e8e8e8;
-  border-radius: 25px;
-  color: gray;
-  font-size: 30px;
   text-align: center;
+  padding: 20px 0;
 }
-
-.buscador__nav button {
-  width: 35px;
-  height: 35px;
-  border-radius: 30px;
-  padding: 5px;
-  color: #f2f2f2;
-  border: none;
-  position: absolute;
-  margin-right: 50px; /* Ajusta la posici�n del bot�n */
-  background: #3e6765;
-  cursor: pointer;
-}
-.icons__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80px; /* Reduce el ancho del contenedor */
-  height: auto;
-  margin-right: 80px; /* Ajusta el margen derecho del contenedor */
-}
-.icons__container i {
-  font-size: 35px;
- 
-  color: #3e6765;
-  cursor: pointer;
-}
-
-/* Ajusta el margen derecho entre los �conos */
-.icons__container .fa-cart-shopping {
-  margin-left: 10px;
-}
-
-/* -----------------------> NAV <-----------------------------*/
 
 .nav {
-  display: flex;
-  background-color: #3e6765;
-  position: absolute;
-  width: 100%;
-  height: auto;
-  top: 50px;
-  left: 0;
-}
-.nav__links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  margin-bottom: 7px;
-}
-.li_nav a{
-  padding-top: 70px;
+  margin-top: 20px;
+  font-size: 24px; /* Aumentamos el tamaño de la fuente del nav */
+  color: #333; /* Color de fuente más oscuro */
 }
 
-.nav__p{
-  margin-top: 15px;
+/* Estilos para el menú de navegación */
+.nav__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .nav__links li {
-  display: inline-block;
-  width: 100%; /* Ocupa todo el ancho disponible */
-  padding: 0 20px;
-  box-sizing: border-box;
-  flex-grow: 1;
-  text-align: center;
+  margin-right: 40px; /* Aumentamos el espaciado entre los elementos */
 }
 
-.nav__links li:hover {
-  transform: scale(1.1);
-}
-.nav a {
-  color: #f2f2f2;
+.nav__links a {
   font-size: 20px;
-  letter-spacing: 1px;
-  padding: 5px 5px;
+  color: #000; /* Cambiamos el color de los enlaces a negro */
   text-decoration: none;
+  transition: color 0.3s ease; /* Agregamos una transición al color de los enlaces */
 }
 
-.nav a:hover {
-  background-color: #d9e2d5;
+.nav__links a:hover {
+  color: #28a745; /* Cambiamos el color al pasar el mouse por encima */
+}
+
+/* Estilos para el logo */
+.logo {
+  margin-right: 40px; /* Aumentamos el margen derecho del logo para separarlo más */
+}
+.logo img {
+  width: 250px; /* Aumentamos el ancho del logo */
+}
+
+/* Estilos para el campo de búsqueda */
+.buscador__nav {
+  display: inline-block;
+  margin-right: 20px; /* Ajustamos el margen entre el logo y el input de búsqueda */
+  text-align: center; /* Centramos horizontalmente el contenido */
+}
+
+.buscar__header {
+  width: 40px; /* Ajustamos el ancho del campo de búsqueda */
+  height: 40px; /* Hacemos el campo de búsqueda cuadrado */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 50%; /* Hacemos el borde circular */
+  margin-right: 10px;
+  transition: border-color 0.3s ease; /* Agregamos una transición al color del borde */
+}
+
+.buscar__header:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px #66afe9;
+}
+/* Estilos para el icono de búsqueda */
+.buscar__header i {
+  font-size: 20px; /* Ajustamos el tamaño del icono */
+  color: #555; /* Cambiamos el color del icono */
+}
+.buscar__header i:hover {
+  font-size: 20px; /* Ajustamos el tamaño del icono */
+  color: #fff; /* Cambiamos el color del icono */
+}
+
+.btn-outline-success {
+  border-color: #28a745;
   color: #3e6765;
 }
 
-#click,
-label {
+.btn-outline-success:hover {
+  background-color: #3e6765;
+}
+
+/* Estilos para el menú desplegable */
+.icons__container {
+  display: inline-block;
+  position: relative;
+  margin-left: 20px; /* Aumentamos el margen entre el icono del sitio y el menú desplegable */
+}
+
+.icons__container .dropdown-menu {
   display: none;
-}
-label i {
-  color: #f2f2f2;
-}
-
-.header,
-.nav {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-
-.buscador__nav button {
-  border: 1px solid #ccc; /* Bordes sutiles */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-}
-
-/* -----------------------> ANIMACION <-----------------------------*/
-
-.header .logo img:hover,
-.nav__links li:hover,
-.abrir-menu i:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out; /* Animaci�n m�s suave */
-}
-/*menu de usuario*/
-nav{
-  width: 100%;
-  height: 35px;
-  }
-  
-  #menu4{
-  width: 10px;
-  height: 50px;
- 
-  float: left;
-
-  position: relative;
-  
-
-  } 
-  
-  #menu4 .menup{
-  width: 10px;
-  height: 35px;
-  margin: 0 auto;
-  padding: 0px;
-
-  }
-  
-  #menu4 li{
-  float:left;
-  position:relative;
-  padding: 1px 0;
-  margin: 0;
-  list-style: none;
-  
-  } 
-  
-  #menu4 li a{
-  color:#ffff;
-  font-size: 13px;
-  padding: 1px 1px;
-  /* text-shadow: 0px -1px 0px #000; */
-  text-decoration: none;
-  text-transform: uppercase;
-  } 
-  
-  /*ocultamos el dropdown*/    
-  #menu4 li > ul{
-  display:none;
-  position:absolute;
-  background: #3e6765;
-  padding: 0;
-  
-  z-index: 1;
-  }
-  
-  #menu4 li > ul li{
-  padding:10px;
-  margin:1px 0;
-  list-style: none;
-  
-  } 
-  
-  #menu4 li > ul li:first-child, #menu li:hover > ul li:last-child{
-  padding:10px;
-  margin:0 0;
-  }
-  
-  /*le damos el color blanco al enlance del submenu y el background negro */    
-  #menu4 li:hover > a{
-  color:#fff;
-  background-color: #424242;
-  width: 120px; 
-  } 
-  
-  #menu4 li > ul li a{
-  width: 150px;
-  margin: 0 5 0 0px;
-  display:block;
-  color: #fff;
-  } 
-  
-  /* Con esto mantenemos el codigo submenu activo */
-  #menu4 li:hover > ul{
-  display:block;
-  width: 150px;
-  top: 35px;
-  
-      }
-  
-  #menu4 .divider{
-  border-right: 1px solid #BCBCBC;
-  height: 23px;
-  }
-  #menu4 .dropdown::after{
-  content:"";
   position: absolute;
-  top: 15px;
-  left: 52px;
-  width:0px;
-  height:0px;
-  border-style: solid;
-  border-width: 4.3px;
-  border-bottom-width:0px;
-  border-color: #ffff transparent transparent transparent;
-  }
-  
-  #menu4 li:hover::after{
-  border-color: #fff transparent transparent transparent;
-  }
-  
-  hr{
-  margin: 0;
-  padding: 0;
-  width: 80%;
-  position: relative;
-  border-color: rgba(189, 189, 189, 0.6);
-  left: 10px;
-  }
-  
-  #menu4 .dropdown span{
-  height: 15px;
-  width: 3px;
-  position: absolute;
-  top: 6px;
-  left: 5px;
-  }
-  .dropdown{
-    color: #ffff;
-  }
-/* -----------------------> ANIMACION <-----------------------------*/
-
-/* -----------------------> MEDIA QUERY <-----------------------------*/
-/* ----------------------->   MOBILE   <-----------------------------*/
-@media (max-width: 667px) {
-  .header {
-    flex-direction: column; /* Apila los elementos verticalmente */
-    height: auto; /* Ajusta la altura autom�ticamente seg�n el contenido */
-  }
-  .header .logo {
-    margin-left: -20px;
-  }
-  .buscador__nav {
-    display: flex;
-    margin:  0px;
-    line-height: 35px;
-    position: relative;
-  }
-  .buscador__nav input{
-    margin: 0px;
-  }
-  .buscador__nav input {
-    font-size: 16px; /* Ajusta el tama�o del texto en la barra de b�squeda para dispositivos m�viles */
-  }
-.buscar__header{
-  left: 30px;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
 }
 
-  .buscador__nav button {
-    position: absolute;
-    top: 1px;
-    right: -25%;
-  }
-  .nav {
-    width: 100%;
-    height: 40px;
-    position: relative;
-    margin-top: -32px;
+.icons__container .dropdown-menu li {
+  padding: 8px 20px;
+}
 
+.icons__container .dropdown-menu li:hover {
+  background-color: #f8f9fa;
+}
+
+.icons__container:hover .dropdown-menu {
+  display: block;
+}
+
+/* Estilos para los iconos de usuario y carrito de compras */
+.icons__container .list-inline-item {
+  margin-right: 10px; /* Ajustamos el margen entre los iconos */
+}
+
+.icons__container .list-inline-item i {
+  font-size: 24px; /* Ajustamos el tamaño de los iconos */
+  color: #333; /* Cambiamos el color de los iconos */
+  transition: color 0.3s ease; /* Agregamos una transición al color de los iconos */
+}
+
+.icons__container .list-inline-item a:hover i {
+  color: #3e6765; /* Cambiamos el color al pasar el mouse por encima */
+}
+
+/* Media query para mostrar el icono del menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
   }
-  .nav__links li {
-    display: none; /* Oculta las li cuando la pantalla es m�s peque�a */
-  }
+
   .abrir-menu {
     display: block;
-    text-align: center;
-    cursor: pointer;
-    padding: 5px;
-    margin: 0 auto;
-    width: 100%;
+  }
+
+  .nav {
+    position: relative;
+  }
+
+  .nav__links {
     position: absolute;
-    cursor: pointer;
-  }
-  .abrir-menu i {
-    font-size: 20px;
-    background-color: #3e6765;
-    border-radius: 5px;
-    color: #f2f2f2;
-    padding: 5px;
-    border: 1px solid #f2f2f2;
-    margin-right: 10px;
-  }
-  .abrir-menu i:hover {
-    background-color: #d9e2d5;
-    color: #3e6765;
-    border-color: #3e6765;
-  }
-  .icons__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .icons__container i {
-    font-size: 20px;
-    margin-right: 25px;
-    margin-left: 25px;
-    margin-top: 5px;
-    color: #3e6765;
-    cursor: pointer;
-  }
-}
-
-/* -----------------------> MEDIA QUERY <-----------------------------*/
-/* ----------------------->   TABLET'S   <-----------------------------*/
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .buscar__header{
-  margin: 0px 
-}
-
-  .header .logo {
-    height: 50px;
-    width: auto;
-    margin-left: 5px;
-    margin-right: 10px;
-  }
-  .buscador__nav {
-    width: 20%;
-    margin-right: 50px;
-    right: 20px;
-    top: 10px;
-  }
-  .buscador__nav input {
-    text-align: right;
-    font-size: 21px; /* Ajusta el tama�o del texto en la barra de b�squeda para dispositivos m�viles */
-  }
-
-  .icons__container i {
-    font-size: 21px;
-    margin-right: 10px; /* Espacio entre los iconos*/
-    margin-left: 50px;
-    color: #3e6765;
-    cursor: pointer;
-  }
-  .nav__links li {
-    display: inline-block;
-    padding: 0px 20px
-    ;
-  }
-
-  .nav a {
-    color: #f2f2f2;
-    font-size: 14px;
-    letter-spacing: 1px;
-    padding: 5px 5px;
-    text-decoration: none;
-  }
-  .nav{
-    top:95px !important;
-  }
-  .buscador__nav button {
-    margin-left: 10px
-  }
-}
-@media (min-width:1023px) {
-  .nav{
-    display: flex;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
     width: 100%;
-    top: 102px!important;
-    flex-direction: column;
-    align-items: stretch;
-}
-.nav__links{
-  padding: 0px;
-}
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    display: none;
+  }
 
+  .abrir-menu:checked + .nav__links {
+    display: block;
+  }
 }
