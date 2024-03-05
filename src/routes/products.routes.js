@@ -59,20 +59,22 @@ router
       {
         name: "images",
       },
-      
     ]),
     create
   )
   .get("/editar/:id", edit)
-  .put("/actualizar/:id",  upload.fields([
-    {
-      name: "mainImage",
-    },
-    {
-      name: "images",
-    },
-   
-  ]), update)
-  .delete("/eliminar/:id", remove)
+  .put(
+    "/actualizar/:id",
+    upload.fields([
+      {
+        name: "mainImage",
+      },
+      {
+        name: "images",
+      },
+    ]),
+    update
+  )
+  .delete("/eliminar/:id", remove);
 
 module.exports = router;

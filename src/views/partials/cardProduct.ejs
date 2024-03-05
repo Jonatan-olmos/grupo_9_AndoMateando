@@ -1,25 +1,21 @@
-
-<article class="combos_main-section-article">
-   
-    <a href="/productos/detalle/<%= product.id %>"><img class="combos_main-section-img" src="../images/productos/<%= product.image %>" alt=""  > </a>
-
-    <br><h2 class="combos_main-section-img-letra"><%= product.name %></h2>
-    <div class="combos_main-section-div-letra">
-        <h3 class="combos_main-section-img-letra-h3"> precio:    </h3>                    
-            <h4 class="combos_main-section-img-letra-h4"> $<%= toThousand((product.price - (product.price * product.discount)/ 100).toFixed(0))%></h4>
+<article class="card combos_main-section-article">
+    <a href="/productos/detalle/<%= product.id %>">
+        <img class="card-img-top combos_main-section-img" src="../images/productos/<%= product.image %>" alt="">
+    </a>
+    <div class="card-body">
+        <h5 class="card-title combos_main-section-img-letra"><%= product.name %></h5>
+        <div class="combos_main-section-div-letra">
+            <h6 class="card-subtitle mb-2 text-muted">Precio:</h6>
             <% if (product.discount) { %>
-                <span class="combos_main-section-img-letra-h4-v"><%= product.discount %>OFF</span>
-            <% }else{ %><p >
-            <%= products.price %>
-            </p>
+                <h6 class="card-text"><span class="badge bg-success"><%= product.discount %> OFF</span> $<%= toThousand((product.price - (product.price * product.discount) / 100).toFixed(0)) %></h6>
+            <% } else { %>
+                <h6 class="card-text">$<%= toThousand(product.price.toFixed(0)) %></h6>
             <% } %>
-       
+        </div>
+        <p class="card-text combos_main-section-img-letra-p"><%= product.description %></p>
+        <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-primary buy-now-button">Comprar ahora</a>
+            <a href="#" class="btn btn-secondary buy-now-button">Agregar al carro</a>
+        </div>
     </div>
-    <p class="combos_main-section-img-letra-p"><%= product.description %></p>
-    <div class="combos_main-section-div-letra">    
-    <h2  href="#" class="buy-now-button">COMPRAR AHORA</h2>
-						
-    <h2 href="#" class="buy-now-button">AGREGAR AL CARRO</h2>
-</div>			
-
 </article>

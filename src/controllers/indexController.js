@@ -1,21 +1,22 @@
 const { leerJSON } = require("../data");
 const fs = require("fs");
 const path = require("path");
+const { Op } = require("sequelize");
 
 const db = require("../database/models");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = {
   index: (req, res) => {
     db.Products.findAll({
-      include : ['category', 'materials','capabilitie','typeproducts']
-  })
-      .then(products => {
-          //return res.send(products)
-          return res.render('index', {
-              products
-          })
+      include: ["category", "materials", "capabilitie", "typeproducts"],
+    })
+      .then((products) => {
+        //return res.send(products)
+        return res.render("index", {
+          products,
+        });
       })
-      .catch(error => console.log(error))
+      .catch((error) => console.log(error));
   },
 
   todos_los_productos2: (req, res) => {
@@ -46,8 +47,8 @@ module.exports = {
   },
   admin: (req, res) => {
     db.Products.findAll({
-      include : ['category', 'materials','capabilitie','typeproducts']
-  })
+      include: ["category", "materials", "capabilitie", "typeproducts"],
+    })
       .then((products) => {
         //return res.send(products)
         return res.render("dashboard", {
@@ -65,7 +66,7 @@ module.exports = {
           [Op.substring]: keyword,
         },
       },
-      include: ['category','Material','capabilitie','typeproducts'],
+      include: ["category", "materials", "capabilitie", "typeproducts"],
     })
       .then((result) => {
         return res.render("dashboard", {
