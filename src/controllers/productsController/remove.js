@@ -10,12 +10,12 @@ module.exports = (req, res) => {
   }).then(({ image, images, }) => {
 
  
-    existsSync("public/images/" + image) &&
-      unlinkSync("public/images/" + image);
+    existsSync("public/images/products/" + image) &&
+      unlinkSync("public/images/products/" + image);
 
     images.forEach((image) => {
-      existsSync("public/images/" + image.file) &&
-        unlinkSync("public/images/" + image.file);
+      existsSync("public/images/products/" + image.file) &&
+        unlinkSync("public/images/products/" + image.file);
     });
 
     db.Image.destroy({

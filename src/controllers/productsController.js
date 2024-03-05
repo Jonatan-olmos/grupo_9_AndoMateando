@@ -1,8 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-//const productsFilePath = path.join(__dirname, "../data/products.json");
-//const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const productsFilePath2 = path.join(
   __dirname,
@@ -123,6 +121,8 @@ const controller = {
   },
 
   arma_tu_equipo: (req, res) => {
+   
+   
     db.Products.findAll(
       {
         include : ['category', 'materials','capabilitie','typeproducts' ]
@@ -130,12 +130,15 @@ const controller = {
        )
      
        .then((products) => {
+     
          return res.render("products/arma_tu_equipo", {
            products,
            toThousand,
            productsarmatuequipos,
+          
          });
        })
+     
        .catch((error) => console.log(error)); 
    
   },
