@@ -78,12 +78,12 @@ module.exports = {
       .catch((error) => console.log(error));
   },
   searchAdmin2: (req, res) => {
-    const { keyword2 } = req.query;
+    const { keyword } = req.query;
 
     db.Products.findAll({
       where: {
         name: {
-          [Op.substring]: keyword2,
+          [Op.substring]: keyword,
         },
       },
       include: ["category", "materials", "capabilitie", "typeproducts"],
@@ -91,7 +91,7 @@ module.exports = {
       .then((result) => {
         return res.render("products/productos", {
           products: result,
-          keyword2,
+          keyword,
           toThousand,
         });
       })
