@@ -16,7 +16,7 @@ const db = require("../database/models");
 const controller = {
   todos_los_productos: (req, res) => {
     db.Products.findAll({
-      include : ['category', ]
+      include : ["category", "materials", "capabilitie", "typeproducts" ]
   }
      
       )

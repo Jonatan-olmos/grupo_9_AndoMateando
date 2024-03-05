@@ -23,9 +23,9 @@
    
             <div class="combos_menu_destacados-imagenes">
                 
-                <%products.filter(product =>product.typeproductsId === 2).forEach(product => { %>
+                <%products.filter(products =>products.typeproductsId === 2).forEach(products => { %>
                     <%- include('../partials/cardProduct',{
-                        product
+                        products
                     }) %>
                 <% }) %>
              

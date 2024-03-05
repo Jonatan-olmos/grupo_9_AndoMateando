@@ -24,9 +24,9 @@
     <div class="combos_menu_destacados-imagenes">
                
 
-        <% products.forEach(product => { %>
+        <% products.forEach(products => { %>
             <%- include('../partials/cardProduct',{
-            product
+                products,
             }) %>
         <% }) %>
     

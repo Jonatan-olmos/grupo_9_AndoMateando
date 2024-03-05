@@ -1,43 +1,29 @@
+<link rel="stylesheet" href="/public/stylesheets/banner.css">
+
 <div class="home_main_banner">
-
-    <div class="swiper mySwiper" class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="../images/vista_armatumate.png" alt="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!-- video -->
+                        <div class="swiper-slide">
+                            <video autoplay muted loop class="video-fluid" id="mainVideo">
+                                <source src="../video/video01.mp4" type="video/mp4">
+                                Tu navegador no admite la etiqueta de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="swiper-slide">
-                <img src="../images/vista_armatuset.png" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="../images/vista_bombilla.png" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="../images/vista_mate.png" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="../images/vista_supercombos.png" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="../images/vista_yerbera.png" alt="">
-            </div>
-
         </div>
-        <div class="swiper-pagination"></div>
     </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            freeMode: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-        });
-    </script>
 </div>
+
+<script>
+    // Reproducir el video automáticamente al cargar la página
+    document.addEventListener('DOMContentLoaded', function () {
+        var mainVideo = document.getElementById('mainVideo');
+        mainVideo.play();
+    });
+</script>
