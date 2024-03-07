@@ -15,8 +15,21 @@ const db = require("../database/models");
 
 const controller = {
   todos_los_productos: (req, res) => {
+
+    const type = req.query.type;
+
+    const options = {}
+
+    if(type) {
+      options.where = {
+        typeproductsId: type
+      }
+    }
+
     db.Products.findAll({
-      include : ["category", "materials", "capabilitie", "typeproducts" ]
+      include : ["category", "materials", "capabilitie", "typeproducts" ],
+      ...options
+
   }
      
       )
