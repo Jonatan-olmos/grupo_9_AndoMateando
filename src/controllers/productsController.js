@@ -15,8 +15,21 @@ const db = require("../database/models");
 
 const controller = {
   todos_los_productos: (req, res) => {
+
+    const type = req.query.type;
+
+    const options = {}
+
+    if(type) {
+      options.where = {
+        typeproductsId: type
+      }
+    }
+
     db.Products.findAll({
-      include : ["category", "materials", "capabilitie", "typeproducts" ]
+      include : ["category", "materials", "capabilitie", "typeproducts" ],
+      ...options
+
   }
      
       )
@@ -203,6 +216,23 @@ const controller = {
      
        .then((products) => {
          return res.render("products/arma_tu_equipo5", {
+           products,
+           toThousand,
+           productsarmatuequipos,
+         });
+       })
+       .catch((error) => console.log(error)); 
+    
+  },
+  diseñatuequipo: (req, res) => {
+    db.Products.findAll(
+      {
+        include : ['category', 'materials','capabilitie','typeproducts' ]
+    }
+       )
+     
+       .then((products) => {
+         return res.render("products/diseña_tu_equipo", {
            products,
            toThousand,
            productsarmatuequipos,

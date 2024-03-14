@@ -25,6 +25,7 @@ const {
   arma_tu_equipo3,
   arma_tu_equipo4,
   arma_tu_equipo5,
+  diseñatuequipo,
 } = require("../controllers/productsController");
 
 /* /productos */
@@ -46,7 +47,7 @@ router
   .get("/set_yerbero", set_yerbero)
   .get("/super_combos", super_combos)
   .get("/termos", termos)
-
+  .get("/tuequipo", diseñatuequipo)
   /*admin*/
 
   .get("/agregar", add)

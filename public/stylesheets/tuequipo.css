@@ -1,0 +1,14 @@
+
+.container {
+    position: relative;
+}
+
+.added-image {
+    position: absolute;
+    ;
+}
+
+.added-text {
+    position: absolute;
+    color: white;
+}
