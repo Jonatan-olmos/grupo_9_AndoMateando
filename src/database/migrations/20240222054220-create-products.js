@@ -60,8 +60,6 @@ module.exports = {
       categoryId: {
         type: Sequelize.INTEGER,
         allowNull: true,
-        
-
         references: {
           model: {
             tableName: "Categories",
@@ -70,6 +68,7 @@ module.exports = {
       },
       typeproductsId: {
         type: Sequelize.INTEGER,
+        allowNull: true,
         references: {
           model: {
             tableName: "Typeproducts",
@@ -79,7 +78,6 @@ module.exports = {
      compatibilitieId: {
         type: Sequelize.INTEGER,
         allowNull: true,
-   
         references: {
           model: {
             tableName: "Capabilities",

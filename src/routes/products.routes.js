@@ -60,7 +60,7 @@ router
       {
         name: "images",
       },
-    ]),
+    ]),productAddValidator,
     create
   )
   .get("/editar/:id", edit)
