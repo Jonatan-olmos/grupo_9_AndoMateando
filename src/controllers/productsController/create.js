@@ -4,10 +4,11 @@ const db = require("../../database/models");
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
+  const mainImage = req.files.mainImage;
+  const images = req.files.images;
+
 
   if (errors.isEmpty()) {
-    const image = req.files.mainImage;
-    const images = req.files.images;
     const {
       typeproductsId,
       name,
@@ -34,7 +35,7 @@ module.exports = (req, res) => {
       quantityInStock,
       tamanio,
       discount,
-      image: image ? image[0].filename : null,
+      image: mainImage ? mainImage[0].filename : null,
       compatibilitieId,
       description,
     })
@@ -70,50 +71,26 @@ module.exports = (req, res) => {
       });
     }
 
-    db.Category.findAll({
-      order: [["name"]],
-    })
-      .then((categories) => {
+    const categories = db.Category.findAll({ 
+      order: ["name"],
+      attributes : ['id','name']
+    });
+    const materiales = db.Material.findAll({ order: ["name"] }); // Obtener todos los materiales
+    const compatibilities = db.Capabilitie.findAll({ order: ["name"] }); // Obtener datos de la tabla 4
+    const typeproductes = db.Typeproducts.findAll({ order: ["name"] }); // Obtener datos de la tabla 4
+  
+    Promise.all([categories, materiales, compatibilities, typeproductes])
+      .then(([categories, materiales, compatibilities, typeproductes]) => {
         return res.render("products/product-add", {
-          errors: errors.mapped(),
-          old: req.body,
           categories,
-        });
-      })
-      .catch((error) => console.log(error));
-
-    db.Material.findAll({
-      order: [["name"]],
-    })
-      .then((materiales) => {
-        return res.render("products/product-add", {
-          errors: errors.mapped(),
-          old: req.body,
           materiales,
-        });
-      })
-      .catch((error) => console.log(error));
-    db.Capabilitie.findAll({
-      order: [["name"]],
-    })
-      .then((compatibilities) => {
-        return res.render("products/product-add", {
-          errors: errors.mapped(),
-          old: req.body,
           compatibilities,
-        });
-      })
-      .catch((error) => console.log(error));
-    db.Typeproducts.findAll({
-      order: [["name"]],
-    })
-      .then((typeproductes) => {
-        return res.render("products/product-add", {
-          errors: errors.mapped(),
-          old: req.body,
           typeproductes,
+          old : req.body,
+          errors : errors.mapped()
         });
       })
+  
       .catch((error) => console.log(error));
   }
 };

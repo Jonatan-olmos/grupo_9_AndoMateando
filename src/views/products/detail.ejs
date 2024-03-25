@@ -18,13 +18,13 @@
                    <%= products.description %>
                
                 </p>
-                <ul>
-                    <li>Material: <%= products.materials.name %></li>
-                    <li>Tamaño: <%= products.tamanio %>CM</li>
-                    <li>Capacidad: <%= products.capabilitie.name %></li>
-                    <li>Marca: <%= products.brand%></li>
+                <ul class="list-group list-group-flush bg-transparent">
+                    <li class="list-group-item bg-transparent">Material: <%= products.materials.name %></li>
+                    <li class="list-group-item bg-transparent">Tamaño: <%= products.tamanio %>CM</li>
+                    <li class="list-group-item bg-transparent">Capacidad: <%= products.capabilitie.name %></li>
+                    <li class="list-group-item bg-transparent">Marca: <%= products.brand%></li>
                    
-                    <li>Disponible: <%= products.quantityInStock %></li>
+                    <li class="list-group-item bg-transparent">Disponible: <%= products.quantityInStock %></li>
                 </ul>
                 
                 <% if (products.discount){ %>
