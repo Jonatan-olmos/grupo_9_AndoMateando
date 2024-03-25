@@ -8,9 +8,12 @@ var logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieCheck = require("./middlewares/cookieCheck");
+
 var indexRouter = require("./routes/index.routes");
 var usersRouter = require("./routes/users.routes");
 const productsRouter = require("./routes/products.routes");
+const apisRouter = require("./routes/apis.routes");
+
 const transferLocals = require("./middlewares/transferLocals");
 const checkUserLogin = require("./middlewares/checkUserLogin");
 var app = express();
@@ -41,7 +44,8 @@ app
 
   .use("/", indexRouter)
   .use("/usuarios", usersRouter)
-  .use("/productos", productsRouter);
+  .use("/productos", productsRouter)
+  .use("/apis", apisRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
