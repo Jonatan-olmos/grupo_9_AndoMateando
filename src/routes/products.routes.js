@@ -9,6 +9,7 @@ const {
 const upload = require("../middlewares/upload");
 const productAddValidator = require("../validations/product-add-validator");
 const productEditValidator = require("../validations/product-edit-validator");
+const checkAdmin = require('../middlewares/checkAdmin')
 const router = express.Router();
 
 const {
@@ -50,9 +51,8 @@ router
   .get("/tuequipo", diseñatuequipo)
   /*admin*/
 
-  .get("/agregar", add)
-  .post(
-    "/crear",
+  .get("/agregar",checkAdmin,  add)
+  .post("/crear",
     upload.fields([
       {
         name: "mainImage",
@@ -61,6 +61,7 @@ router
         name: "images",
       },
     ]),
+    productAddValidator,
     create
   )
   .get("/editar/:id", edit)
@@ -74,6 +75,7 @@ router
         name: "images",
       },
     ]),
+    productEditValidator,
     update
   )
   .delete("/eliminar/:id", remove);

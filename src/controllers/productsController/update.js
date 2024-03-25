@@ -23,8 +23,9 @@ module.exports = (req, res) => {
   const { id } = req.params;
 
   const errors = validationResult(req);
+  console.log(errors)
 
-  if (errors.isEmpty()) {
+  if (!errors.isEmpty()) {
     db.Products.findByPk(id,{
       include : ['images']
   }).then((resto) => {

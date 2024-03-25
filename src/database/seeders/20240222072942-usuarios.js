@@ -1,8 +1,8 @@
 "use strict";
 
-const usuariosJSON = require("../../data/User");
+const usuariosJSON = require("../../data/users.json");
 
-const productDB = usuariosJSONJSON.map((product, index) => {
+const productDB = usuariosJSON.map((product, index) => {
   return {
     name: product.name,
     description: product.description,
