@@ -1,5 +1,17 @@
 "use strict";
 
+const usuariosJSON = require("../../data/User");
+
+const productDB = usuariosJSONJSON.map((product, index) => {
+  return {
+    name: product.name,
+    description: product.description,
+ 
+  
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  };
+});
 const bcryptjs = require("bcryptjs");
 
 /** @type {import('sequelize-cli').Migration} */
@@ -14,6 +26,8 @@ module.exports = {
           email: "admin@gmail.com",
           password: bcryptjs.hashSync(process.env.PASSWORD_ADMIN, 10),
           roleId: 1,
+          age:40,
+          phone: 33451561,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -23,6 +37,8 @@ module.exports = {
           email: "user@gmail.com",
           password: bcryptjs.hashSync(process.env.PASSWORD_ADMIN, 10),
           roleId: 2,
+          age:40,
+          phone: 3364515025,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
