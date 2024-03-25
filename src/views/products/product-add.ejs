@@ -39,9 +39,10 @@
                               </div> 
                             <div class="col-12 col-md-6 mb-3">
                               <div class="form-floating ">
-                                  <input name="name" type="text" class="form-control" id="name" >
+                                  <input name="name" type="text" class="form-control <%= (locals.errors && errors.name) && 'is-invalid' %>" id="name" value="<%= locals.old && old.name %>"  >
                                   <label for="name">Nombre</label>
                                 </div>
+                                <small class="text-danger ms-2"><%= (locals.errors && errors.name) && errors.name.msg %></small>
                           </div>
                           <div class="col-12 col-md-6 mb-3">
                             <div class="form-floating">
@@ -53,6 +54,7 @@
                                 </select>
                                 <label for="category">Categoría</label>
                               </div>
+                              <small class="text-danger ms-2"><%= (locals.errors && errors.category) && errors.category.msg %></small>
                             </div> 
                           <div class="col-12 col-md-6 mb-3">
                             <div class="form-floating ">
